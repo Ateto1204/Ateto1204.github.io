@@ -1,37 +1,37 @@
 body {
-    font-family: "Karla", 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  font-family: "Karla", 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
 }
 
 .profile {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 }
 
 .profile-image {
-    width: 300px;
-    height: auto;
-    border-radius: 8px;
-    margin-right: 140px;
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 140px;
 }
 
 .github-logo {
@@ -47,25 +47,25 @@ main {
 }
 
 .profile-info {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .profile-info h1 {
-    font-size: 4em;
-    margin: 0;
-    padding-bottom: 20px;
+  font-size: 4em;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .profile-info h2 {
-    font-size: 1.5em;
-    color: #777;
-    margin-top: 10px;
-    margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #777;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .profile-info p {
-    line-height: 1.6;
-    margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
 .contact-list a {
