@@ -1,0 +1,68 @@
+.profile {
+    display: flex;
+    align-items: flex-start;
+    animation: fadeIn 1.6s ease-in-out;
+}
+
+.profile-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 140px;
+}
+
+.contact-icon img:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7), 0 0 25px rgba(0, 123, 255, 0.5), 0 0 35px rgba(0, 123, 255, 0.3);
+}
+
+.contact-icon img {
+    width: 23px;
+    margin-right: 20px;
+    position: relative;
+    top: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.github-icon {
+    border-radius: 100px;
+}
+
+.mail-icon {
+    margin-bottom: 3.5px;
+}
+
+.profile-info {
+    max-width: 590px;
+}
+
+.profile-info h1 {
+    font-size: 4em;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.profile-info h2 {
+    font-size: 1.5em;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-info p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.custom-list li::before {
+  content: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
