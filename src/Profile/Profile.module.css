@@ -2,6 +2,9 @@
     display: flex;
     align-items: flex-start;
     animation: fadeIn 1.6s ease-in-out;
+    position: relative;
+    margin: 140px;
+    padding-top: 100px;
 }
 
 .profile-image {
@@ -37,12 +40,14 @@
 }
 
 .profile-info h1 {
+    font-family: "Playfair Display", Georgia, serif;;
     font-size: 4em;
     margin: 0;
     padding-bottom: 20px;
 }
 
 .profile-info h2 {
+    font-family: "Playfair Display", Georgia, serif;;
     font-size: 1.5em;
     color: #777;
     margin-top: 10px;

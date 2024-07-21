@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Profile from './Profile/Profile.jsx'
+import Experience from './Experience/Experience.jsx'
 import './App.css'
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
         <main>
           <Profile />
         </main>
+        <Experience />
       </div>
     </>
   );
