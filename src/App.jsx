@@ -4,8 +4,6 @@ import Experience from './Experience/Experience.jsx'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <div class="container">
