@@ -1,0 +1,98 @@
+.skill {
+    padding-top: 180px;
+    animation: fadeIn 1.6s ease-in-out;
+}
+  
+.card-set {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap !important;
+    flex-direction: column;
+    min-width: 500px;
+    word-wrap: break-word;
+    border: 2px solid rgb(184, 190, 197);
+    backdrop-filter: blur(0.2rem);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: 0.25s;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 0 0 auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        width: 41.66666667%;
+    }
+}
+
+.card .cardTitle {
+    text-align: center;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.skill-card-col-set {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-card-col {
+    font-size: 1.15rem;
+    flex: 0 0 auto;
+    width: 50%;
+    padding: 10px 0px 10px 0px;
+}
+
+.skill-circle-icon::before {
+    content: "•";
+    font-size: 1.3rem;
+    color: rgb(161, 160, 160);
+    padding-right: 12px;
+}
+
+.skill-circle-icon {
+    font: normal normal normal 14px / 1 FontAwesome;
+}
+
+.skill h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 4em;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.skill h2 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 1.5em;
+    color: #777;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+hr {
+    margin: 1rem;
+    opacity: 0.75;
+}
