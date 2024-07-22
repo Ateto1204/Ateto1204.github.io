@@ -2,6 +2,7 @@ import { useState } from 'react'
 import Profile from './Profile/Profile.jsx'
 import Experience from './Experience/Experience.jsx'
 import Skill from './Skill/Skill.jsx'
+import Specialty from './Specialty/Specialty.jsx'
 import Footer from './Footer/Footer.jsx'
 import './App.css'
 
@@ -13,6 +14,7 @@ function App() {
       </main>
       <Experience />
       <Skill />
+      <Specialty />
       <Footer />
     </div>
   );
