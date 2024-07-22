@@ -1,4 +1,8 @@
 import styles from './Skill.module.css'
+import swiftLogo from '../assets/swift-logo.png'
+import reactLogo from '../assets/react-logo.png'
+import springBootLogo from '../assets/spring-boot-logo.png'
+import goLogo from '../assets/go-logo.png'
 
 function Skill() {
     const skillCircleIcon = <i className={styles['skill-circle-icon']}></i>
@@ -15,10 +19,12 @@ function Skill() {
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}
                             <span>Swift (SwiftUI, UIKit)</span>
+                            <img src={swiftLogo} id={styles['swift-logo']}/>
                         </div>
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}
                             <span>React.js</span>
+                            <img src={reactLogo} id={styles['react-logo']} />
                         </div>
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}
@@ -34,10 +40,12 @@ function Skill() {
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}
                             <span>Java (Spring Boot)</span>
+                            <img src={springBootLogo} id={styles['spring-boot-logo']} />
                         </div>
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}
                             <span>Go (Gin, Gorilla)</span>
+                            <img src={goLogo} id={styles['go-logo']}/>
                         </div>
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}
