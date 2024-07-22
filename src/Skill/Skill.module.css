@@ -57,6 +57,12 @@
     padding-right: 12px;
 }
 
+.skill-card-col img {
+    width: 30px;
+    position: absolute;
+    bottom: 10px;
+}
+
 .skill-circle-icon::before {
     content: "•";
     font-size: 1.3rem;
@@ -100,29 +106,4 @@
 hr {
     margin: 1rem;
     opacity: 0.75;
-}
-
-#spring-boot-logo {
-    width: 25px;
-    position: absolute;
-    top: 10px;
-    left: 185px;
-}
-
-#go-logo {
-    width: 30px;
-    position: absolute;
-    bottom: 12px;
-}
-
-#swift-logo {
-    width: 30px;
-    position: absolute;
-    bottom: 10px;
-}
-
-#react-logo {
-    width: 30px;
-    position: absolute;
-    bottom: 10px;
 }
