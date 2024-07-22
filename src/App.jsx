@@ -13,8 +13,8 @@ function App() {
         <Profile />
       </main>
       <Experience />
-      <Skill />
       <Specialty />
+      <Skill />
       <Footer />
     </div>
   );
