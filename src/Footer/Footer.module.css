@@ -1,0 +1,10 @@
+.footer {
+    padding-top: 16em;
+    display: block;
+    width: 100%;
+}
+
+.footer p {
+    text-align: center;
+    color: gray;
+}
