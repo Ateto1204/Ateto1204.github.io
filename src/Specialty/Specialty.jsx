@@ -3,7 +3,7 @@ import styles from './Specialty.module.css'
 function Specialty() {
     return (
         <section className={styles['specialty']}>
-            <h1>Specialty</h1>
+            <h1>Specialties</h1>
             <div className={styles['specialty-grid']}>
                 <div className={styles['specialty-item']}>
                     <h3>軟體工程</h3>
@@ -11,7 +11,7 @@ function Specialty() {
                 </div>
                 <div className={styles['specialty-item']}>
                     <h3>物件導向</h3>
-                    <p>熟悉 SOLID 原則以及設計模式，習慣且擅長基於 OOP 開發出具有低耦合高模組化的架構模式以達成槓桿未來。</p>
+                    <p>熟悉 SOLID 原則以及設計模式，習慣且擅長基於 OOP 開發出具有低耦合且高模組化特性的架構模式以達成槓桿未來。</p>
                 </div>
                 <div className={styles['specialty-item']}>
                     <h3>程式教學</h3>
