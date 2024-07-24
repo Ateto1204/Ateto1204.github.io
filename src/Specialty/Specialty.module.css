@@ -1,12 +1,12 @@
 .specialty {
   padding-top: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .specialty h1 {
   font-family: "Playfair Display", Georgia, serif;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   font-size: 4em;
   margin: 0;
   padding-bottom: 70px;
@@ -22,8 +22,7 @@
 }
 
 .specialty-grid {
-  display: grid flex;
-  justify-content: center;
+  display: grid;
   gap: 5rem;
   border-radius: 1.5rem;
   padding: 2rem;
@@ -39,6 +38,7 @@
 @media (max-width: 50em) {
   .specialty-grid {
     max-width: 300px;
-    grid-template-rows: repeat(3, 1);
+    gap: 0rem;
+    grid-template-rows: repeat(3, 1fr);
   }
 }
