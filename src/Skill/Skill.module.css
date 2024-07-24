@@ -42,7 +42,6 @@
 }
 
 .skill-card-col-set {
-    /* display: flex; */
     flex-wrap: wrap;
 }
 
