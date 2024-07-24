@@ -1,11 +1,17 @@
 .profile {
     margin: 140px;
-    padding-top: 100px;
     animation: fadeIn 1.6s ease-in-out;
+}
+
+@media (max-width: 50em) {
+    .profile {
+        margin-top: -20px;
+    }
 }
 
 @media (min-width: 880px) {
     .profile {
+        padding-top: 100px;
         display: flex;
     }
 }
