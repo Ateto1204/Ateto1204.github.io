@@ -10,14 +10,18 @@ body {
 }
 
 .container {
-  max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 50px;
+}
+
+@media (min-width: 50em) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 main {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
 }

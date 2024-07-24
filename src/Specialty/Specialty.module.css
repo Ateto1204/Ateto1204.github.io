@@ -21,13 +21,24 @@
   line-height: 2;
 }
 
+.specialty-grid {
+  display: grid flex;
+  justify-content: center;
+  gap: 5rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid gray;
+}
+
 @media (min-width: 50em) {
   .specialty-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 5rem;
-      border-radius: 1.5rem;
-      padding: 2rem;
-      border: 1px solid gray;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 50em) {
+  .specialty-grid {
+    max-width: 300px;
+    grid-template-rows: repeat(3, 1);
   }
 }
