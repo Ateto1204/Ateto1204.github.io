@@ -10,8 +10,8 @@ function Skill() {
     const skillCircleIcon = <i className={styles['skill-circle-icon']}></i>
     return (
         <section className={styles['skill']}>
-            <h1>Skill</h1>
-            <h2>My Developing Skill</h2>
+            <h1>Skills</h1>
+            <h2>My Development Skills</h2>
             <div className={styles['card-set']}>
                 {/* front-end skill */}
                 <div className={styles['card']}>
@@ -47,7 +47,7 @@ function Skill() {
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}
                             <span>Go (Gin, Gorilla)</span>
-                            <img src={goLogo} />
+                            <img src={goLogo} id={styles['go-logo']}/>
                         </div>
                         <div className={styles['skill-card-col']}>
                             {skillCircleIcon}

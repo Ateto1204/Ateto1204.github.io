@@ -1,29 +1,44 @@
 .specialty {
-    padding-top: 180px;
+  padding-top: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.specialty h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 4em;
+  margin: 0;
+  padding-bottom: 70px;
+}
+
+.specialty h3 {
+  font-family: "Karla", 'Arial', sans-serif;
+  font-size: 1.5rem;
+}
+
+.specialty p {
+  line-height: 2;
+}
+
+.specialty-grid {
+  display: grid;
+  gap: 5rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid gray;
+}
+
+@media (min-width: 50em) {
+  .specialty-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .specialty h1 {
-    font-family: "Playfair Display", Georgia, serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    font-size: 4em;
-    margin: 0;
-    padding-bottom: 70px;
+}
+
+@media (max-width: 50em) {
+  .specialty-grid {
+    max-width: 300px;
+    gap: 0rem;
+    grid-template-rows: repeat(3, 1fr);
   }
-  
-  .specialty h3 {
-    font-family: "Karla", 'Arial', sans-serif;
-    font-size: 1.5rem;
-  }
-  
-  @media (min-width: 50em) {
-    .specialty-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5rem;
-        border-radius: 1.5rem;
-        padding: 2.5rem;
-        border: 1px solid gray;
-    }
-  }
+}

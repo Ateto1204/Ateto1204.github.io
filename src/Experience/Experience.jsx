@@ -2,7 +2,7 @@ import styles from './Experience.module.css'
 
 function Experience() {
     return (
-        <div className={styles['experience']}>
+        <section className={styles['experience']}>
             <h1>Experience</h1>
             <h2>Software Engineer / Teacher / Leader</h2>
             <ul className={styles['timeline']}>
@@ -52,7 +52,7 @@ function Experience() {
                     </div>
                 </li>
             </ul>
-        </div>
+        </section>
     );
 }
 
