@@ -1,6 +1,5 @@
 .experience {
-    padding: 180px 30px 0px 20px;
-    animation: fadeIn 1.6s ease-in-out;
+    padding: 180px 30px 180px 30px;
 }
 
 .experience h1, h2, h3 {
@@ -63,13 +62,4 @@ ul {
     float: left;
     margin-top: 15px;
     color: #A6A6A6;
-}
-
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
 }

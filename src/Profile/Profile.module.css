@@ -1,6 +1,6 @@
 .profile {
     margin: 140px;
-    animation: fadeIn 1.6s ease-in-out;
+    padding: 50px;
 }
 
 @media (max-width: 50em) {
@@ -12,6 +12,7 @@
 @media (min-width: 880px) {
     .profile {
         padding-top: 100px;
+        padding-bottom: 100px;
         display: flex;
     }
 }
@@ -74,13 +75,4 @@
 
 .custom-list li::before {
   content: none;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }

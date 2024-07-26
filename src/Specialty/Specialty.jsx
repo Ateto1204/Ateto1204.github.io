@@ -1,8 +1,20 @@
+import React, { useEffect } from 'react';
+
 import styles from './Specialty.module.css'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function Specialty() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,
+            once: true,
+        });
+    }, []);
+
     return (
-        <section className={styles['specialty']}>
+        <section className={styles['specialty']} data-aos="fade-up">
             <h1>Specialties</h1>
             <div className={styles['specialty-grid']}>
                 <div className={styles['specialty-item']}>

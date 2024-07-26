@@ -1,8 +1,19 @@
+import React, { useEffect } from 'react';
+
 import styles from './Experience.module.css'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function Experience() {
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,
+            once: true,
+        });
+    }, []);
     return (
-        <section className={styles['experience']}>
+        <section className={styles['experience']} data-aos="fade-up">
             <h1>Experience</h1>
             <h2>Software Engineer / Teacher / Leader</h2>
             <ul className={styles['timeline']}>

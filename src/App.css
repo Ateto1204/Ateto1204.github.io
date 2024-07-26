@@ -11,7 +11,6 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 50px;
 }
 
 @media (min-width: 50em) {
@@ -20,8 +19,15 @@ body {
   }
 }
 
+@media (max-width: 600px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
 main {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 60px;
 }
