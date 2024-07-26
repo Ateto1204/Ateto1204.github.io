@@ -1,13 +1,26 @@
+import React, { useEffect } from 'react';
+
 import style from './Profile.module.css'
 import myProfile from '../assets/graduate-profile.png'
 import githubLogo from '../assets/github-logo.png'
 import mailIcon from '../assets/email.png'
 import linkedinIcon from '../assets/linkedin.png'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function Profile() {
     const aidmicsLink = <a href='https://www.aidmics.com/' target="_blank">Aidmics Biotechnology Ltd.</a>
+    
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,
+            once: true,
+        });
+    }, []);
+    
     return (
-        <div class={style['profile']}>
+        <div class={style['profile']} data-aos="fade-up">
             <img src={myProfile} alt="Dong-Yi Su" class={style['profile-image']} />
             <div className={style['profile-info']}>
                 <h1>Dong-Yi Su</h1>

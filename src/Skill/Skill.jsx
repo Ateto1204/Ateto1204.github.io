@@ -1,3 +1,5 @@
+import React, { useEffect } from 'react';
+
 import styles from './Skill.module.css'
 import swiftLogo from '../assets/swift-logo.png'
 import reactLogo from '../assets/react-logo.png'
@@ -6,10 +8,21 @@ import mysqlLogo from '../assets/mysql-logo.png'
 import firebaseLogo from '../assets/firebase-logo.png'
 import goLogo from '../assets/go-logo.png'
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function Skill() {
     const skillCircleIcon = <i className={styles['skill-circle-icon']}></i>
+    
+    useEffect(() => {
+        AOS.init({
+            duration: 1500,
+            once: true,
+        });
+    }, []);
+
     return (
-        <section className={styles['skill']}>
+        <section className={styles['skill']} data-aos="fade-up">
             <h1>Skills</h1>
             <h2>My Development Skills</h2>
             <div className={styles['card-set']}>
