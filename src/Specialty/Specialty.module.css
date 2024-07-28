@@ -4,6 +4,11 @@
   flex-wrap: wrap;
   justify-content: center;
 }
+@media (max-width: 600px) {
+  .specialty {
+    padding-bottom: 80px;
+  }
+}
 
 .specialty h1 {
   font-family: "Playfair Display", Georgia, serif;

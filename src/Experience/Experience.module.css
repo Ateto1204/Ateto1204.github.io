@@ -1,6 +1,11 @@
 .experience {
     padding: 180px 30px 180px 30px;
 }
+@media (max-width: 600px) {
+    .experience {
+        padding-bottom: 80px;
+    }
+}
 
 .experience h1, h2, h3 {
     font-family: "Playfair Display", Georgia, serif;
@@ -29,25 +34,32 @@
     }
 }
 
-
 .timeline {
+    display: flex;
+    justify-content: center;
+}
+
+.timeline-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
 }
 
 ul {
     margin-bottom: 1.5em;
 }
 
-.timeline li {
+.timeline-list li {
     overflow: hidden;
     margin: 0;
     position: relative;
 }
 
 .timeline-content {
-    width: 40%;
+    width: 60%;
     float: left;
-    /* border-left: 3px #e5e5d1 solid; */
     border-left: 3px pink solid;
     padding-left: 30px;
 }
@@ -56,7 +68,6 @@ ul {
     content: '';
     width: 12px;
     height: 12px;
-    /* background: #7390B3; */
     background: rgb(239, 93, 239);
     position: absolute;
     left: 166px;
@@ -73,7 +84,6 @@ ul {
     width: 170px;
     float: left;
     margin-top: 15px;
-    /* color: #A6A6A6; */
     color: #3C3C3C;
 }
 @media (max-width: 600px) {
