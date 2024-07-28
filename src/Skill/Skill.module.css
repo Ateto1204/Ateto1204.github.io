@@ -35,16 +35,20 @@
     }
 }
 
-.card .cardTitle {
+.card .card-title {
     text-align: center;
     font-size: 1.7rem;
     font-weight: bold;
+}
+@media (max-width: 600px) {
+    .card .card-title {
+        font-size: 1.2em;
+    }
 }
 
 .skill-card-col-set {
     flex-wrap: wrap;
 }
-
 @media (min-width: 50em) {
     .skill-card-col-set {
         display: flex;
@@ -57,10 +61,14 @@
     padding: 15px 0px 15px 0px;
     position: relative
 }
-
 @media (min-width: 50em) {
     .skill-card-col {
         width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .skill-card-col {
+        font-size: 0.9rem;
     }
 }
 
@@ -90,7 +98,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    font-size: 4em;
     margin: 0;
     padding-bottom: 20px;
 }
@@ -100,9 +107,14 @@
     justify-content: center;
     align-items: flex-start;
     font-size: 1.5em;
-    color: #777;
+    color: #3C3C3C;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+@media (max-width: 600px) {
+    .skill h2 {
+        font-size: 1em;
+    }
 }
 
 hr {

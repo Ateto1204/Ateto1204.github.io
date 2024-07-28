@@ -1,32 +1,37 @@
 .profile {
-    margin: 0px 140px 0px 140px;
+    margin: 50px;
     padding: 50px;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 600px) {
     .profile {
-        margin-top: -20px;
+        margin: 50px 0px 50px 0;
     }
 }
 
 @media (min-width: 880px) {
     .profile {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding: 150px 100px 150px 100px;
         display: flex;
     }
 }
 
 .profile-image {
     width: auto;
-    height: 360px;
     border-radius: 8px;
     box-shadow: 5px 5px 20px;
 }
 
 @media (min-width: 880px) {
     .profile-image {
-        margin-right: 140px;
+        height: 360px;
+        margin-right: 80px;
+    }
+}
+@media (max-width: 600px) {
+    .profile-image {
+        height: 120px;
+        margin-bottom: 15px;
     }
 }
 
@@ -40,6 +45,12 @@
     position: relative;
     top: 20px;
     transition: box-shadow 0.3s ease-in-out;
+}
+@media (max-width: 600px) {
+    .contact-icon img {
+        width: 18px;
+        top: 5px;
+    }
 }
 
 .github-icon {
@@ -55,8 +66,7 @@
 }
 
 .profile-info h1 {
-    font-family: "Playfair Display", Georgia, serif;;
-    font-size: 4em;
+    font-family: "Playfair Display", Georgia, serif;
     margin: 0;
     padding-bottom: 20px;
 }
@@ -64,16 +74,18 @@
 .profile-info h2 {
     font-family: "Playfair Display", Georgia, serif;;
     font-size: 1.5em;
-    color: #777;
+    color: #3C3C3C;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    .profile-info h2 {
+        font-size: 1em;
+    }
 }
 
 .profile-info p {
     line-height: 1.6;
     margin-bottom: 20px;
-}
-
-.custom-list li::before {
-  content: none;
 }
