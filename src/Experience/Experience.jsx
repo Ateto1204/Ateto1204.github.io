@@ -16,7 +16,8 @@ function Experience() {
         <section className={styles['experience']} data-aos="fade-up">
             <h1>Experience</h1>
             <h2>Software Engineer / Teacher / Leader</h2>
-            <ul className={styles['timeline']}>
+            <div className={styles['timeline']} >
+            <ul className={styles['timeline-list']}>
                 <li>
                     <strong>
                         <p className={styles['timeline-date']}>Jul2024 - Present</p>
@@ -63,6 +64,7 @@ function Experience() {
                     </div>
                 </li>
             </ul>
+            </div>
         </section>
     );
 }

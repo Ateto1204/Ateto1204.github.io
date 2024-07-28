@@ -8,3 +8,9 @@
     text-align: center;
     color: gray;
 }
+
+@media (max-width: 600px) {
+    p {
+        font-size: 0.6em;
+    }
+}
