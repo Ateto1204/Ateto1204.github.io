@@ -28,7 +28,7 @@ function Skill() {
             <div className={styles['card-set']}>
                 {/* front-end skill */}
                 <div className={styles['card']}>
-                    <div className={styles['cardTitle']}>Frontend</div>
+                    <div className={styles['card-title']}>Frontend</div>
                     <hr />
                     <div className={styles['skill-card-col-set']}>
                         <div className={styles['skill-card-col']}>
@@ -49,7 +49,7 @@ function Skill() {
                 </div>
                 {/* back-end skill */}
                 <div className={styles['card']}>
-                    <div className={styles['cardTitle']}>Backend</div>
+                    <div className={styles['card-title']}>Backend</div>
                     <hr />
                     <div className={styles['skill-card-col-set']}>
                         <div className={styles['skill-card-col']}>
