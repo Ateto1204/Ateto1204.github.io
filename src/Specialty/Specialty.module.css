@@ -28,6 +28,7 @@
   border-radius: 1.5rem;
   padding: 2rem;
   border: 1px solid gray;
+  box-shadow: 5px 5px 20px;
 }
 
 @media (min-width: 50em) {

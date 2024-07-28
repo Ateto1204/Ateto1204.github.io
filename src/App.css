@@ -2,7 +2,8 @@ body {
   font-family: "Karla", 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f9fa;
+  background-image: url(src/assets/background.JPG), url("../assets/email.png");
+  background-attachment: fixed;
   color: #333;
   display: flex;
   justify-content: center;
@@ -10,7 +11,13 @@ body {
 }
 
 .container {
-  margin: 0 auto;
+  margin: 60px 0px 60px 0px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 @media (min-width: 50em) {

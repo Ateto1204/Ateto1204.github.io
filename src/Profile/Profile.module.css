@@ -1,5 +1,5 @@
 .profile {
-    margin: 140px;
+    margin: 0px 140px 0px 140px;
     padding: 50px;
 }
 
@@ -21,6 +21,7 @@
     width: auto;
     height: 360px;
     border-radius: 8px;
+    box-shadow: 5px 5px 20px;
 }
 
 @media (min-width: 880px) {
