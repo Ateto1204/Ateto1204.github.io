@@ -7,7 +7,7 @@
   color: rgba(255, 255, 255, 0.87);
   background-color: #f8f9fa;
 
-  background-image: url(src/assets/background.JPG), url("../assets/email.png");
+  background-image: url(src/assets/background.jpg);
   background-attachment: fixed;
 
   font-synthesis: none;
