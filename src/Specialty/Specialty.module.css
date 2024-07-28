@@ -1,6 +1,5 @@
 .specialty {
-  padding-top: 180px;
-  padding-bottom: 180px;
+  padding: 180px 30px 180px 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8,14 +7,13 @@
 
 .specialty h1 {
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 4em;
   margin: 0;
   padding-bottom: 70px;
 }
 
 .specialty h3 {
   font-family: "Karla", 'Arial', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .specialty p {
