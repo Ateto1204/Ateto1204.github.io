@@ -5,6 +5,11 @@
     justify-content: center;
     align-items: end;
 }
+@media (max-width: 600px) {
+    .mode-btn {
+        inset: 15px;
+    }
+}
 
 .mode-btn button {
     background: none;
@@ -15,6 +20,11 @@
     width: 40px;
     height: auto;
     opacity: 0.82;
+}
+@media (max-width: 600px) {
+    .mode-btn img {
+        width: 30px;
+    }
 }
 
 .mode-btn img:hover {
