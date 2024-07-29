@@ -4,6 +4,8 @@ import Experience from './Experience/Experience.jsx'
 import Skill from './Skill/Skill.jsx'
 import Specialty from './Specialty/Specialty.jsx'
 import Footer from './Footer/Footer.jsx'
+
+import DarkModeButton from './Button/DarkModeButton.jsx'
 import './App.css'
 
 const images = [
@@ -34,15 +36,18 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-      <main>
-        <Profile />
-      </main>
-      <Experience />
-      <Specialty />
-      <Skill />
-      <Footer />
-    </div>
+    <>
+      <div className="container">
+        <main>
+          <Profile />
+        </main>
+        <Experience />
+        <Specialty />
+        <Skill />
+        <Footer />
+      </div>
+      <DarkModeButton />
+    </>
   );
 }
 
