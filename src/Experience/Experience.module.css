@@ -63,6 +63,11 @@ ul {
     border-left: 3px pink solid;
     padding-left: 30px;
 }
+@media (max-width: 400px) {
+    .timeline-content {
+        width: 50%;
+    }
+}
 
 .timeline-content:before {
     content: '';
