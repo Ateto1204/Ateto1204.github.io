@@ -1,0 +1,7 @@
+.mode-btn {
+    position: fixed;
+    inset: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
