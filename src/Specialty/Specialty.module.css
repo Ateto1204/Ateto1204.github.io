@@ -3,6 +3,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+    align-content: center;
 }
 @media (max-width: 600px) {
   .specialty {
@@ -12,13 +14,18 @@
 
 .specialty h1 {
   font-family: "Playfair Display", Georgia, serif;
-  margin: 0;
+  margin: 0 auto;
   padding-bottom: 70px;
 }
 
 .specialty h3 {
   font-family: "Karla", 'Arial', sans-serif;
-  font-size: 1rem;
+  font-size: 1.4rem;
+}
+@media (max-width: 600px) {
+  .specialty h3 {
+    font-size: 1rem;
+  }
 }
 
 .specialty p {
@@ -33,17 +40,19 @@
   border: 1px solid gray;
   box-shadow: 5px 5px 20px;
 }
-
-@media (min-width: 50em) {
+@media (min-width: 880px) {
   .specialty-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-@media (max-width: 50em) {
+@media (max-width: 880px) {
   .specialty-grid {
-    max-width: 300px;
     gap: 0rem;
     grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .specialty-grid {
+    max-width: 300px;
   }
 }
