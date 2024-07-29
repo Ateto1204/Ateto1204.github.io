@@ -14,4 +14,9 @@
 .mode-btn img {
     width: 40px;
     height: auto;
+    opacity: 0.82;
+}
+
+.mode-btn img:hover {
+    opacity: 0.48;
 }
