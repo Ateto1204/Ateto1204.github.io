@@ -1,0 +1,32 @@
+.mode-btn {
+    position: fixed;
+    inset: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+@media (max-width: 600px) {
+    .mode-btn {
+        inset: 15px;
+    }
+}
+
+.mode-btn button {
+    background: none;
+    padding: 0;
+}
+
+.mode-btn img {
+    width: 40px;
+    height: auto;
+    opacity: 0.82;
+}
+@media (max-width: 600px) {
+    .mode-btn img {
+        width: 30px;
+    }
+}
+
+.mode-btn img:hover {
+    opacity: 0.48;
+}
