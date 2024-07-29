@@ -22,6 +22,11 @@
   font-family: "Karla", 'Arial', sans-serif;
   font-size: 1.4rem;
 }
+@media (max-width: 600px) {
+  .specialty h3 {
+    font-size: 1rem;
+  }
+}
 
 .specialty p {
   line-height: 2;
