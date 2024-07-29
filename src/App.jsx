@@ -5,15 +5,15 @@ import Skill from './Skill/Skill.jsx'
 import Specialty from './Specialty/Specialty.jsx'
 import Footer from './Footer/Footer.jsx'
 
+import bg1 from './assets/background.JPG'
+import bg2 from './assets/background2.JPG'
+import bg3 from './assets/background3.JPG'
+import bg4 from './assets/background4.JPG'
+
 import DarkModeButton from './Button/DarkModeButton.jsx'
 import './App.css'
 
-const images = [
-  '/src/assets/background.JPG',
-  '/src/assets/background2.JPG',
-  '/src/assets/background3.JPG',
-  '/src/assets/background4.JPG',
-];
+const images = [bg1, bg2, bg3, bg4];
 
 function App() {
 
