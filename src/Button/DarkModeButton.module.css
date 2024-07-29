@@ -1,7 +1,17 @@
 .mode-btn {
     position: fixed;
-    inset: 60px;
+    inset: 40px;
     display: flex;
     justify-content: center;
     align-items: end;
+}
+
+.mode-btn button {
+    background: none;
+    padding: 0;
+}
+
+.mode-btn img {
+    width: 40px;
+    height: auto;
 }
