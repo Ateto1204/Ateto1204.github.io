@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
-import Profile from './Profile/Profile.jsx'
-import Experience from './Experience/Experience.jsx'
-import Skill from './Skill/Skill.jsx'
-import Specialty from './Specialty/Specialty.jsx'
-import Footer from './Footer/Footer.jsx'
+import Profile from './Profile/Profile'
+import Experience from './Experience/Experience'
+import Skill from './Skill/Skill'
+import Specialty from './Specialty/Specialty'
+import Footer from './Footer/Footer'
 
 import bg1 from './assets/background.JPG'
 import bg2 from './assets/background2.JPG'
 import bg3 from './assets/background3.JPG'
 import bg4 from './assets/background4.JPG'
 
-import DarkModeButton from './Button/DarkModeButton.jsx'
+import DarkModeButton from './Button/DarkModeButton'
 import './App.css'
 
 const images = [bg1, bg2, bg3, bg4];
