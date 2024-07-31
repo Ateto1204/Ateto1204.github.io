@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Profile from './Profile/Profile.jsx'
 import Experience from './Experience/Experience.jsx'
 import Skill from './Skill/Skill.jsx'
