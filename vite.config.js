@@ -6,4 +6,12 @@ export default defineConfig({
   plugins: [react()],
   assetsInclude: ['**/*.JPG'],
   base: "/", 
+    resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
 });
