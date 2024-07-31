@@ -9,7 +9,7 @@
 }
 
 .card {
-    background: none;
+    background: transparent;
     position: relative;
     display: flex;
     flex-wrap: wrap !important;
