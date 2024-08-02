@@ -1,9 +1,10 @@
 .mode-btn {
+    bottom: 50px;
+    left: 50%;
     position: fixed;
-    inset: 40px;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 }
 @media (max-width: 600px) {
     .mode-btn {
