@@ -8,7 +8,6 @@ import DarkModeButton from './Button/DarkModeButton'
 import ToggleBackground from './Api/ToggleBackground'
 import './App.css'
 
-
 function App() {
   
   ToggleBackground();

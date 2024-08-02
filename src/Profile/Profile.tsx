@@ -1,4 +1,8 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import style from './Profile.module.css'
 import myProfile from '../assets/graduate-profile.png'
@@ -29,13 +33,16 @@ function Profile() {
                 <p>我的專長領域包含譁眾取寵、軟體工程、物件導向、程式教學，目前主要投入於 iOS mobile APP 的設計開發與測試，並專注於相機軟體的開發。</p>
                 <div className={style['contact-icon']}>
                     <a href="https://github.com/Ateto1204" target="_blank">
-                    <img src={githubLogo} className={style['github-icon']} />
+                    {/* <img src={githubLogo} className={style['github-icon']} /> */}
+                        <FontAwesomeIcon icon={faGithub} size="xl" />
                     </a>
                     <a href="mailto:tonysu1204@gmail.com">
-                        <img src={mailIcon} className={style['mail-icon']} />
+                        {/* <img src={mailIcon} className={style['mail-icon']} /> */}
+                        <FontAwesomeIcon icon={faEnvelope} size="xl" />
                     </a>
                     <a href="https://www.linkedin.com/in/ateto" target="_blank">
-                    <img src={linkedinIcon} />
+                        {/* <img src={linkedinIcon} /> */}
+                        <FontAwesomeIcon icon={faLinkedin} size="xl" />
                     </a>
                 </div>
             </div>
