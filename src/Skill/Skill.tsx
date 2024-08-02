@@ -12,7 +12,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Skill() {
-    const skillCircleIcon = <i className={styles['skill-circle-icon']}></i>
     
     useEffect(() => {
         AOS.init({
@@ -32,18 +31,23 @@ function Skill() {
                     <hr />
                     <div className={styles['skill-card-col-set']}>
                         <div className={styles['skill-card-col']}>
-                            {skillCircleIcon}
-                            <span>Swift (SwiftUI, UIKit)</span>
-                            <img src={swiftLogo} />
+                            <span>
+                                Swift (SwiftUI, UIKit) &nbsp;
+                                <img src={swiftLogo} />
+                            </span>
+                            
                         </div>
                         <div className={styles['skill-card-col']}>
-                            {skillCircleIcon}
-                            <span>React.js</span>
-                            <img src={reactLogo} />
+                            <span>
+                                {/* {skillItemMark} */}
+                                React.js&nbsp;
+                                <img src={reactLogo} />
+                            </span>
                         </div>
                         <div className={styles['skill-card-col']}>
-                            {skillCircleIcon}
-                            <span>HTML/CSS/Javascript</span>
+                            <span>
+                                HTML/CSS/Javascript
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -53,24 +57,29 @@ function Skill() {
                     <hr />
                     <div className={styles['skill-card-col-set']}>
                         <div className={styles['skill-card-col']}>
-                            {skillCircleIcon}
-                            <span>Java (Spring Boot)</span>
-                            <img src={springBootLogo} />
+                            <span>
+                                Java (Spring Boot)&nbsp;&nbsp;
+                                <img src={springBootLogo} />
+                            </span>
                         </div>
                         <div className={styles['skill-card-col']}>
-                            {skillCircleIcon}
-                            <span>Go (Gin, Gorilla)</span>
-                            <img src={goLogo} id={styles['go-logo']}/>
+                            <span>
+                                Go (Gin, Gorilla)
+                                <img src={goLogo} id={styles['go-logo']}/>
+                            </span>
                         </div>
                         <div className={styles['skill-card-col']}>
-                            {skillCircleIcon}
-                            <span>GCP (Firebase)</span>
-                            <img src={firebaseLogo} />
+                            <span>
+                                GCP (Firebase)&nbsp;
+                                <img src={firebaseLogo} />
+                            </span>
+                            
                         </div>
                         <div className={styles['skill-card-col']}>
-                            {skillCircleIcon}
-                            <span>MySQL</span>
-                            <img src={mysqlLogo} />
+                            <span>
+                                MySQL&nbsp;
+                                <img src={mysqlLogo} />
+                            </span>
                         </div>
                     </div>
                 </div>
