@@ -32,7 +32,7 @@ function Skill() {
                     <div className={styles['skill-card-col-set']}>
                         <div className={styles['skill-card-col']}>
                             <span>
-                                Swift (SwiftUI, UIKit)&nbsp;
+                                Swift (SwiftUI, UIKit) &nbsp;
                                 <img src={swiftLogo} />
                             </span>
                             
