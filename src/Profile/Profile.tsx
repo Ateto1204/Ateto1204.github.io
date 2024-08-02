@@ -34,15 +34,15 @@ function Profile() {
                 <div className={style['contact-icon']}>
                     <a href="https://github.com/Ateto1204" target="_blank">
                     {/* <img src={githubLogo} className={style['github-icon']} /> */}
-                        <FontAwesomeIcon icon={faGithub} />
+                        <FontAwesomeIcon icon={faGithub} size="xl" />
                     </a>
                     <a href="mailto:tonysu1204@gmail.com">
                         {/* <img src={mailIcon} className={style['mail-icon']} /> */}
-                        <FontAwesomeIcon icon={faEnvelope} />
+                        <FontAwesomeIcon icon={faEnvelope} size="xl" />
                     </a>
                     <a href="https://www.linkedin.com/in/ateto" target="_blank">
                         {/* <img src={linkedinIcon} /> */}
-                        <FontAwesomeIcon icon={faLinkedin} />
+                        <FontAwesomeIcon icon={faLinkedin} size="xl" />
                     </a>
                 </div>
             </div>
