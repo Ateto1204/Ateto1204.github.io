@@ -11,6 +11,7 @@ export default defineConfig({
     alias: {
       '@': '/src',
       '@fortawesome/free-regular-svg-icons': path.resolve(__dirname, 'node_modules/@fortawesome/free-regular-svg-icons'),
+      '@fortawesome/free-brands-svg-icons': path.resolve(__dirname, 'node_modules/@fortawesome/free-brands-svg-icons'),
     },
   }, 
   build: {
