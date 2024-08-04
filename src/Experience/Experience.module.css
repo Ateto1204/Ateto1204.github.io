@@ -11,12 +11,17 @@
     font-family: "Playfair Display", Georgia, serif;
 }
 
-.experience h1 {
+.experience-title {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 0;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+}
+
+.experience-title h1 {
+    margin: 0;
+    padding-left: 20px;
 }
 
 .experience h2 {

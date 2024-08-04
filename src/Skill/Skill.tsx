@@ -12,7 +12,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faCodeMerge } from '@fortawesome/free-solid-svg-icons';
 
 function Skill() {
     
@@ -25,7 +25,10 @@ function Skill() {
 
     return (
         <section className={styles['skill']} data-aos="fade-up">
-            <h1>Skills</h1>
+            <div className={styles['skill-title']}>
+                <FontAwesomeIcon icon={faCodeMerge} size="xl" />
+                <h1>Skills</h1>
+            </div>
             <h2>My Development Skills</h2>
             <div className={styles['card-set']}>
                 {/* front-end skill */}
