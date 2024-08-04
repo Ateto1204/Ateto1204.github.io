@@ -5,9 +5,9 @@ import bg2 from '../assets/background2.JPG'
 import bg3 from '../assets/background3.JPG'
 import bg4 from '../assets/background4.JPG'
 
+const images = [bg1, bg2, bg3, bg4];
+
 function ToggleBackground() {
-    const images = [bg1, bg2, bg3, bg4];
-    
     const randomImage = images[Math.floor(Math.random() * images.length)];
     const root = document.documentElement;
     root.style.backgroundImage = `url(${randomImage})`;
