@@ -58,12 +58,19 @@
     padding-bottom: 20px;
 }
 
-.profile-info h2 {
-    font-family: "Playfair Display", Georgia, serif;;
-    font-size: 1.5em;
-    color: #3C3C3C;
+.profile-info-subtitle {
+    display: flex;
+    align-items: center;
     margin-top: 10px;
     margin-bottom: 20px;
+}
+
+.profile-info-subtitle h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 1.5em;
+    color: #3C3C3C;
+    margin: 0;
+    padding: 0 10px;
 }
 @media (max-width: 600px) {
     .profile-info h2 {
