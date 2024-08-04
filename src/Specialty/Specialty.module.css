@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-    align-content: center;
+  align-content: center;
 }
 @media (max-width: 600px) {
   .specialty {
@@ -21,6 +21,9 @@
 .specialty h3 {
   font-family: "Karla", 'Arial', sans-serif;
   font-size: 1.4rem;
+  height: 20%;
+  margin: 0;
+  padding-left: 10px;
 }
 @media (max-width: 600px) {
   .specialty h3 {
@@ -30,6 +33,7 @@
 
 .specialty p {
   line-height: 2;
+  margin: 0;
 }
 
 .specialty-grid {
@@ -56,3 +60,22 @@
     max-width: 300px;
   }
 }
+
+.specialty-item {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin: 15px 0;
+}
+
+.specialty-item-title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-bottom: 10px;
+}
+
+/* .specialty-item p {
+  flex-direction: column;
+} */
