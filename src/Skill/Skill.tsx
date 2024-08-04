@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import styles from './Skill.module.css'
 import swiftLogo from '../assets/swift-logo.png'
@@ -10,6 +10,9 @@ import goLogo from '../assets/go-logo.png'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCode } from '@fortawesome/free-solid-svg-icons';
 
 function Skill() {
     
@@ -32,21 +35,17 @@ function Skill() {
                     <div className={styles['skill-card-col-set']}>
                         <div className={styles['skill-card-col']}>
                             <span>
-                                Swift (SwiftUI, UIKit) &nbsp;
+                                <FontAwesomeIcon icon={faCode} />
+                                &nbsp;Swift (SwiftUI, UIKit)&nbsp;
                                 <img src={swiftLogo} />
                             </span>
                             
                         </div>
                         <div className={styles['skill-card-col']}>
                             <span>
-                                {/* {skillItemMark} */}
-                                React.js&nbsp;
+                                <FontAwesomeIcon icon={faCode} />
+                                &nbsp;React.js&nbsp;
                                 <img src={reactLogo} />
-                            </span>
-                        </div>
-                        <div className={styles['skill-card-col']}>
-                            <span>
-                                HTML/CSS/Javascript
                             </span>
                         </div>
                     </div>
@@ -58,26 +57,30 @@ function Skill() {
                     <div className={styles['skill-card-col-set']}>
                         <div className={styles['skill-card-col']}>
                             <span>
-                                Java (Spring Boot)&nbsp;&nbsp;
+                                <FontAwesomeIcon icon={faCode} />
+                                &nbsp;Java (Spring Boot)&nbsp;&nbsp;
                                 <img src={springBootLogo} />
                             </span>
                         </div>
                         <div className={styles['skill-card-col']}>
                             <span>
-                                Go (Gin, Gorilla)
-                                <img src={goLogo} id={styles['go-logo']}/>
+                                <FontAwesomeIcon icon={faCode} />
+                                &nbsp;Go (Gin, Gorilla)
+                                <img src={goLogo} style={{width: "38px"}}/>
                             </span>
                         </div>
                         <div className={styles['skill-card-col']}>
                             <span>
-                                GCP (Firebase)&nbsp;
+                                <FontAwesomeIcon icon={faCode} />
+                                &nbsp;GCP (Firebase)&nbsp;
                                 <img src={firebaseLogo} />
                             </span>
                             
                         </div>
                         <div className={styles['skill-card-col']}>
                             <span>
-                                MySQL&nbsp;
+                                <FontAwesomeIcon icon={faCode} />
+                                &nbsp;MySQL&nbsp;
                                 <img src={mysqlLogo} />
                             </span>
                         </div>

@@ -1,6 +1,7 @@
 .mode-btn {
     bottom: 50px;
     left: 50%;
+    right: 50%;
     position: fixed;
     display: flex;
     justify-content: center;
@@ -8,7 +9,7 @@
 }
 @media (max-width: 600px) {
     .mode-btn {
-        inset: 15px;
+        bottom: 10px;
     }
 }
 

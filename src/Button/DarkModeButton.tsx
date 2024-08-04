@@ -14,7 +14,11 @@ function DarkModeButton() {
     }
 
     useEffect(() => {
-        document.body.style.color = theme === sun ? `#333` : `white`
+        document.body.style.color = theme === sun ? `#333` : `#F5F5F5`;
+        document.querySelector('a')!.style.color = theme === sun ?  `#D0D0D0` : `#333`;
+        document.querySelectorAll('h2').forEach(h2 => {
+            h2.style.color = theme === sun ? `#333` : `#F5F5F5`;
+        });
     }, [theme]);
 
     return (
