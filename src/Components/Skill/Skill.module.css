@@ -81,10 +81,11 @@
     padding-right: 12px;
 }
 
-.skill-card-col img {
-    width: 30px;
+.skill-card-col-icon {
+    width: 25px;
+    height: auto;
     position: absolute;
-    bottom: 14px;
+    padding-left: 6px;
 }
 
 .skill-title {
