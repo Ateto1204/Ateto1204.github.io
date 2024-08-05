@@ -33,3 +33,8 @@
 .mode-btn .icon:hover {
     opacity: 0.48;
 }
+
+button {
+    border: transparent;
+    cursor: pointer;
+}
