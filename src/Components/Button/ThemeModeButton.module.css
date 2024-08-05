@@ -18,17 +18,18 @@
     padding: 0;
 }
 
-.mode-btn img {
-    width: 40px;
+.mode-btn .icon {
+    color: #333;
+    width: 45px;
     height: auto;
     opacity: 0.82;
 }
 @media (max-width: 600px) {
-    .mode-btn img {
-        width: 30px;
+    .mode-btn .icon {
+        width: 35px;
     }
 }
 
-.mode-btn img:hover {
+.mode-btn .icon:hover {
     opacity: 0.48;
 }
