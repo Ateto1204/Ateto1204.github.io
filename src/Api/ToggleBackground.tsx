@@ -7,7 +7,7 @@ const lightBackground = [bg1, bg2];
 const darkBackground = [bg3, bg4];
 
 async function ToggleBackground(theme: String) {
-    const randomImage = theme === "dark" ? 
+    const randomImage = theme === "light" ? 
                         lightBackground[Math.floor(Math.random() * lightBackground.length)] : 
                         darkBackground[Math.floor(Math.random() * darkBackground.length)];
     const root = document.documentElement;

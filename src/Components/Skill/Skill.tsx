@@ -1,12 +1,6 @@
 import { useEffect } from 'react';
 
 import styles from './Skill.module.css'
-import swiftLogo from '../../assets/logo/swift-logo.png'
-import reactLogo from '../../assets/logo/react-logo.png'
-import springBootLogo from '../../assets/logo/spring-boot-logo.png'
-import mysqlLogo from '../../assets/logo/mysql-logo.png'
-import firebaseLogo from '../../assets/logo/firebase-logo.png'
-import goLogo from '../../assets/logo/go-logo.png'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

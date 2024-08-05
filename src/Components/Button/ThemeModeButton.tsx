@@ -3,17 +3,18 @@ import { MdSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 
 import ToggleBackground from '../../Api/ToggleBackground'
-import styles from './DarkModeButton.module.css'
+import styles from './ThemeModeButton.module.css'
 
-function DarkModeButton() {
+function ThemeModeButton() {
     const [theme, setTheme] = useState("light");
 
     const toggleTheme = () => {
-        setTheme(theme === "light" ? "dark" : "light");
         ToggleBackground(theme);
+        setTheme(theme === "light" ? "dark" : "light");
     }
 
     useEffect(() => {
+        ToggleBackground(theme)
         document.body.style.color = theme === "light" ? `#333` : `#F5F5F5`;
         document.querySelectorAll('a').forEach(a => {
             if (a.href === 'https://www.aidmics.com/') {
@@ -39,4 +40,4 @@ function DarkModeButton() {
         </div>
     );
 }
-export default DarkModeButton;
+export default ThemeModeButton;

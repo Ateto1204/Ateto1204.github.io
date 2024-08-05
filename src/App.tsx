@@ -4,14 +4,10 @@ import Skill from './Components/Skill/Skill'
 import Specialty from './Components/Specialty/Specialty'
 import Footer from './Components/Footer/Footer'
 
-import DarkModeButton from './Components/Button/DarkModeButton'
-import ToggleBackground from './Api/ToggleBackground'
+import ThemeModeButton from './Components/Button/ThemeModeButton'
 import './App.css'
 
 function App() {
-  
-  ToggleBackground('init', 'init');
-
   return (
     <>
       <div className="container">
@@ -23,7 +19,7 @@ function App() {
         <Skill />
         <Footer />
       </div>
-      <DarkModeButton />
+      <ThemeModeButton />
     </>
   );
 }
