@@ -12,7 +12,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function Profile() {
-    const aidmicsLink = <a href='https://www.aidmics.com/' target="_blank">Aidmics Biotechnology Ltd.</a>
+    const aidmicsLink = <a 
+                            href='https://www.aidmics.com/'
+                            target='_blank'
+                            style={{transition: `0.2s`}}
+                            onMouseEnter={e => e.currentTarget.style.opacity = `0.41` }
+                            onMouseLeave={e => e.currentTarget.style.opacity = `0.82` }
+                        >
+                            Aidmics Biotechnology Ltd.
+                        </a>
     
     useEffect(() => {
         AOS.init({

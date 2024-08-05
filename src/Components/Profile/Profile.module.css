@@ -46,6 +46,10 @@
     opacity: 0.82;
     padding: 10px;
 }
+.contact-icon a:hover {
+    transition: 0.18s;
+    opacity: 0.41;
+}
 
 .profile-info {
     max-width: 590px;
