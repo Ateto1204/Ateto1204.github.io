@@ -1,13 +1,12 @@
-import bg1 from '../assets/background.JPG'
-import bg2 from '../assets/background2.JPG'
-import bg3 from '../assets/background3.JPG'
-import bg4 from '../assets/background4.JPG'
+import bg1 from '../assets/background/background.JPG'
+import bg2 from '../assets/background/background2.JPG'
+import bg3 from '../assets/background/background3.JPG'
+import bg4 from '../assets/background/background4.JPG'
 
-const images = [bg1, bg2, bg3, bg4];
 const lightBackground = [bg1, bg2];
 const darkBackground = [bg3, bg4];
 
-async function ToggleBackground(theme: String, sun: String, moon: String) {
+async function ToggleBackground(theme: String, moon: String) {
     const randomImage = theme === moon ? 
                         lightBackground[Math.floor(Math.random() * lightBackground.length)] : 
                         darkBackground[Math.floor(Math.random() * darkBackground.length)];

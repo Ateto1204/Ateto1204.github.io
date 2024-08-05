@@ -1,16 +1,16 @@
-import Profile from './Profile/Profile'
-import Experience from './Experience/Experience'
-import Skill from './Skill/Skill'
-import Specialty from './Specialty/Specialty'
-import Footer from './Footer/Footer'
+import Profile from './Components/Profile/Profile'
+import Experience from './Components/Experience/Experience'
+import Skill from './Components/Skill/Skill'
+import Specialty from './Components/Specialty/Specialty'
+import Footer from './Components/Footer/Footer'
 
-import DarkModeButton from './Button/DarkModeButton'
+import DarkModeButton from './Components/Button/DarkModeButton'
 import ToggleBackground from './Api/ToggleBackground'
 import './App.css'
 
 function App() {
   
-  ToggleBackground();
+  ToggleBackground('init', 'init');
 
   return (
     <>

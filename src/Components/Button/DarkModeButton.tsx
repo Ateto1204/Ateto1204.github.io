@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from 'react'
-import ToggleBackground from '../Api/ToggleBackground'
+import { useState, useEffect } from 'react'
+import ToggleBackground from '../../Api/ToggleBackground'
 import styles from './DarkModeButton.module.css'
 
-import moon from '../assets/moon.png'
-import sun from '../assets/sun.png'
+import moon from '../../assets/icon/moon.png'
+import sun from '../../assets/icon/sun.png'
 
 function DarkModeButton() {
     const [theme, setTheme] = useState(sun);
 
     const toggleTheme = () => {
         setTheme(theme === sun ? moon : sun);
-        ToggleBackground(theme, sun, moon);
+        ToggleBackground(theme, moon);
     }
 
     useEffect(() => {

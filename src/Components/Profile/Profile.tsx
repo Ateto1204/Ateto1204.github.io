@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 
 import { faLinkedin, faGithub, faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faBedPulse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './Profile.module.css'
-import myProfile from '../assets/graduate-profile.png'
+import myProfile from '../../assets/profile/graduate-profile.png'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { faBedPulse } from '@fortawesome/free-solid-svg-icons';
 
 function Profile() {
     const aidmicsLink = <a href='https://www.aidmics.com/' target="_blank">Aidmics Biotechnology Ltd.</a>
