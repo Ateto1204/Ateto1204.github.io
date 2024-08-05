@@ -15,15 +15,9 @@ body {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 60px;
+  max-width: 1200px;
 }
-
-@media (min-width: 50em) {
-  .container {
-    margin: 60px;
-    max-width: 1200px;
-  }
-}
-
 @media (max-width: 600px) {
   .container {
     margin: 25px;
@@ -36,4 +30,14 @@ main {
   justify-content: center;
   align-items: center;
   padding: 60px 0px 60px 0px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.1em;
+  }
 }
