@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 import styles from './Experience.module.css'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
 function Experience() {
     useEffect(() => {
@@ -14,7 +16,10 @@ function Experience() {
     }, []);
     return (
         <section className={styles['experience']} data-aos="fade-up">
-            <h1>Experience</h1>
+            <div className={styles['experience-title']}>
+                <FontAwesomeIcon icon={faCodeBranch} size='xl'/>
+                <h1>Experience</h1>
+            </div>
             <h2>Software Engineer / Teacher / Leader</h2>
             <div className={styles['timeline']} >
             <ul className={styles['timeline-list']}>

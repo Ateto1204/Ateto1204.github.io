@@ -1,18 +1,18 @@
 import { useEffect } from 'react';
 
 import styles from './Skill.module.css'
-import swiftLogo from '../assets/swift-logo.png'
-import reactLogo from '../assets/react-logo.png'
-import springBootLogo from '../assets/spring-boot-logo.png'
-import mysqlLogo from '../assets/mysql-logo.png'
-import firebaseLogo from '../assets/firebase-logo.png'
-import goLogo from '../assets/go-logo.png'
+import swiftLogo from '../../assets/logo/swift-logo.png'
+import reactLogo from '../../assets/logo/react-logo.png'
+import springBootLogo from '../../assets/logo/spring-boot-logo.png'
+import mysqlLogo from '../../assets/logo/mysql-logo.png'
+import firebaseLogo from '../../assets/logo/firebase-logo.png'
+import goLogo from '../../assets/logo/go-logo.png'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCode } from '@fortawesome/free-solid-svg-icons';
+import { faCode, faCodeMerge } from '@fortawesome/free-solid-svg-icons';
 
 function Skill() {
     
@@ -25,7 +25,10 @@ function Skill() {
 
     return (
         <section className={styles['skill']} data-aos="fade-up">
-            <h1>Skills</h1>
+            <div className={styles['skill-title']}>
+                <FontAwesomeIcon icon={faCodeMerge} size="xl" />
+                <h1>Skills</h1>
+            </div>
             <h2>My Development Skills</h2>
             <div className={styles['card-set']}>
                 {/* front-end skill */}

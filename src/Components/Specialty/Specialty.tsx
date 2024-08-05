@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook, faCodePullRequest, faCubes } from '@fortawesome/free-solid-svg-icons';
+import { faBook, faCodeCompare, faCodePullRequest, faCubes } from '@fortawesome/free-solid-svg-icons';
 
 function Specialty() {
     useEffect(() => {
@@ -18,7 +18,10 @@ function Specialty() {
 
     return (
         <section className={styles['specialty']} data-aos="fade-up">
-            <h1>Specialties</h1>
+            <div className={styles['specialty-title']}>
+                <FontAwesomeIcon icon={faCodeCompare} size="xl" />
+                <h1>Specialties</h1>
+            </div>
             <div className={styles['specialty-grid']}>
                 <div className={styles['specialty-item']}>
                     <div className={styles['specialty-item-title']}>
