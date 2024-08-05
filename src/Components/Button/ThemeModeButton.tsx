@@ -31,7 +31,6 @@ function ThemeModeButton() {
     return (
         <div className={styles['mode-btn']}>
             <button onClick={toggleTheme}>
-                {/* <img src={theme} /> */}
                 { theme === "light" ? 
                 <MdSunny className={styles['icon']} /> : 
                 <FaMoon className={styles['icon']} /> }
