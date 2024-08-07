@@ -6,7 +6,7 @@ import { faBedPulse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import styles from './Profile.module.css'
-import myProfile from '../../assets/profile/graduate-profile.png'
+import myProfile from '../../assets/profile.png'
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
