@@ -1,11 +1,8 @@
-// import styles from './Footer.module.css'
-import '../../index.css';
-
 function Footer() {
     let currentYear = new Date().getFullYear();
     return (
-        <section className="mt-44 mb-4">
-          <p className="text-center text-gray-500 opacity-75">© Copyright ©{currentYear} All rights reserved</p>
+        <section className='mt-44 mb-4'>
+          <p className='text-center text-gray-500 opacity-75'>© Copyright ©{currentYear} All rights reserved</p>
         </section>
     );
 }
