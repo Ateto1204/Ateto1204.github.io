@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
-const githubUsername = "Ateto1204";
+const githubUsername = 'Ateto1204';
 const githubAvatarUrl = `https://github.com/${githubUsername}.png`;
 
 const setFavicon = (url: string) => {

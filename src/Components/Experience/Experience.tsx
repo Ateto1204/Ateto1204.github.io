@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 
-
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -125,4 +124,4 @@ function Experience() {
     );
 }
 
-export default Experience
+export default Experience;

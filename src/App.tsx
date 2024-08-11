@@ -6,13 +6,13 @@ import Footer from './Components/Footer/Footer'
 
 import ThemeModeButton from './Components/Button/ThemeModeButton'
 import FaviconSetter from './Api/FaviconSetter'
-import './App.css'
 
 function App() {
   return (
-    <>
+    <div className='flex justify-center items-center'>
       <FaviconSetter />
-      <nav className='shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[20px] border max-w-[1200px] m-[60px] rounded-2xl border-solid border-[rgba(255,255,255,0.3)]
+      <nav className='shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[20px] m-[60px]
+                      border max-w-[1200px] rounded-2xl border-solid border-[rgba(255,255,255,0.3)]
                       background: rgba(255, 255, 255, 0.05)
                       -webkit-backdrop-filter: blur(20px)'>
         <main className='flex justify-center items-center px-0 py-[60px]'>
@@ -24,7 +24,7 @@ function App() {
         <Footer />
       </nav>
       <ThemeModeButton />
-    </>
+    </div>
   );
 }
 

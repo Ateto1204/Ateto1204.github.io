@@ -29,18 +29,26 @@ function Profile() {
     }, []);
     
     return (
-        <div className='flex m-14 p-12 px-24 py-36 items-end' data-aos='fade-up'>
-            <img src={myProfile} alt='Dong-Yi Su' className='h-[360px] w-auto rounded-lg shadow-[1px_1px_10px] mr-20' />
-            <div className='max-w-xl'>
+        <div className='flex m-14 p-12 px-24 py-36 items-end' data-aos='fade-up'> {/* profile */}
+            <img 
+                src={myProfile} 
+                alt='Dong-Yi Su' 
+                className='h-[360px] w-auto rounded-lg shadow-[1px_1px_10px] mr-20' 
+            /> {/* profile-image */}
+            <div className='max-w-xl'> {/* profile-info */}
                 <h1 className='font-serif text-[3.2rem] leading font-semibold mb-8'>Dong-Yi Su</h1>
-                <div className='flex items-center mt-[10px] mb-5'>
+                <div className='flex items-center mt-[10px] mb-5'> {/* profile-info-subtitle */}
                     <FontAwesomeIcon icon={faBedPulse} />
                     <h2 className='font-serif text-2xl font-semibold px-[10px]'>Software Engineer / Developer</h2>
                     <FontAwesomeIcon icon={faAccessibleIcon} size='lg' />
                 </div>
-                <p className='text-[1.05rem] leading-[1.6] mb-5'>這裡是蘇東毅 aka Ateto，雖然很想休學但姑且就讀國立臺灣海洋大學資訊工程學系二年級，並在 {aidmicsLink} 擔任 Software Engineer Intern。</p>
-                <p className='text-[1.05rem] leading-[1.6] mb-5'>我的專長領域包含譁眾取寵、軟體工程、物件導向、程式教學，目前主要投入於 iOS mobile APP 的設計開發與測試，並專注於相機軟體的開發。</p>
-                <div className='pt-3'>
+                <p className='text-[1.05rem] leading-[1.6] mb-5'>
+                    這裡是蘇東毅 aka Ateto，雖然很想休學但姑且就讀國立臺灣海洋大學資訊工程學系二年級，並在 {aidmicsLink} 擔任 Software Engineer Intern。
+                </p>
+                <p className='text-[1.05rem] leading-[1.6] mb-5'>
+                    我的專長領域包含譁眾取寵、軟體工程、物件導向、程式教學，目前主要投入於 iOS mobile APP 的設計開發與測試，並專注於相機軟體的開發。
+                </p>
+                <div className='pt-3'> {/* contact-icon */}
                     <a 
                         href='https://github.com/Ateto1204'
                         target='_blank'
@@ -68,4 +76,4 @@ function Profile() {
     );
 }
 
-export default Profile
+export default Profile;
