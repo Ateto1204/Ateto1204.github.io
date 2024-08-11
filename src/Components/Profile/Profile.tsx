@@ -5,7 +5,6 @@ import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faBedPulse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// import './Profile.module.css';
 import myProfile from '../../assets/profile.png';
 
 import AOS from 'aos';
