@@ -15,7 +15,7 @@ function Specialty() {
     }, []);
 
     return (
-        <section  data-aos="fade-up">
+        <section className=' flex flex-wrap justify-center flex-col items-center px-44 py-8' data-aos="fade-up">
             <div className='flex flex-row justify-center'>
                 <FontAwesomeIcon icon={faCodeCompare} size="xl" />
                 <h1 className='pl-2'>Specialties</h1>
