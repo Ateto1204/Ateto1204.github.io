@@ -12,10 +12,10 @@ function App() {
   return (
     <>
       <FaviconSetter />
-      <nav className='@apply shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[20px] border max-w-[1200px] m-[60px] rounded-2xl border-solid border-[rgba(255,255,255,0.3)]
+      <nav className='shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[20px] border max-w-[1200px] m-[60px] rounded-2xl border-solid border-[rgba(255,255,255,0.3)]
                       background: rgba(255, 255, 255, 0.05)
                       -webkit-backdrop-filter: blur(20px)'>
-        <main className='@apply flex justify-center items-center px-0 py-[60px]'>
+        <main className='flex justify-center items-center px-0 py-[60px]'>
           <Profile />
         </main>
         <Experience />
