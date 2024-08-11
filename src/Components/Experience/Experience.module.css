@@ -16,7 +16,6 @@
     justify-content: center;
     align-items: center;
     margin: 0;
-    /* padding-bottom: 20px; */
 }
 
 .experience-title h1 {
@@ -33,7 +32,7 @@
     margin-top: 10px;
     margin-bottom: 40px;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .experience h2 {
         font-size: 1em;
     }
@@ -68,9 +67,14 @@ ul {
     border-left: 3px pink solid;
     padding-left: 30px;
 }
-@media (max-width: 400px) {
+@media (max-width: 800px) {
     .timeline-content {
         width: 50%;
+    }
+}
+@media (max-width: 600px) {
+    .timeline-content h3 {
+        font-size: 0.8em;
     }
 }
 
@@ -84,7 +88,7 @@ ul {
     top: 24px;
     border-radius: 100%;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .timeline-content:before {
         left: 66px;
     }
@@ -96,8 +100,14 @@ ul {
     margin-top: 15px;
     color: #3C3C3C;
 }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .timeline-date {
         width: 70px;
+        font-size: 0.7em;
     }
 }
+/* @media (max-width: 600px) {
+    .timeline-date p {
+        font-size: 0.8em;
+    }
+} */

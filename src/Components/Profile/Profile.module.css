@@ -18,23 +18,34 @@
     width: auto;
     border-radius: 8px;
     box-shadow: 5px 5px 20px;
+    height: 360px;
+    margin-right: 80px;
 }
-@media (min-width: 880px) {
+@media (max-width: 1000px) {
     .profile-image {
-        height: 360px;
-        margin-right: 80px;
+        height: 220px;
     }
 }
 @media (max-width: 880px) {
     .profile-image {
         height: 150px;
+        margin: 0;
         margin-bottom: 15px;
+    }
+    .profile img {
+        left: 50%;
+        right: 50%;
     }
 }
 @media (max-width: 600px) {
     .profile-image {
         height: 120px;
+        margin: 0;
         margin-bottom: 15px;
+    }
+    .profile img {
+        left: 50%;
+        right: 50%;
     }
 }
 
@@ -75,13 +86,17 @@
     margin: 0;
     padding: 0 10px;
 }
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+    .profile-info h1 {
+        font-size: 2.5em;
+    }
     .profile-info h2 {
         font-size: 1em;
     }
 }
 
-.profile-info p {
+p {
+    font-size: 1.05rem;
     line-height: 1.6;
     margin-bottom: 20px;
 }
