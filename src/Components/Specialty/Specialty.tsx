@@ -23,7 +23,7 @@ function Specialty() {
                 <FontAwesomeIcon icon={faCodeCompare} size='xl' />
                 <h1 className='font-serif font-semibold text-6xl pl-5 m-0'>Specialties</h1>
             </div>
-            <div className='grid grid-cols-3 gap-20 
+            <div className='grid md:grid-cols-3 sm:gap-20 
                             border rounded-3xl border-solid border-[gray]
                             shadow-[5px_5px_20px] p-8 w-fit'> {/* specialty-grid */}
                 <div className='flex flex-col flex-wrap m-2'> {/* specialty-item */}
