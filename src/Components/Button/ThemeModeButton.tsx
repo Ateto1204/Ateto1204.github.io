@@ -27,10 +27,10 @@ function ThemeModeButton() {
         });
     }, [theme]);
 
-    const iconStyle = 'w-12 h-auto opacity-80 hover:opacity-45 hover:transition-opacity'; // icon
+    const iconStyle = 'w-9 md:w-12 h-auto opacity-80 hover:opacity-45 hover:transition-opacity'; // icon
     return (
         <button 
-            className='fixed left-1/2 right-1/2 bottom-14 p-0' 
+            className='fixed left-1/2 right-1/2 bottom-3 md:bottom-14 p-0' 
             onClick={toggleTheme}
         > {/* mode-btn */}
             { 
