@@ -37,7 +37,7 @@ function Skill() {
             <div className='flex justify-evenly flex-wrap'> {/* card-set */}
                 {/* front-end skill */}
                 <div className='flex flex-col flex-[0_0_auto] grow-0 shrink-0 basis-auto
-                                min-w-[300px] lg:min-w-[500px] w-5/12 shadow-[1px_1px_10px] 
+                                min-w-[300px] lg:min-w-[490px] xl:min-w-[550px] w-5/12 shadow-[1px_1px_10px]
                                 border rounded-2xl  border-[rgb(184,190,197) 
                                 p-6 mt-4'> {/* card */}
                     <div className='text-center text-xl md:text-2xl font-semibold'> {/* card-title */}
@@ -46,7 +46,7 @@ function Skill() {
                     <hr className='m-4 opacity-75' />
                     <div className='lg:flex flex-wrap'> {/* skill-card-col-set */}
                         <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'> {/* skill-card-col */}
-                            <span className='pr-3 inline-flex text-base md:text-lg'>
+                            <span className='pr-3 inline-flex text-base xl:text-lg'>
                                 <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
                                 Swift (SwiftUI, UIKit)
                                 {/* skill-card-col-icon */}
@@ -54,7 +54,7 @@ function Skill() {
                             </span>
                         </div>
                         <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'> {/* skill-card-col */}
-                            <span className='pr-3 inline-flex text-base md:text-lg'>
+                            <span className='pr-3 inline-flex text-base xl:text-lg'>
                                 <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
                                 React.js
                                 {/* skill-card-col-icon */}
@@ -65,7 +65,7 @@ function Skill() {
                 </div>
                 {/* back-end skill */}
                 <div className='flex flex-col flex-[0_0_auto] grow-0 shrink-0 basis-auto
-                                min-w-[300px] lg:min-w-[500px] w-5/12 shadow-[1px_1px_10px] 
+                                min-w-[300px] lg:min-w-[490px] xl:min-w-[550px] w-5/12 shadow-[1px_1px_10px]
                                 border rounded-2xl  border-[rgb(184,190,197) 
                                 p-6 mt-4'> {/* card */}
                     <div className='text-center text-xl md:text-2xl font-semibold'> {/* card-title */}
@@ -74,7 +74,7 @@ function Skill() {
                     <hr className='m-4 opacity-75' />
                     <div className='lg:flex flex-wrap'> {/* skill-card-col-set */}
                         <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'> {/* skill-card-col */}
-                            <span className='pr-3 inline-flex text-base md:text-lg'>
+                            <span className='pr-3 inline-flex text-base xl:text-lg'>
                                 <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
                                 Java (Spring Boot)
                                 {/* skill-card-col-icon */}
@@ -82,7 +82,7 @@ function Skill() {
                             </span>
                         </div>
                         <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'> {/* skill-card-col */}
-                            <span className='pr-3 inline-flex text-base md:text-lg'>
+                            <span className='pr-3 inline-flex text-base xl:text-lg'>
                                 <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
                                 Go (Gin, Gorilla)
                                 {/* skill-card-col-icon */}
@@ -90,7 +90,7 @@ function Skill() {
                             </span>
                         </div>
                         <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'> {/* skill-card-col */}
-                            <span className='pr-3 inline-flex text-base md:text-lg'>
+                            <span className='pr-3 inline-flex text-base xl:text-lg'>
                                 <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
                                 GCP (Firebase)
                                 {/* skill-card-col-icon */}
@@ -98,7 +98,7 @@ function Skill() {
                             </span>
                         </div>
                         <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'> {/* skill-card-col */}
-                            <span className='pr-3 inline-flex text-base md:text-lg'>
+                            <span className='pr-3 inline-flex text-base xl:text-lg'>
                                 <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
                                 MySQL
                                 {/* skill-card-col-icon */}
