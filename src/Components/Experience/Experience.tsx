@@ -38,7 +38,7 @@ function Experience() {
                         > {/* timeline-content */}
                             <div 
                                 className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
-                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                            shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)'
                                 onClick={() => alert('Software Engineer Intern')}
                             > {/* exp-btn */}
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
@@ -61,7 +61,7 @@ function Experience() {
                         > {/* timeline-content */}
                             <div 
                                 className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
-                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                            shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)'
                                 onClick={() => alert('NSTC Part-time Contracted Assistant')}
                             > {/* exp-btn */}
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
@@ -84,7 +84,7 @@ function Experience() {
                         > {/* timeline-content */}
                             <div 
                                 className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
-                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                            shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)'
                                 onClick={() => alert('Lecturer of Basic Programming')}
                             > {/* exp-btn */}
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
@@ -107,7 +107,7 @@ function Experience() {
                         > {/* timeline-content */}
                             <div 
                                 className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
-                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                            shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)'
                                 onClick={() => alert('General Coordinator of College Admission Sharing Event')}
                             > {/* exp-btn */}
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
@@ -130,7 +130,7 @@ function Experience() {
                         > {/* timeline-content */}
                             <div 
                                 className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
-                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                            shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)'
                                 onClick={() => alert('Lecturer of Basic Programming')}
                             > {/* exp-btn */}
                                 <h3 className='font-serif text-xl font-semibold my-4'>
