@@ -33,6 +33,9 @@ function Experience() {
                                 Jul2024 - Present
                             </p> {/* timeline-date */}
                         </strong>
+                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                            Jul2024 - Present
+                        </p> {/* timeline-date */}
                         <div 
                             className='w-3/5 float-left border-l-4 border-solid pl-8 py-4
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
@@ -54,6 +57,9 @@ function Experience() {
                                 Feb2024 - Jun2024
                             </p> {/* timeline-date */}
                         </strong>
+                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                            Feb2024 - Jun2024
+                        </p> {/* timeline-date */}
                         <div 
                             className='w-3/5 float-left border-l-4 border-solid pl-8 py-4
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
@@ -70,6 +76,9 @@ function Experience() {
                         </div>
                     </li>
                     <li className='overflow-hidden relative m-0'>
+                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                            Sep2023 - Jan2024
+                        </p> {/* timeline-date */}
                         <strong>
                             <p className='text-sm md:text-base float-left w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
                                 Sep2023 - Jan2024
@@ -96,6 +105,9 @@ function Experience() {
                                 Jan2023 - Jun2023
                             </p> {/* timeline-date */}
                         </strong>
+                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                            Jan2023 - Jun2023
+                        </p> {/* timeline-date */}
                         <div 
                             className='w-3/5 float-left border-l-4 border-solid pl-8 py-4
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
@@ -116,6 +128,9 @@ function Experience() {
                         </div>
                     </li>
                     <li className='overflow-hidden relative m-0'>
+                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                            Oct2021 - Jun2022
+                        </p> {/* timeline-date */}
                         <strong>
                             <p className='text-sm md:text-base float-left w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
                                 Oct2021 - Jun2022
