@@ -36,7 +36,11 @@ function Experience() {
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
-                            <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
+                            <div 
+                                className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
+                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                onClick={() => alert('Software Engineer Intern')}
+                            >
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     Software Engineer Intern
                                 </h3>
@@ -55,7 +59,11 @@ function Experience() {
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
-                            <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
+                            <div 
+                                className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
+                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                onClick={() => alert('NSTC Part-time Contracted Assistant')}
+                            >
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     NSTC Part-time Contracted Assistant
                                 </h3>
@@ -74,7 +82,11 @@ function Experience() {
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
-                            <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
+                            <div 
+                                className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
+                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                onClick={() => alert('Lecturer of Basic Programming')}
+                            >
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     Lecturer of Basic Programming
                                 </h3>
@@ -116,7 +128,11 @@ function Experience() {
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
-                            <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
+                            <div 
+                                className='cursor-pointer pl-4 py-2 hover:opacity-60 transition-opacity
+                                            shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
+                                onClick={() => alert('Lecturer of Basic Programming')}
+                            >
                                 <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     Lecturer of Basic Programming
                                 </h3>
