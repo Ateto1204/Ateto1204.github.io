@@ -28,12 +28,7 @@ function Experience() {
             <div className='flex justify-center mt-20' > {/* timeline */}
                 <ul className='flex flex-col justify-start items-stretch'> {/* timeline-list */}
                     <li className='overflow-hidden relative m-0'>
-                        <strong>
-                            <p className='text-sm md:text-base float-left w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
-                                Jul2024 - Present
-                            </p> {/* timeline-date */}
-                        </strong>
-                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                        <p className='text-sm md:text-base float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
                             Jul2024 - Present
                         </p> {/* timeline-date */}
                         <div 
@@ -42,7 +37,7 @@ function Experience() {
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
                             <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
-                                <h3 className='font-serif text-lg md:text-xl font-semibold my-4'>
+                                <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     Software Engineer Intern
                                 </h3>
                                 <p className='my-2'>
@@ -52,12 +47,7 @@ function Experience() {
                         </div>
                     </li>
                     <li className='overflow-hidden relative m-0'>
-                        <strong>
-                            <p className='text-sm md:text-base float-left w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
-                                Feb2024 - Jun2024
-                            </p> {/* timeline-date */}
-                        </strong>
-                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                        <p className='text-sm md:text-base float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
                             Feb2024 - Jun2024
                         </p> {/* timeline-date */}
                         <div 
@@ -66,7 +56,7 @@ function Experience() {
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
                             <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
-                                <h3 className='font-serif text-lg md:text-xl font-semibold my-4'>
+                                <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     NSTC Part-time Contracted Assistant
                                 </h3>
                                 <p className='my-2'>
@@ -76,21 +66,16 @@ function Experience() {
                         </div>
                     </li>
                     <li className='overflow-hidden relative m-0'>
-                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                        <p className='text-sm md:text-base float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
                             Sep2023 - Jan2024
                         </p> {/* timeline-date */}
-                        <strong>
-                            <p className='text-sm md:text-base float-left w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
-                                Sep2023 - Jan2024
-                            </p> {/* timeline-date */}
-                        </strong>
                         <div 
                             className='w-3/5 float-left border-l-4 border-solid pl-8 py-4
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
                             <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
-                                <h3 className='font-serif text-lg md:text-xl font-semibold my-4'>
+                                <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     Lecturer of Basic Programming
                                 </h3>
                                 <p className='my-2'>
@@ -100,12 +85,7 @@ function Experience() {
                         </div>
                     </li>
                     <li className='overflow-hidden relative m-0'>
-                        <strong>
-                            <p className='text-sm md:text-base float-left w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
-                                Jan2023 - Jun2023
-                            </p> {/* timeline-date */}
-                        </strong>
-                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                        <p className='text-sm md:text-base float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
                             Jan2023 - Jun2023
                         </p> {/* timeline-date */}
                         <div 
@@ -118,7 +98,7 @@ function Experience() {
                                             shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'
                                 onClick={() => alert('General Coordinator of College Admission Sharing Event')}
                             >
-                                <h3 className='font-serif text-lg md:text-xl font-semibold my-4'>
+                                <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     General Coordinator of College Admission Sharing Event
                                 </h3>
                                 <p className='my-2'>
@@ -128,21 +108,16 @@ function Experience() {
                         </div>
                     </li>
                     <li className='overflow-hidden relative m-0'>
-                        <p className='float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
+                        <p className='text-sm md:text-base float-left font-semibold w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
                             Oct2021 - Jun2022
                         </p> {/* timeline-date */}
-                        <strong>
-                            <p className='text-sm md:text-base float-left w-[70px] md:w-[170px] mt-4 mr-5 md:mr-0'>
-                                Oct2021 - Jun2022
-                            </p> {/* timeline-date */}
-                        </strong>
                         <div 
                             className='w-3/5 float-left border-l-4 border-solid pl-8 py-4
                                         before:w-3 before:h-3 before:rounded-full before:bg-gray-400 
                                         before:absolute before:left-[86px] md:before:left-[166px] before:top-[24px]'
                         > {/* timeline-content */}
                             <div className='pl-4 py-2 shadow-[1px_1px_10px] border rounded-2xl  border-[rgb(184,190,197)'>
-                                <h3 className='font-serif text-lg md:text-xl font-semibold my-4'>
+                                <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                                     Lecturer of Basic Programming
                                 </h3>
                                 <p className='my-2'>
