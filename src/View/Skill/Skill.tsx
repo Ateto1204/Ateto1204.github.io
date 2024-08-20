@@ -12,6 +12,7 @@ import { FaGolang } from "react-icons/fa6";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faCodeMerge } from '@fortawesome/free-solid-svg-icons';
 import { RiTailwindCssFill } from "react-icons/ri";
+import { BiLogoPostgresql } from "react-icons/bi";
 
 function Skill() {
     
@@ -112,6 +113,14 @@ function Skill() {
                                 MySQL
                                 {/* skill-card-col-icon */}
                                 <GrMysql className='w-8 h-auto pl-2' color='#1874CD' />
+                            </span>
+                        </div>
+                        <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'> {/* skill-card-col */}
+                            <span className='pr-3 inline-flex text-base xl:text-lg'>
+                                <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
+                                PostgreSQL
+                                {/* skill-card-col-icon */}
+                                <BiLogoPostgresql className='w-9 h-auto pl-2' color='#36648B' />
                             </span>
                         </div>
                     </div>

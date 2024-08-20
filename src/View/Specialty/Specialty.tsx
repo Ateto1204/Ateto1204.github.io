@@ -37,7 +37,7 @@ function Specialty() {
                         </h3>
                     </div>
                     <p className='leading-8 m-0'>
-                        熟悉軟體開發流程如 Scrum，於大一開始擔任軟體工程實習生，目前主要使用 Swift 進行 iOS APP 開發，並專注於相機軟體的開發。
+                        熟悉軟體開發流程與模式如 Scrum，於大一開始擔任軟體工程實習生，目前主要使用 Swift 進行 iOS APP 開發。
                     </p>
                 </div>
                 <div className='flex flex-col flex-wrap m-2'> {/* specialty-item */}
@@ -59,7 +59,7 @@ function Specialty() {
                         </h3>
                     </div>
                     <p className='leading-8 m-0'>
-                        自高中至今多次以講師身份教授程式設計相關課程，我擅長換位思考找出學生的學習痛點，由此可知我是一個有同理心的人。
+                        高中至今累積豐富程式設計相關教學經驗，我擅長換位思考找出學生的學習痛點，由此可知我是一個有同理心的人。
                     </p>
                 </div>
             </div>
