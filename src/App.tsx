@@ -1,11 +1,11 @@
-import Profile from './Components/Profile/Profile'
-import Experience from './Components/Experience/Experience'
-import Skill from './Components/Skill/Skill'
-import Specialty from './Components/Specialty/Specialty'
-import Footer from './Components/Footer/Footer'
+import Profile from './View/Profile/Profile'
+import Experience from './View/Experience/Experience'
+import Skill from './View/Skill/Skill'
+import Specialty from './View/Specialty/Specialty'
+import Footer from './View/Footer/Footer'
 
-import ThemeModeButton from './Components/Button/ThemeModeButton'
-import FaviconSetter from './Api/FaviconSetter'
+import ThemeModeButton from './View/Button/ThemeModeButton'
+import FaviconSetter from './Controller/FaviconSetter'
 
 function App() {
   return (
