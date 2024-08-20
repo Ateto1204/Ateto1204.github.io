@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { MdSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 
-import ToggleBackground from '../../Api/ToggleBackground';
+import ToggleBackground from '../../Controller/ToggleBackground';
 
 function ThemeModeButton() {
     const [theme, setTheme] = useState('light');
