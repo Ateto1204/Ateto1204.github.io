@@ -13,6 +13,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode, faCodeMerge } from '@fortawesome/free-solid-svg-icons';
 import { RiTailwindCssFill } from "react-icons/ri";
 import { BiLogoPostgresql } from "react-icons/bi";
+import { SiMongodb } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
+import { FaNodeJs } from "react-icons/fa";
+import { RiNextjsLine } from "react-icons/ri";
+
 
 interface SkillProps {
     title: string, 
@@ -28,7 +33,7 @@ interface SkillCardProps {
 const MySkill = ({ title, IconComponent, iconColor }: SkillProps) => {
     return (
         <div className='flex-[0_0_auto] relative lg:w-1/2 text-lg py-4'>
-            <span className='pr-3 inline-flex text-base lg:text-sm xl:text-lg'>
+            <span className='pr-3 inline-flex text-base lg:text-xs xl:text-lg'>
                 <FontAwesomeIcon icon={faCode} className='pr-2 pt-1' />
                 {title}
                 <IconComponent className='w-8 h-auto pl-2' color={iconColor} />
@@ -40,7 +45,7 @@ const MySkill = ({ title, IconComponent, iconColor }: SkillProps) => {
 const SkillCard = ({ title, skills }: SkillCardProps) => {
     return (
         <div className='flex flex-col flex-[0_0_auto] grow-0 shrink-0 basis-auto 
-                        min-w-72 lg:min-w-[460px] xl:min-w-[550px] 
+                        min-w-72 lg:min-w-[450px] xl:min-w-[550px] 
                         w-5/12 shadow-[1px_1px_10px] border rounded-2xl 
                         border-[rgb(184,190,197)] p-6 mt-4'>
             <div className='text-center text-xl md:text-2xl font-semibold'>
@@ -73,16 +78,23 @@ function Skill() {
     const frontendSkills = [
         { title: 'Swift (SwiftUI, UIKit)', icon: GrSwift, color: '#FF4500' },
         { title: 'React.js', icon: FaReact, color: '#00FFFF' },
+        { title: 'Next.js', icon: RiNextjsLine, color: 'black' }, 
         { title: 'Tailwind CSS', icon: RiTailwindCssFill, color: '#00E5EE' },
     ];
 
     const backendSkills = [
         { title: 'Java (Spring Boot)', icon: SiSpringboot, color: '#66CD00' },
-        { title: 'Go (Gin, Gorilla)', icon: FaGolang, color: '#00BFFF' },
-        { title: 'Firebase', icon: IoLogoFirebase, color: '#EEAD0E' },
-        { title: 'MySQL', icon: GrMysql, color: '#1874CD' },
-        { title: 'PostgreSQL', icon: BiLogoPostgresql, color: '#36648B' },
+        { title: 'Go (Gin)', icon: FaGolang, color: '#00BFFF' },
+        { title: 'Node (Express)', icon: FaNodeJs, color: '#66CD00'}, 
     ];
+
+    const dbSkills = [
+        { title: 'Firebase', icon: IoLogoFirebase, color: '#EEAD0E' },
+        { title: 'PostgreSQL', icon: BiLogoPostgresql, color: '#36648B' },
+        { title: 'MySQL', icon: GrMysql, color: '#00758F' },
+        { title: 'MongoDB', icon: SiMongodb, color: '#44883e'}, 
+        { title: 'Redis', icon: DiRedis, color: '#c93131'}, 
+    ]
 
     return (
         <section className='pt-44' data-aos='fade-up'> {/* skill */}
@@ -98,6 +110,7 @@ function Skill() {
             <div className='flex justify-evenly flex-wrap'> {/* card-set */}
                 <SkillCard title="Frontend" skills={frontendSkills} />
                 <SkillCard title="Backend" skills={backendSkills} />
+                <SkillCard title="Database" skills={dbSkills} />
             </div>
         </section>
     );
