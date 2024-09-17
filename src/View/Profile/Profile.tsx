@@ -49,7 +49,8 @@ function Profile() {
                 <div className='flex items-center mt-[10px] mb-5'> {/* profile-info-subtitle */}
                     <FontAwesomeIcon icon={faBedPulse} />
                     <h2 className='font-serif font-semibold px-[10px] 
-                                   text-base md:text-lg lg:text-xl xl:text-2xl '>
+                                   text-base md:text-lg md:max-w-60 
+                                   lg:text-xl xl:max-w-max xl:text-2xl'>
                         Software Engineer / Developer
                     </h2>
                     <FontAwesomeIcon icon={faAccessibleIcon} size='lg' />
