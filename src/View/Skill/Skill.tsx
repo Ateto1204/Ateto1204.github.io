@@ -17,6 +17,7 @@ import { SiMongodb } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
+import { BiLogoTypescript } from "react-icons/bi";
 
 
 interface SkillProps {
@@ -77,8 +78,9 @@ function Skill() {
 
     const frontendSkills = [
         { title: 'Swift (SwiftUI, UIKit)', icon: GrSwift, color: '#FF4500' },
-        { title: 'React.js', icon: FaReact, color: '#00FFFF' },
-        { title: 'Next.js', icon: RiNextjsLine, color: 'black' }, 
+        { title: 'React', icon: FaReact, color: '#00FFFF' },
+        { title: 'Next', icon: RiNextjsLine, color: 'black' }, 
+        { title: 'Typescript', icon: BiLogoTypescript, color: '#36648B' },
         { title: 'Tailwind CSS', icon: RiTailwindCssFill, color: '#00E5EE' },
     ];
 
