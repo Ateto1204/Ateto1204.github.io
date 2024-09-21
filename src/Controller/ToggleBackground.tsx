@@ -1,20 +1,19 @@
-import bg1 from '../assets/background/background.JPG'
-import bg2 from '../assets/background/background2.JPG'
-import bg3 from '../assets/background/background3.JPG'
-import bg4 from '../assets/background/background4.JPG'
+const lightColor = ['#7C93C3', '#6A9AB0', '#A5B68D', '#7FA1C3'];
+const darkColor = ['#55679C', '#3A6D8C', '#384B70', '#697565', '#6A9C89', '#295F98'];
 
-const lightBackground = [bg1, bg2];
-const darkBackground = [bg3, bg4];
-
-async function ToggleBackground(theme: String) {
-    const randomImage = theme === 'light' ? 
-                        lightBackground[Math.floor(Math.random() * lightBackground.length)] : 
-                        darkBackground[Math.floor(Math.random() * darkBackground.length)];
+async function ToggleBackground(theme: string) {
     const root = document.documentElement;
-    root.style.backgroundImage = `url(${randomImage})`;
+
+    const randomColor = theme === 'light' ? 
+                        lightColor[Math.floor(Math.random() * lightColor.length)] : 
+                        darkColor[Math.floor(Math.random() * darkColor.length)];
+
+    root.style.backgroundColor = randomColor;
+    root.style.backgroundImage = '';
     root.style.backgroundPosition = 'center';
     root.style.backgroundRepeat = 'no-repeat';
     root.style.backgroundSize = 'cover';
     root.style.backgroundAttachment = 'fixed';
 }
+
 export default ToggleBackground;
