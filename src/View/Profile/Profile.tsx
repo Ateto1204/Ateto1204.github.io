@@ -40,7 +40,7 @@ const useAOS = () => {
 };
 
 function Profile() {
-    useAOS(); // 使用自定義 Hook
+    useAOS();
 
     return (
         <div 
@@ -50,7 +50,7 @@ function Profile() {
             <img 
                 src={myProfile} 
                 alt='Dong-Yi Su' 
-                className='h-[150px] md:h-[220px] lg:h-[300px] xl:h-[360px] w-auto transition-[10s]
+                className='h-[150px] lg:h-72 xl:h-[360px] w-auto transition-[10s]
                             rounded-lg shadow-[1px_1px_10px] mb-3 md:mb-0 md:mr-20'
             />
             <div className='max-w-xl'>
@@ -61,7 +61,7 @@ function Profile() {
                 <div className='flex items-center mt-[10px] mb-5'>
                     <FontAwesomeIcon icon={faBedPulse} />
                     <h2 className='font-serif font-semibold px-[10px] 
-                                   text-base md:text-lg md:max-w-60 
+                                   text-base max-w-48 md:text-lg md:max-w-60
                                    lg:text-xl xl:max-w-max xl:text-2xl'>
                         Software Engineer / Developer
                     </h2>
@@ -74,7 +74,6 @@ function Profile() {
                     我的專長領域包含譁眾取寵、軟體工程、物件導向、程式教學，目前主要投入於 iOS mobile APP 的設計開發與測試，並專注於相機軟體的開發。
                 </p>
                 <div className='pt-3'>
-                    {/* 使用 IconLink 元件重用 icon 和連結 */}
                     <IconLink href='https://github.com/Ateto1204' icon={faGithub} />
                     <IconLink href='mailto:tonysu1204@gmail.com' icon={faEnvelope} />
                     <IconLink href='https://www.linkedin.com/in/ateto' icon={faLinkedin} />
