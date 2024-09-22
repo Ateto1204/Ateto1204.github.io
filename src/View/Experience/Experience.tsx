@@ -21,15 +21,14 @@ const TimelineItem = ({
     alertMessage,
 }: TimelineItemProps) => {
     return (
-        <li className='overflow-hidden relative m-0'>
-            <p className='text-base lg:float-left font-semibold w-48 mt-4 mr-5 md:mr-0'>
+        <li className='relative m-0'>
+            <p className='text-base lg:float-left font-semibold w-48 mt-4 mr-5 md:mr-0 pl-4'>
                 {date}
             </p>
             <div 
                 className='w-auto lg:w-3/5 float-left lg:border-l-4 border-solid pl-8 py-4
                             lg:before:w-3 lg:before:h-3 before:rounded-full before:bg-gray-400 
-                            before:absolute lg:before:left-[188px] before:top-[24px]'
-            >
+                            before:absolute lg:before:left-[188px] before:top-6'>
                 <div 
                     className='cursor-pointer pl-4 pr-4 py-2 hover:opacity-60 transition-opacity
                                 shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)]'
