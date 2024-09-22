@@ -27,7 +27,7 @@ function Specialty() {
                     Specialties
                 </h1>
             </div>
-            <div className='grid md:grid-cols-3 gap-5 lg:gap-20 
+            <div className='grid lg:grid-cols-3 gap-5 lg:gap-20 
                             border rounded-3xl border-solid border-[gray]
                             shadow-[5px_5px_20px] p-8 w-fit'> {/* specialty-grid */}
                 {specialties.map((specialty, index) => (
