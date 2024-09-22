@@ -13,7 +13,7 @@ function App() {
       <FaviconSetter />
       <main className='flex justify-center items-center'>
         <nav className='shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[20px] 
-                        m-[25px] md:m-[60px] max-w-[380px] md:max-w-[1200px]
+                        m-[25px] md:m-[60px] max-w-full md:max-w-[800px] lg:max-w-[1200px]
                         border rounded-2xl border-solid border-[rgba(255,255,255,0.3)]
                         background: rgba(255, 255, 255, 0.05)
                         -webkit-backdrop-filter: blur(20px)'> {/* container */}
