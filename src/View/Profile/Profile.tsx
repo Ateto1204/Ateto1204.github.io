@@ -50,7 +50,7 @@ function Profile() {
             <img 
                 src={myProfile} 
                 alt='Dong-Yi Su' 
-                className='h-40 lg:h-72 xl:h-80 w-auto transition-[10s]
+                className='h-40 lg:h-72 xl:h-80 w-auto transition-[10s] select-none
                             rounded-lg shadow-[1px_1px_10px] mb-3 md:mb-0 md:mr-20'
             />
             <div className='max-w-xl'>
