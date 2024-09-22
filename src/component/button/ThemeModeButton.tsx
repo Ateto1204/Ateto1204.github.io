@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { MdSunny } from "react-icons/md";
 import { FaMoon } from "react-icons/fa";
 
-import ToggleBackground from '../../Controller/ToggleBackground';
+import ToggleBackground from '../../controller/ToggleBackground';
 
 function ThemeModeButton() {
     const initTheme: string = localStorage.getItem('theme') || 'light';
