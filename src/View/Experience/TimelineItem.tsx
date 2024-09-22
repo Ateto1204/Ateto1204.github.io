@@ -14,12 +14,12 @@ export const TimelineItem = ({
     alertMessage,
 }: TimelineItemProps) => {
     return (
-        <li className='overflow-hidden relative m-0'>
+        <li className='overflow-hidden relative m-2 mb-2 md:m-0'>
             <p className='text-base lg:float-left font-semibold w-48 mt-4 mr-5 md:mr-0'>
                 {date}
             </p>
             <div 
-                className='w-auto lg:w-3/5 float-left lg:border-l-4 border-solid pl-8 py-4
+                className='w-full lg:w-3/5 float-left lg:border-l-4 border-solid md:pl-8 py-4 px-2
                             lg:before:w-3 lg:before:h-3 before:rounded-full before:bg-gray-400 
                             before:absolute lg:before:left-[188px] before:top-[24px]'
             >
