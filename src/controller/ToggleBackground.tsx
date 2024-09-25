@@ -1,5 +1,4 @@
-const lightColor = ['#7C93C3', '#6A9AB0', '#A5B68D', '#7FA1C3'];
-const darkColor = ['#55679C', '#3A6D8C', '#384B70', '#697565', '#6A9C89', '#295F98'];
+import { lightColor, darkColor } from "../data/bgColorsData";
 
 async function ToggleBackground(theme: string) {
     const root = document.documentElement;

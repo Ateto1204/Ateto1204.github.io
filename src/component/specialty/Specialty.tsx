@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
 
 import { SpecialtyItem } from './SpecialtyItem';
-import { specialties } from './specialtyData';
+import { specialties } from '../../data/specialtyData';
 
 function Specialty() {
     useEffect(() => {

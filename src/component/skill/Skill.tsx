@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeMerge } from '@fortawesome/free-solid-svg-icons';
 
 import { SkillCard } from './SkillCard';
-import { frontendSkills, backendSkills, dbSkills } from './skillData';
+import { frontendSkills, backendSkills, dbSkills } from '../../data/skillData';
 
 
 function Skill() {

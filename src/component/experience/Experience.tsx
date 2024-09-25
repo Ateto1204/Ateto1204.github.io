@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
 import { TimelineItem } from './TimelineItem';
-import { timelineItems } from './expData';
+import { timelineItems } from '../../data/expData';
 
 function Experience() {
     useEffect(() => {
