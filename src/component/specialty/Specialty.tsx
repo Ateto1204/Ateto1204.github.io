@@ -4,8 +4,9 @@ import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
 
+import { Subtitle } from '../subtitle/Subtitle';
 import { SpecialtyItem } from './SpecialtyItem';
-import { specialties } from './specialtyData';
+import { specialties } from '../../data/specialtyData';
 
 function Specialty() {
     useEffect(() => {
@@ -22,10 +23,7 @@ function Specialty() {
         > {/* specialty */}
             <div className='flex justify-center items-center pb-[70px]'> {/* specialty-title */}
                 <FontAwesomeIcon icon={faCodeCompare} size='xl' />
-                <h1 className='font-serif font-semibold leading pl-6
-                               text-3xl md:text-4xl lg:text-5xl xl:text-[3.2rem]'>
-                    Specialties
-                </h1>
+                <Subtitle content='Specialties' />
             </div>
             <div className='grid lg:grid-cols-3 gap-5 lg:gap-20 
                             border rounded-3xl border-solid border-[gray]

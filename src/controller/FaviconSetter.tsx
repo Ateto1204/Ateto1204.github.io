@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
-
-const githubUsername = 'Ateto1204';
-const githubAvatarUrl = `https://github.com/${githubUsername}.png`;
+import { githubAvatarUrl } from '../data/faviconData';
 
 const setFavicon = (url: string) => {
   let link = document.querySelector("link[rel*='icon']") as HTMLLinkElement;

@@ -17,16 +17,12 @@ function ThemeModeButton() {
 
     useEffect(() => {
         ToggleBackground(theme)
-        document.body.style.color = theme === 'light' ? `#333` : `#F5F5F5`;
+        document.body.style.color = theme === 'light' ? `var(--dark-font)` : `var(--light-font)`;
         document.querySelectorAll('a').forEach(a => {
-            if (a.href === 'https://www.aidmics.com/') {
-                a.style.color = theme === 'light' ?  `#E0EEE0` : `#00E5EE`;
-            } else {
-                a.style.color = theme === 'light' ?  `#333` : `#D0D0D0`;
-            }
+            a.style.color = theme === 'light' ?  `var(--dark-font)` : `var(--light-font)`;
         });
         document.querySelectorAll('h2').forEach(h2 => {
-            h2.style.color = theme === 'light' ? `#333` : `#F5F5F5`;
+            h2.style.color = theme === 'light' ? `var(--dark-font)` : `var(--light-font)`;
         });
     }, [theme]);
 
