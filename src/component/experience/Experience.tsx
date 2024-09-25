@@ -33,8 +33,8 @@ function Experience() {
                             date={item.date}
                             title={item.title}
                             company={item.company}
-                            skill={item.description}
-                            description={item.alertMessage}
+                            skill={item.skill}
+                            description={item.description}
                         />
                     )) }
                 </ul>
