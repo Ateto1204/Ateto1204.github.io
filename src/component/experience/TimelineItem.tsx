@@ -1,14 +1,6 @@
 import { useState } from "react";
 import { ExpDialog } from "./ExpDialog";
-
-
-interface TimelineItemProps {
-    date: string, 
-    title: string,
-    company: string,
-    skill: string,
-    description: string,
-}
+import { TimelineItemProps } from "./TimelineItemProps";
 
 export const TimelineItem = ({
     date,
@@ -49,8 +41,7 @@ export const TimelineItem = ({
             <ExpDialog  
                 openDialog={openDialog}
                 setOpenDialog={setOpenDialog}
-                title={title}
-                content={description}
+                data={{date, title, company, skill, description}}
             />
         </li>
     );

@@ -5,14 +5,15 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
+import { TimelineItemProps } from "./TimelineItemProps";
+
 interface ExpDialogProps {
     openDialog: boolean,
-    setOpenDialog: Function,
-    title: string,
-    content: string
+    setOpenDialog: (open: boolean) => void,
+    data: TimelineItemProps,
 }
 
-export const ExpDialog = ({ openDialog, setOpenDialog, title, content }: ExpDialogProps) => {
+export const ExpDialog = ({ openDialog, setOpenDialog, data }: ExpDialogProps) => {
 
     const handleClose = () => {
         setOpenDialog(false);
@@ -20,10 +21,17 @@ export const ExpDialog = ({ openDialog, setOpenDialog, title, content }: ExpDial
 
     return (
         <Dialog open={openDialog} onClose={handleClose}>
-            <DialogTitle>{title}</DialogTitle>
+            <DialogTitle>
+                {data.title}
+                <DialogContentText>
+                    {data.company} {data.skill ? '| ' + data.skill : ''} 
+                    <br />
+                    {data.date}
+                </DialogContentText>
+            </DialogTitle>
             <DialogContent>
                 <DialogContentText>
-                    {content}
+                    {data.description}
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
