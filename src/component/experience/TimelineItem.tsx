@@ -1,18 +1,28 @@
+import { useState } from "react";
+import { ExpDialog } from "./ExpDialog";
+
+
 interface TimelineItemProps {
     date: string, 
     title: string,
     company: string,
+    skill: string,
     description: string,
-    alertMessage: string,
 }
 
 export const TimelineItem = ({
     date,
     title,
     company,
+    skill,
     description,
-    alertMessage,
 }: TimelineItemProps) => {
+    const [openDialog, setOpenDialog] = useState(false);
+
+    const handleOpen = () => {
+        setOpenDialog(true);
+    }
+
     return (
         <li className='overflow-hidden relative m-2 mb-2 md:m-0'>
             <p className='text-base lg:float-left font-semibold w-48 mt-4 mr-5 md:mr-0'>
@@ -26,16 +36,22 @@ export const TimelineItem = ({
                 <div 
                     className='cursor-pointer pl-4 pr-4 py-2 hover:opacity-60 transition-opacity
                                 shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)]'
-                    onClick={() => alert(alertMessage)}
+                    onClick={handleOpen}
                 >
                     <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                         {title}
                     </h3>
                     <p className='my-2'>
-                        {company}{description ? ' | ' + description : ''}
+                        {company}{skill ? ' | ' + skill : ''}
                     </p>
                 </div>
             </div>
+            <ExpDialog  
+                openDialog={openDialog}
+                setOpenDialog={setOpenDialog}
+                title={title}
+                content={description}
+            />
         </li>
     );
 }
