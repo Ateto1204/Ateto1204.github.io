@@ -1,6 +1,6 @@
 import myProfile from '../../assets/profile.png';
 import mbti from '../../assets/mbti.svg';
-import { myEngName } from '../../data/profileData';
+import { myEngName } from '../../data/profile/profileData';
 
 export const ProfileAvatar = () => (
     <div className='relative transform-style-3d transition duration-300

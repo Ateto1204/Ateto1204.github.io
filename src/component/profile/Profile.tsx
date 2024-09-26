@@ -6,8 +6,8 @@ import { IconLink } from './IconLink';
 import { ProfileTitle } from './ProfileTitle';
 import { ProfileSubtitle } from './ProfileSubtitle';
 import { ProfileTextParagraph } from './ProfileTextParagraph';
-import { profileParagraphsData } from '../../data/profileData';
-import { contactData } from '../../data/contactData';
+import { profileParagraphsData } from '../../data/profile/profileData';
+import { contactData } from '../../data/profile/contactData';
 
 function Profile() {
     useAOS();

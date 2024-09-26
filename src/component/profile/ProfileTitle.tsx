@@ -1,4 +1,4 @@
-import { myEngName } from "../../data/profileData";
+import { myEngName } from "../../data/profile/profileData";
 
 export const ProfileTitle = () => (
     <h1 className='font-serif font-semibold leading lg:mb-8

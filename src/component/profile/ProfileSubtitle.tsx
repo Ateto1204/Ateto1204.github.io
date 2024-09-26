@@ -1,7 +1,7 @@
 import { faBedPulse } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAccessibleIcon } from '@fortawesome/free-brands-svg-icons';
-import { profileSubtitle } from '../../data/profileData';
+import { profileSubtitle } from '../../data/profile/profileData';
 
 export const ProfileSubtitle = () => (
     <div className='flex items-center mt-[10px] mb-5'>
