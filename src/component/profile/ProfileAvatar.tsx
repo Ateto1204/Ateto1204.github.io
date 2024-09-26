@@ -1,5 +1,6 @@
 import myProfile from '../../assets/profile.png';
 import mbti from '../../assets/mbti.svg';
+import { myEngName } from '../../data/profile/profileData';
 
 export const ProfileAvatar = () => (
     <div className='relative transform-style-3d transition duration-300
@@ -9,7 +10,7 @@ export const ProfileAvatar = () => (
         <div className='card'>
             <img 
                 src={myProfile} 
-                alt='Dong-Yi Su' 
+                alt={myEngName}
                 className='h-36 w-auto shadow-2xl rounded-lg
                             md:h-52 lg:h-72 2xl:h-80'
             />

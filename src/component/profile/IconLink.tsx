@@ -1,7 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-export const IconLink = ({ href, icon }: { href: string; icon: any }) => (
+interface ContactIcon {
+    href: string, 
+    icon: any, 
+}
+
+export const IconLink = ({ href, icon }: ContactIcon) => (
     <a
         href={href}
         target='_blank'

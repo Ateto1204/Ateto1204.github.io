@@ -1,21 +1,14 @@
-import { useEffect } from 'react';
-
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 
+import { useAOS } from '../../controller/useAOS';
 import { Subtitle } from '../subtitle/Subtitle';
 import { TimelineItem } from './TimelineItem';
 import { timelineItems } from '../../data/expData';
 
 function Experience() {
-    useEffect(() => {
-        AOS.init({
-            duration: 1500,
-            once: true,
-        });
-    }, []);
+    useAOS();
 
     return (
         <section className='px-8 py-44 transition-[10s]' data-aos='fade-up'> {/* experience */}

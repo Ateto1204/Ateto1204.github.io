@@ -1,8 +1,4 @@
-import { useEffect } from 'react';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
-
-import AOS from 'aos';
+import { useAOS } from '../../controller/useAOS';
 import 'aos/dist/aos.css';
 
 import { ProfileAvatar } from './ProfileAvatar';
@@ -10,16 +6,8 @@ import { IconLink } from './IconLink';
 import { ProfileTitle } from './ProfileTitle';
 import { ProfileSubtitle } from './ProfileSubtitle';
 import { ProfileTextParagraph } from './ProfileTextParagraph';
-import { profileParagraphsData } from '../../data/profileParagraphsData';
-
-const useAOS = () => {
-    useEffect(() => {
-        AOS.init({
-            duration: 1500,
-            once: true,
-        });
-    }, []);
-};
+import { profileParagraphsData } from '../../data/profile/profileData';
+import { contactData } from '../../data/profile/contactData';
 
 function Profile() {
     useAOS();
@@ -42,9 +30,13 @@ function Profile() {
                     <ProfileTextParagraph key={index} text={text} />
                 )) }
                 <div className='pt-3'>
-                    <IconLink href='https://github.com/Ateto1204' icon={faGithub} />
-                    <IconLink href='mailto:tonysu1204@gmail.com' icon={faEnvelope} />
-                    <IconLink href='https://www.linkedin.com/in/ateto' icon={faLinkedin} />
+                    { contactData.map((contact, index) => (
+                        <IconLink 
+                            key={index}
+                            href={contact.href}
+                            icon={contact.icon} 
+                        />
+                    ))}
                 </div>
             </div>
         </div>
