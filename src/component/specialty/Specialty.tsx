@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
@@ -7,14 +5,10 @@ import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
 import { Subtitle } from '../subtitle/Subtitle';
 import { SpecialtyItem } from './SpecialtyItem';
 import { specialties } from '../../data/specialtyData';
+import { useAOS } from '../../controller/useAOS';
 
 function Specialty() {
-    useEffect(() => {
-        AOS.init({
-            duration: 1500,
-            once: true,
-        });
-    }, []);
+    useAOS();
 
     return (
         <section 

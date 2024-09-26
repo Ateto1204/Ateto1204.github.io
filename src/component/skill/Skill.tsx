@@ -1,8 +1,4 @@
-import { useEffect } from 'react';
-
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
+import { useAOS } from '../../controller/useAOS';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCodeMerge } from '@fortawesome/free-solid-svg-icons';
 
@@ -12,13 +8,7 @@ import { frontendSkills, backendSkills, dbSkills } from '../../data/skillData';
 
 
 function Skill() {
-
-    useEffect(() => {
-        AOS.init({
-            duration: 1500,
-            once: true,
-        });
-    }, []);
+    useAOS();
 
     return (
         <section className='pt-44' data-aos='fade-up'> {/* skill */}
