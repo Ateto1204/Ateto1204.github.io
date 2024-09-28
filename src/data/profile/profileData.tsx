@@ -1,4 +1,4 @@
-import { HoverLink } from "../component/profile/HoverLink";
+import { HoverLink } from "../../component/profile/HoverLink";
 
 export const myEngName = 'Dong-Yi Su';
 export const profileSubtitle = 'Software Engineer / Developer';
