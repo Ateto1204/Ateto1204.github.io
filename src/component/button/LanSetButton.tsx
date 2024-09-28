@@ -13,7 +13,7 @@ interface LanProviderProps {
 }
 
 export const LanProvider: React.FC<LanProviderProps> = ({ children }) => {
-  const initialLan = localStorage.getItem('lan') || 'zh';
+  const initialLan = localStorage.getItem('lan') || 'en';
   const [lan, setLan] = useState<string>(initialLan);
 
   useEffect(() => {
@@ -37,10 +37,14 @@ export const LanSetButton = () => {
     const { lan, setLan } = context;
 
     return (
-        <div className={`fixed left-3 top-3 text-3xl p-2 font-semibold
-                        hover:opacity-50 transition-opacity ${glassBgStyle}`}>
-            <button onClick={() => setLan(lan === 'zh' ? 'en' : 'zh')}>
-                { lan === 'zh' ? 'en' : 'zh' }
+        <div className='fixed left-7 top-7'>
+            <button 
+                className={`text-xl p-3 font-semibold
+                            hover:opacity-50 transition-opacity 
+                            ${glassBgStyle}`}
+                onClick={() => setLan(lan === 'zh' ? 'en' : 'zh')}
+            >
+                { lan === 'zh' ? 'En' : '中' }
             </button>
         </div>
     );
