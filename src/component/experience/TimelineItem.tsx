@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ExpDialog } from "./ExpDialog";
 import { TimelineItemProps } from "./TimelineItemProps";
+import { glassBgStyle } from "../../data/glassStyle";
 
 export const TimelineItem = ({
     date,
@@ -26,8 +27,9 @@ export const TimelineItem = ({
                             before:absolute lg:before:left-[188px] before:top-[24px]'
             >
                 <div 
-                    className='cursor-pointer pl-4 pr-4 py-2 hover:opacity-60 transition-opacity
-                                shadow-[1px_1px_10px] border rounded-2xl border-[rgb(184,190,197)]'
+                    className={`cursor-pointer pl-4 pr-4 py-2 
+                                hover:opacity-60 transition-opacity
+                                ${glassBgStyle}`}
                     onClick={handleOpen}
                 >
                     <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
