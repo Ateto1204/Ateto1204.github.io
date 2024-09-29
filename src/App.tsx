@@ -7,9 +7,9 @@ import Footer from './component/footer/Footer'
 import ThemeModeButton from './component/button/ThemeModeButton'
 import FaviconSetter from './controller/FaviconSetter'
 import { LanSetButton } from './component/button/LanSetButton'
-import { LanProvider } from './component/button/LanSetButton'
 
 import { glassBgStyle } from './data/glassStyle';
+import { LanProvider } from './controller/LanCxtProvider'
 
 function App() {
   return (

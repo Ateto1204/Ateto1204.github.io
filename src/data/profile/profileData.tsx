@@ -1,10 +1,10 @@
 import { HoverLink } from "../../component/profile/HoverLink";
 
 export const name = '蘇東毅';
-export const profileSubtitle = '軟體工程師/開發者';
+export const profileSubtitle = '軟體工程師 | 開發者';
 
 export const engName = 'Dong-Yi Su';
-export const engProfileSubtitle = 'Software Engineer / Developer';
+export const engProfileSubtitle = 'Software Engineer | Developer';
 
 const company = 'Aidmics Biotechnology Ltd.';
 const companyHref = 'https://www.aidmics.com/';
