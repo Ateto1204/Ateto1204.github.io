@@ -1,6 +1,5 @@
 import { faBook, faCodePullRequest, faCubes } from '@fortawesome/free-solid-svg-icons';
 
-
 export const specialties = [
     {
         icon: faCodePullRequest,
@@ -16,5 +15,23 @@ export const specialties = [
         icon: faBook,
         title: "程式教學",
         description: "高中至今累積豐富程式設計相關教學經驗，我擅長換位思考找出學生的學習痛點，由此可知我是一個有同理心的人。",
+    }
+];
+
+export const engSpecialties = [
+    {
+        icon: faCodePullRequest,
+        title: "Software Engineering",
+        description: "Familiar with software development processes and models such as Scrum and project management, started working as a software engineering intern in my freshman year and currently mainly use Swift for iOS APP development.",
+    },
+    {
+        icon: faCubes,
+        title: "Object-Oriented",
+        description: "Familiar with SOLID principles and design patterns, accustomed to and good at developing low-coupling, high-cohesion, modular architecture patterns such as clean architecture based on OOP to achieve high scalability and high testability.",
+    },
+    {
+        icon: faBook,
+        title: "Programming Teaching",
+        description: "Accumulated rich teaching experience related to programming since high school. I am good at identifying students’ learning pain points by putting myself in others’ shoes. This shows that I am an empathetic person.",
     }
 ];

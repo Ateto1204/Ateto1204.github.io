@@ -6,17 +6,18 @@ import Footer from './component/footer/Footer'
 
 import ThemeModeButton from './component/button/ThemeModeButton'
 import FaviconSetter from './controller/FaviconSetter'
+import { LanSetButton } from './component/button/LanSetButton'
+
+import { glassBgStyle } from './data/glassStyle';
+import { LanProvider } from './controller/LanCxtProvider'
 
 function App() {
   return (
-    <>
+    <LanProvider>
       <FaviconSetter />
       <main className='flex justify-center items-center'>
-        <nav className='shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[20px] 
-                        m-[25px] md:m-[60px] max-w-full md:max-w-[800px] lg:max-w-[1200px]
-                        border rounded-2xl border-solid border-[rgba(255,255,255,0.3)]
-                        background: rgba(255, 255, 255, 0.05)
-                        -webkit-backdrop-filter: blur(20px)'> {/* container */}
+        <nav className={`max-w-full m-[25px] md:m-[60px] md:max-w-[800px] lg:max-w-[1200px]
+                        ${glassBgStyle}`}> {/* container */}
           <header className='flex justify-center items-center px-0 py-[60px]'>
             <Profile />
           </header>
@@ -26,8 +27,11 @@ function App() {
           <Footer />
         </nav>
         <ThemeModeButton />
+        <aside>
+          <LanSetButton />
+        </aside>
       </main>
-    </>
+    </LanProvider>
   );
 }
 
