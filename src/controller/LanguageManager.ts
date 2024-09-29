@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import { language } from "../component/button/LanSetButton"
 import { localData } from "../data/localData";
+import { language } from "./LanCxtProvider";
 
 export class LanguageManager {
     private getLocalData(): string {
