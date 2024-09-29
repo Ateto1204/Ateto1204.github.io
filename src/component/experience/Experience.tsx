@@ -5,9 +5,10 @@ import { faCodeBranch } from '@fortawesome/free-solid-svg-icons';
 import { useAOS } from '../../controller/useAOS';
 import { Subtitle } from '../subtitle/Subtitle';
 import { TimelineItem } from './TimelineItem';
-import { timelineItems } from '../../data/expData';
+import { LanguageManager } from '../../controller/LanguageManager';
 
 function Experience() {
+    const timelineItems = LanguageManager.localString('timeline-items');
     useAOS();
 
     return (
@@ -18,7 +19,8 @@ function Experience() {
             </div>
             <div className='flex justify-center mt-20'> {/* timeline */}
                 <ul className='flex flex-col justify-start items-stretch'> {/* timeline-list */}
-                    { timelineItems.map((item, index) => (
+                    { Array.isArray(timelineItems) &&
+                    timelineItems.map((item, index) => (
                         <TimelineItem
                             key={index}
                             date={item.date}
