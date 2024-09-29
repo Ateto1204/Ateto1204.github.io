@@ -4,11 +4,12 @@ import { faCodeCompare } from '@fortawesome/free-solid-svg-icons';
 
 import { Subtitle } from '../subtitle/Subtitle';
 import { SpecialtyItem } from './SpecialtyItem';
-import { specialties } from '../../data/specialtyData';
 import { useAOS } from '../../controller/useAOS';
 import { glassBgStyle } from '../../data/glassStyle';
+import { LanguageManager } from '../../controller/LanguageManager';
 
 function Specialty() {
+    const specialties = LanguageManager.localString('specialties');
     useAOS();
 
     return (
@@ -22,7 +23,8 @@ function Specialty() {
             </div>
             <div className={`grid lg:grid-cols-3 gap-5 lg:gap-20 p-8 w-fit
                             ${glassBgStyle}`}>
-                {specialties.map((specialty, index) => (
+                { Array.isArray(specialties) &&
+                specialties.map((specialty, index) => (
                     <SpecialtyItem 
                         key={index}
                         icon={specialty.icon} 
