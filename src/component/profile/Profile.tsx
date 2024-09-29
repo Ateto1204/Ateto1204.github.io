@@ -6,10 +6,11 @@ import { IconLink } from './IconLink';
 import { ProfileTitle } from './ProfileTitle';
 import { ProfileSubtitle } from './ProfileSubtitle';
 import { ProfileTextParagraph } from './ProfileTextParagraph';
-import { profileParagraphsData } from '../../data/profile/profileData';
 import { contactData } from '../../data/profile/contactData';
+import { LanguageManager } from '../../controller/LanguageManager';
 
 function Profile() {
+    const profileParagraph = LanguageManager.localString('profile-paragraph')
     useAOS();
 
     return (
@@ -26,7 +27,8 @@ function Profile() {
                         <ProfileSubtitle />
                     </div>
                 </div>
-                { profileParagraphsData.map((text, index) => (
+                { Array.isArray(profileParagraph) && 
+                    profileParagraph.map((text, index) => (
                     <ProfileTextParagraph key={index} text={text} />
                 )) }
                 <div className='pt-3'>
