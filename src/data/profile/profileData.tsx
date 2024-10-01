@@ -23,11 +23,11 @@ export const profileParagraphsData = [
 
 export const engProfileParagraphsData = [
     <>
-        This is Dong-Yi Su aka Ateto, currently studying in the second year of the Department of Information Engineering at National Taiwan Ocean University, and working as a Software Engineer Intern at 
+        This is Dong-Yi Su aka Ateto, currently studying computer science and engineering at National Taiwan Ocean University, and working as a Software Engineer Intern at 
         <HoverLink 
             href={companyHref}
             content={company}
         />
     </>,
-    'My areas of expertise include software engineering, object-oriented, and programming teaching. Currently, I am mainly engaged in iOS APP development and testing, while learning front-end and back-end development.'
+    'My domains of expertise include software engineering, object-oriented, and programming teaching. Currently, I am mainly engaged in iOS APP development and testing, while learning front-end and back-end development.'
 ];
