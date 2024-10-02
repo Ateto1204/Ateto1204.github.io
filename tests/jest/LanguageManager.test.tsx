@@ -1,4 +1,4 @@
-import { LanguageManager } from '../controller/LanguageManager';
+import { LanguageManager } from '../../src/controller/LanguageManager';
 import { useContext } from 'react';
 
 jest.mock('react', () => ({
@@ -6,7 +6,7 @@ jest.mock('react', () => ({
     useContext: jest.fn(),
 }));
 
-jest.mock('../model/LocalDataModel', () => ({
+jest.mock('../../src/model/LocalDataModel', () => ({
     LocalDataModel: jest.fn().mockImplementation(() => ({
         getLocalData: jest.fn((lan: string, key: string) => {
             if (lan === 'zh') {

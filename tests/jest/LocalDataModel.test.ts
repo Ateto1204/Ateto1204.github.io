@@ -1,4 +1,4 @@
-import { LocalDataModel } from "../model/LocalDataModel";
+import { LocalDataModel } from "../../src/model/LocalDataModel";
 
 const zhMockName = "中文名稱";
 const zhMockProfileSubtitle = "中文副標題";
@@ -12,7 +12,7 @@ const engMockProfileParagraphsData = ["English Paragraph 1", "English Paragraph 
 const engMockTimelineItems = [{ title: "English Experience 1", description: "Experience Description" }];
 const engMockSpecialties = ["Specialty 1", "Specialty 2"];
 
-jest.mock('../data/profile/profileData', () => ({
+jest.mock('../../src/data/profile/profileData', () => ({
     name: zhMockName,
     profileSubtitle: zhMockProfileSubtitle,
     profileParagraphsData: zhMockProfileParagraphsData,
@@ -21,12 +21,12 @@ jest.mock('../data/profile/profileData', () => ({
     engProfileParagraphsData: engMockProfileParagraphsData,
 }));
 
-jest.mock('../data/expData', () => ({
+jest.mock('../../src/data/expData', () => ({
     timelineItems: zhMockTimelineItems,
     engTimelineItems: engMockTimelineItems,
 }));
 
-jest.mock('../data/specialtyData', () => ({
+jest.mock('../../src/data/specialtyData', () => ({
     specialties: zhMockSpecialties,
     engSpecialties: engMockSpecialties,
 }));
