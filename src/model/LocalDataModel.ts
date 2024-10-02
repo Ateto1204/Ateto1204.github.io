@@ -25,7 +25,6 @@ export class LocalDataModel{
     }
 
     public getLocalData(lan: string, key: string) {
-        console.log(this.localData);
         return this.localData[lan][key]
     }
 }

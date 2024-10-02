@@ -1,6 +1,5 @@
 import { LocalDataModel } from "../model/LocalDataModel";
 
-// Mocking the data
 const zhMockName = "中文名稱";
 const zhMockProfileSubtitle = "中文副標題";
 const zhMockProfileParagraphsData = ["中文段落1", "中文段落2"];
@@ -13,7 +12,6 @@ const engMockProfileParagraphsData = ["English Paragraph 1", "English Paragraph 
 const engMockTimelineItems = [{ title: "English Experience 1", description: "Experience Description" }];
 const engMockSpecialties = ["Specialty 1", "Specialty 2"];
 
-// Mock the data into the LocalDataModel
 jest.mock('../data/profile/profileData', () => ({
     name: zhMockName,
     profileSubtitle: zhMockProfileSubtitle,

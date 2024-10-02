@@ -13,15 +13,5 @@ export default defineConfig({
       '@fortawesome/free-regular-svg-icons': path.resolve(__dirname, 'node_modules/@fortawesome/free-regular-svg-icons'),
       '@fortawesome/free-brands-svg-icons': path.resolve(__dirname, 'node_modules/@fortawesome/free-brands-svg-icons'),
     },
-  }, 
-  // build: {
-  //   rollupOptions: {
-  //     external: [
-  //       '@fortawesome/react-fontawesome',
-  //       '@fortawesome/free-regular-svg-icons',
-  //       '@fortawesome/free-brands-svg-icons',
-  //       '@fortawesome/fontawesome-svg-core'
-  //     ]
-  //   }
-  // }
+  },
 });
