@@ -36,7 +36,7 @@ jobs:
           node-version: 18
           cache: "npm"
       - name: Install dependencies
-        run: npm install; npx playwright install;
+        run: npm install
       - name: Run tests
         run: npm run test
       - name: Build
