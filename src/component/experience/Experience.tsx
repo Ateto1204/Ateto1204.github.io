@@ -18,7 +18,7 @@ function Experience() {
                 <Subtitle content='Experience' />
             </div>
             <div className='flex justify-center mt-20'> {/* timeline */}
-                <ul className='flex flex-col justify-start items-stretch'> {/* timeline-list */}
+                <ul className='flex flex-col justify-start items-stretch xl:w-3/5'> {/* timeline-list */}
                     { Array.isArray(timelineItems) &&
                     timelineItems.map((item, index) => (
                         <TimelineItem

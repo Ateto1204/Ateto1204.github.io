@@ -9,7 +9,7 @@ import FaviconSetter from './controller/FaviconSetter'
 import { LanSetButton } from './component/button/LanSetButton'
 
 import { glassBgStyle } from './data/glassStyle';
-import { LanProvider } from './controller/LanCxtProvider'
+import { LanProvider } from './model/LanCxtProvider'
 
 function App() {
   return (

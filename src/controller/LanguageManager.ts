@@ -1,16 +1,17 @@
 import { useContext } from "react"
-import { localData } from "../data/localData";
-import { language } from "./LanCxtProvider";
+import { LocalDataModel } from "../model/LocalDataModel";
+import { language } from "../model/LanCxtProvider";
 
 export class LanguageManager {
-    private getLocalData(): string {
+    private static getLocalData(): string {
         const { lan } = useContext(language) || {lan: 'en'};
         return lan;
     }
 
-    static localString(key: string): string {
-        const manager = new LanguageManager();
-        const lan: string = manager.getLocalData();
-        return localData[lan][key] || key;
+    public static localString(key: string): string {
+        const model = new LocalDataModel();
+        const lan: string = this.getLocalData();
+        const localString = model.getLocalData(lan, key);
+        return localString;
     }
 }

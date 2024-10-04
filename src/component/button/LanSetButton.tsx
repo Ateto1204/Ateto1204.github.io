@@ -1,7 +1,7 @@
 import { useContext } from "react";
 
 import { glassBgStyle } from "../../data/glassStyle";
-import { language } from "../../controller/LanCxtProvider";
+import { language } from "../../model/LanCxtProvider";
 
 
 export const LanSetButton = () => {
