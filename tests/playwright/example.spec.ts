@@ -26,7 +26,7 @@ test('has profile text paragraph', async ({ page }) => {
   await page.goto('https://ateto1204.github.io/');
 
   await page.getByText('This is Dong-Yi Su aka Ateto').click();
-  await page.getByText('My areas of expertise include').click();
+  await page.getByText('My domains of expertise include').click();
 });
 
 test('has contact icon', async ({ page }) => {
