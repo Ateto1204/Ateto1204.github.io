@@ -14,10 +14,10 @@
   
 .transform-style-3d {
     transform-style: preserve-3d;
+    transition: transform 0.5s;
 }
-.transform-style-3d:active {
-    transform:rotateY(180deg);
-}
+
 .transform-rotateY-180 {
-    transform:rotateY(180deg);
+    transform: rotateY(180deg);
+    transition: transform 0.5s;
 }

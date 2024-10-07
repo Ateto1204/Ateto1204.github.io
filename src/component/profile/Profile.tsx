@@ -1,7 +1,7 @@
 import { useAOS } from '../../controller/useAOS';
 import 'aos/dist/aos.css';
 
-import { ProfileAvatar } from './ProfileAvatar';
+import ProfileAvatar from './ProfileAvatar';
 import { IconLink } from './IconLink';
 import { ProfileTitle } from './ProfileTitle';
 import { ProfileSubtitle } from './ProfileSubtitle';
