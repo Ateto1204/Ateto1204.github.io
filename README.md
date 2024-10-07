@@ -1,8 +1,5 @@
-# React + Vite
+# The Site of Ateto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a personal site developed by Dong-Yi Su aka Ateto using React.js, Typescript, Tailwind CSS and Material UI, packaged and unit tested and E2E tested using Vite, Jest and Playwright.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The architectural design adopts MVC architecture and adheres to the abstraction principle, providing each component with an almost pure interface to achieve low coupling, high modularity and high testability.
