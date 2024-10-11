@@ -25,12 +25,14 @@ function ProfileAvatar() {
                 <img 
                     src={myProfile} 
                     alt={name}
-                    className='h-36 w-auto shadow-2xl rounded-lg
-                                md:h-52 lg:h-72 2xl:h-80'
+                    className='h-36 w-auto shadow-none rounded-lg
+                                md:h-52 lg:h-72 2xl:h-80 
+                                hover:shadow-2xl transition-shadow'
                 />
             </div>
             <div className='card w-28 h-auto transform-rotateY-180
-                            bg-slate-100 rounded-lg shadow-2xl
+                            bg-slate-100 rounded-lg shadow-none
+                            hover:shadow-2xl transition-shadow
                             2xl:w-64 lg:w-52 md:w-36 xl:left-16 md:left-4'>
                 <p className='flex justify-center text-sm pt-1 
                                 md:text-xl lg:text-2xl xl:text-3xl md:pt-4 
