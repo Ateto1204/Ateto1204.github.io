@@ -8,7 +8,7 @@ interface SkillProps {
     iconColor: string,
 }
 
-export const MySkill = ({ title, IconComponent, iconColor }: SkillProps) => {
+function SkillItem({ title, IconComponent, iconColor }: SkillProps) {
     return (
         <div className='flex-[0_0_auto] relative xl:w-1/2 text-lg py-4'>
             <span className='pr-3 inline-flex text-base 2xl:text-lg'>
@@ -19,3 +19,5 @@ export const MySkill = ({ title, IconComponent, iconColor }: SkillProps) => {
         </div>
     );
 };
+
+export default SkillItem;
