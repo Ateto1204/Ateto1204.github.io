@@ -1,5 +1,5 @@
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope, faFileLines } from '@fortawesome/free-regular-svg-icons';
 
 export const contactData = [
     {
@@ -13,5 +13,9 @@ export const contactData = [
     {
         href: 'https://www.linkedin.com/in/ateto', 
         icon: faLinkedin,
+    },
+    {
+        href: 'https://drive.google.com/file/d/1_ulKRuI_CqaXUFd7n0CJkombPF2dO546/view?usp=drive_link',
+        icon: faFileLines,
     },
 ];

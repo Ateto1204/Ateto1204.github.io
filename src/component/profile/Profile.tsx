@@ -2,7 +2,7 @@ import { useAOS } from '../../controller/useAOS';
 import 'aos/dist/aos.css';
 
 import ProfileAvatar from './ProfileAvatar';
-import { IconLink } from './IconLink';
+import IconLink from './IconLink';
 import { ProfileTitle } from './ProfileTitle';
 import { ProfileSubtitle } from './ProfileSubtitle';
 import { ProfileTextParagraph } from './ProfileTextParagraph';
@@ -18,7 +18,6 @@ function Profile() {
             className='m-10 md:m-6 md:py-12 md:px-5 lg:m-14 lg:py-36 xl:px-24' 
             data-aos='fade-up'
         >
-            
             <div className='max-w-2xl lg:max-w-3xl xl:max-w-4xl'>
                 <div className='flex lg:block'>
                     <ProfileAvatar />
