@@ -18,7 +18,7 @@ export const profileParagraphsData = [
         />
         擔任 Software Engineer Intern。
     </>,
-    '我的專長領域包含譁眾取寵、軟體工程、物件導向、程式教學，目前主要投入於 iOS APP 開發與測試，同時學習前後端開發。'
+    '我的專長領域包含譁眾取寵、軟體工程、系統設計、程式教學，目前主要投入於 iOS APP 開發與測試，同時學習前後端開發。'
 ];
 
 export const engProfileParagraphsData = [
@@ -29,5 +29,5 @@ export const engProfileParagraphsData = [
             content={company}
         />
     </>,
-    'My domains of expertise include software engineering, object-oriented, and programming teaching. Currently, I am mainly engaged in iOS APP development and testing, while learning front-end and back-end development.'
+    'My domains of expertise include software engineering, system design, and programming teaching. Currently, I am mainly engaged in iOS APP development and testing, while learning front-end and back-end development.'
 ];
