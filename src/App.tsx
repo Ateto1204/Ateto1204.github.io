@@ -4,6 +4,7 @@ import Aside from './view/Aside';
 import Main from './view/Main'
 
 function App() {
+  console.log("我最喜歡軟體工程了！");
   FaviconSetter();
 
   return (
