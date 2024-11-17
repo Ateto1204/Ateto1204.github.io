@@ -1,7 +1,7 @@
 import { useAOS } from '../../controller/useAOS';
 import 'aos/dist/aos.css';
 
-import ProfileAvatar from './ProfileAvatar';
+import ProfileAvatarController from '../../controller/ProfileAvatarController';
 import IconLink from './IconLink';
 import { ProfileTitle } from './ProfileTitle';
 import { ProfileSubtitle } from './ProfileSubtitle';
@@ -20,7 +20,7 @@ function Profile() {
         >
             <div className='max-w-2xl lg:max-w-3xl xl:max-w-4xl'>
                 <div className='flex lg:block'>
-                    <ProfileAvatar />
+                    <ProfileAvatarController />
                     <div className='flex flex-col justify-center'>
                         <ProfileTitle />
                         <ProfileSubtitle />
