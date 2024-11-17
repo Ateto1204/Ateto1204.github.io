@@ -31,3 +31,12 @@ export const engProfileParagraphsData = [
     </>,
     'My domains of expertise include software engineering, system design, and programming teaching. Currently, I am mainly engaged in iOS APP development and testing, while learning front-end and back-end development.'
 ];
+
+export const mbtiUrls = [
+    'https://www.16personalities.com/static/images/personality-types/famous/analysts_ENTJ_steve_jobs.svg?v=6',
+    'https://www.16personalities.com/static/images/personality-types/famous/analysts_ENTJ_dr_strange.svg?v=6',
+    'https://www.16personalities.com/static/images/personality-types/famous/analysts_ENTJ_gordon_ramsay.svg?v=6',
+    'https://www.16personalities.com/static/images/personality-types/famous/analysts_ENTJ_franklin_d_roosevelt.svg?v=6'
+];
+
+export const avatarURL = 'https://media.licdn.com/dms/image/v2/D4E03AQGv6c9UkOGZLA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731845835336?e=1737590400&v=beta&t=jxdhcjxm-iHP1DleZJQicCnkOtJN8Pb3d_cRuak19QY';
