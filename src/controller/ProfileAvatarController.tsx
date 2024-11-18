@@ -21,7 +21,7 @@ function ProfileAvatarController() {
             if (!isFront) {
                 setTimeout(() => {
                     toggleMBTIurl();
-                }, 300);
+                }, 150);
             }
         }
     };
@@ -39,17 +39,23 @@ function ProfileAvatarController() {
         setCurrentMBTIimg(img);
     };
 
-    const getRandMBTIurl = (): number => {
-        const url = Math.floor(Math.random() * mbtiUrls.length);
-        return url;
+    const getRandMbtiUrlIndex = (last: number): number => {
+        const urlIdx = Math.floor(Math.random() * mbtiUrls.length);
+        if (urlIdx === last) {
+            if (urlIdx + 1 === mbtiUrls.length) return 0;
+            return urlIdx + 1;
+        }
+        return urlIdx;
     }
 
     const generateRandSequence = async() => {
         const number = 10;
         let urlSeq: number[] = randSequence;
+        let last = -1;
         for (let i = 0; i < number; i++) {
-            const url: number = getRandMBTIurl();
+            const url: number = getRandMbtiUrlIndex(last);
             urlSeq.push(url);
+            last = url;
         }
         setRandSequence(urlSeq);
     }
