@@ -2,6 +2,6 @@ export interface TimelineItemProps {
     date: string, 
     title: string,
     company: string,
-    skill: string,
+    skills: string[],
     description: string,
 }

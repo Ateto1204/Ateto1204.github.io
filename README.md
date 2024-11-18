@@ -22,4 +22,3 @@ The architectural design adopts MVC architecture and adheres to the abstraction 
 
 ### CI/CD
 - Github Action
-- Jenkins

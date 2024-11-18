@@ -20,7 +20,7 @@ function Experience() {
                                 date={item.date}
                                 title={item.title}
                                 company={item.company}
-                                skill={item.skill}
+                                skills={item.skill}
                                 description={item.description}
                             />
                     )) }
