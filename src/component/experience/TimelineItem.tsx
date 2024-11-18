@@ -43,7 +43,7 @@ export const TimelineItem = ({
                     { skills.length > 0 &&
                         <div className='flex mt-5 mb-2'>
                             {skills.map((skill, index) => (
-                                <div key={index} className='mr-3 px-3 bg-slate-400 rounded-2xl border'>
+                                <div key={index} className='mr-3 px-3 bg-slate-400 rounded-2xl border opacity-75'>
                                     {skill}
                                 </div>
                             ))}
