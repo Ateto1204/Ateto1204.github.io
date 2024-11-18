@@ -2,14 +2,15 @@ import { useState } from "react";
 import { ExpDialog } from "./ExpDialog";
 import { TimelineItemProps } from "./TimelineItemProps";
 import { glassBgStyle } from "../../data/glassStyle";
+import { TiFolderOpen } from "react-icons/ti";
+
 
 export const TimelineItem = ({
     date,
     title,
     company,
-    skill,
-    description,
-}: TimelineItemProps) => {
+    skills,
+    description, }: TimelineItemProps) => {
     const [openDialog, setOpenDialog] = useState(false);
 
     const handleOpen = () => {
@@ -35,15 +36,25 @@ export const TimelineItem = ({
                     <h3 className='font-serif text-lg lg:text-xl font-semibold my-4'>
                         {title}
                     </h3>
-                    <p className='my-2'>
-                        {company}{skill ? ' | ' + skill : ''}
+                    <p className='flex my-2'>
+                        <TiFolderOpen className='h-6 w-auto mr-2' />
+                        { company }
                     </p>
+                    { skills.length > 0 &&
+                        <div className='flex mt-5 mb-2'>
+                            {skills.map((skill, index) => (
+                                <div key={index} className='mr-3 px-3 bg-slate-400 rounded-2xl border'>
+                                    {skill}
+                                </div>
+                            ))}
+                        </div>
+                    }
                 </div>
             </div>
             <ExpDialog  
                 openDialog={openDialog}
                 setOpenDialog={setOpenDialog}
-                data={{date, title, company, skill, description}}
+                data={{date, title, company, skills, description}}
             />
         </li>
     );
