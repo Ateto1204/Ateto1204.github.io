@@ -1,6 +1,6 @@
 import { GrSwift } from "react-icons/gr";
 import { FaReact, FaNodeJs, FaDocker } from "react-icons/fa";
-import { SiSpringboot, SiMongodb, SiGithubactions, SiPlaywright, SiJest, SiXcode } from "react-icons/si";
+import { SiSpringboot, SiMongodb, SiGithubactions, SiPlaywright, SiJest, SiXcode, SiKong } from "react-icons/si";
 import { IoLogoFirebase } from "react-icons/io5";
 import { GrMysql } from "react-icons/gr";
 import { FaGolang, FaGitAlt } from "react-icons/fa6";
@@ -20,6 +20,7 @@ const backendSkills = [
     { title: 'Java (Spring Boot)', icon: SiSpringboot, color: '#66CD00' },
     { title: 'Go (Gin)', icon: FaGolang, color: '#00BFFF' },
     { title: 'Node (Express)', icon: FaNodeJs, color: '#66CD00'}, 
+    { title: 'Kong Gateway', icon: SiKong, color: '#21A66F'}
 ];
 
 const dbSkills = [
