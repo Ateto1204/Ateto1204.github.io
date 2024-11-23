@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { ExpDialog } from "./ExpDialog";
-import { TimelineItemProps } from "./TimelineItemProps";
+import { TimelineItemProps } from "../../model/TimelineItemProps";
 import { glassBgStyle } from "../../data/glassStyle";
 import { TiFolderOpen } from "react-icons/ti";
+import SkillTag from "./SkillTag";
 
 
 export const TimelineItem = ({
@@ -43,9 +44,7 @@ export const TimelineItem = ({
                     { skills.length > 0 &&
                         <div className='flex mt-5 mb-2'>
                             {skills.map((skill, index) => (
-                                <div key={index} className='mr-3 px-3 bg-slate-400 rounded-2xl border opacity-75'>
-                                    {skill}
-                                </div>
+                                <SkillTag key={index} skill={skill}/>
                             ))}
                         </div>
                     }
