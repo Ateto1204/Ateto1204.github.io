@@ -47,7 +47,7 @@ test('has contact icon', async ({ page }) => {
 test('exp page', async ({ page }) => {
   await page.goto('https://ateto1204.github.io/');
 
-  await page.locator('section').filter({ hasText: 'Experience Jul2024 -' }).locator('path').click();
+  await page.locator('section').filter({ hasText: 'Experience Jul2024 -' }).locator('path').nth(0).click();
   await page.getByRole('heading', { name: 'Experience' }).click();
 
   await page.locator('.w-9 > path:nth-child(2)').click();

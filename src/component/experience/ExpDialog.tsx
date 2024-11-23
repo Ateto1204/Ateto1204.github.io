@@ -5,7 +5,8 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 
-import { TimelineItemProps } from "./TimelineItemProps";
+import { TimelineItemProps } from "../../model/TimelineItemProps";
+import SkillTag from "./SkillTag";
 
 interface ExpDialogProps {
     openDialog: boolean,
@@ -24,8 +25,13 @@ export const ExpDialog = ({ openDialog, setOpenDialog, data }: ExpDialogProps) =
             <DialogTitle>
                 {data.title}
                 <DialogContentText>
-                    {data.company} {data.skill ? '| ' + data.skill : ''} 
-                    <br />
+                    { data.skills.length > 0 &&
+                        <div className='flex my-3'>
+                            {data.skills.map((skill, index) => (
+                                <SkillTag key={index} skill={skill}/>
+                            ))}
+                        </div>
+                    }
                     {data.date}
                 </DialogContentText>
             </DialogTitle>
