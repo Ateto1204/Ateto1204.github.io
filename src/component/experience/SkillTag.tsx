@@ -1,9 +1,9 @@
-function SkillTag({skill}: {skill: string}) {
+function SkillTag({ skill }: { skill: string }) {
     return (
-        <div className='mr-3 px-3 bg-slate-400 rounded-2xl border opacity-75 select-none'>
+        <div className="mr-3 px-3 my-1 bg-slate-400 rounded-2xl border opacity-75 select-none">
             {skill}
         </div>
-    )
+    );
 }
 
 export default SkillTag;
