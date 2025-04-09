@@ -1,78 +1,78 @@
 name: Deploy static content to Pages
 
 on:
-  pull_request:
-    branches:
-      - '**'
-  push:
-    branches:
-      - main
+    pull_request:
+        branches:
+            - "**"
+    push:
+        branches:
+            - main
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+    contents: read
+    pages: write
+    id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+    group: "pages"
+    cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "npm"
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Upload artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: build-artifact
-          path: ./dist
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Set up Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  cache: "npm"
+            - name: Install dependencies
+              run: npm install
+            - name: Build
+              run: npm run build
+            - name: Upload artifact
+              uses: actions/upload-artifact@v4
+              with:
+                  name: build-artifact
+                  path: ./dist
 
-  test:
-    needs: build
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-          cache: "npm"
-      - name: Install dependencies
-        run: npm install
-      - name: Run tests
-        run: npm run test
+    test:
+        needs: build
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                os: [ubuntu-latest, windows-latest, macos-latest]
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+            - name: Set up Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  cache: "npm"
+            - name: Install dependencies
+              run: npm install
+            - name: Run tests
+              run: npm run test
 
-  deploy:
-    needs: ['build', 'test']
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: build-artifact
-          path: ./dist
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
-      - name: Upload artifact to Pages
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: ./dist
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+    deploy:
+        needs: ["build", "test"]
+        if: github.ref == 'refs/heads/main'
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download artifact
+              uses: actions/download-artifact@v3
+              with:
+                  name: build-artifact
+                  path: ./dist
+            - name: Setup Pages
+              uses: actions/configure-pages@v3
+            - name: Upload artifact to Pages
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  path: ./dist
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v1
