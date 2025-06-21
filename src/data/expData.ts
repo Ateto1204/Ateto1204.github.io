@@ -8,9 +8,9 @@ export const engTimelineItems = [
             "UIKit",
             "XCTest",
             "Go",
-            "PostgreSQL",
+            "Nginx",
             "Next.js",
-            "Tailwind CSS",
+            "Docker",
         ],
         description:
             "Utilized AVFoundation to develop and test iOS camera functionalities, including configuring the camera to capture 48MP Apple ProRAW images, whileleading the refactoring of UIKit-based views to SwiftUI to resolve compatibility issues in view hierarchy, gesture handling, lifecycle management and state management. Applied architecture patterns like MVC and design patterns such as Pub-Sub, Delegate, and Observer to decouple large-scale software systems, enhancing modularity, maintainability, and optimizing performance across the application.",
@@ -59,9 +59,9 @@ export const timelineItems = [
             "UIKit",
             "XCTest",
             "Go",
-            "PostgreSQL",
+            "Nginx",
             "Next.js",
-            "Tailwind CSS",
+            "Docker",
         ],
         description:
             "利用 AVFoundation 開發和測試 iOS 相機功能，包括配置相機擷取 48MP Apple ProRAW 影像，將 UIKit 框架重構為 SwiftUI，並解決視圖層次結構 (view heirarchy)、手勢處理、生命週期管理和狀態管理中的相容性問題。應用 MVC 等架構模式和 Pub-Sub、Delegate 和 Observer 等設計模式來解耦合大型軟體系統，以達到模組化及高可維護性並優化應用程式效能。",

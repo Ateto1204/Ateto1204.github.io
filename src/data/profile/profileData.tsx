@@ -48,4 +48,5 @@ export const mbtiUrls = [
     "https://www.16personalities.com/static/images/personality-types/famous/analysts_ENTJ_franklin_d_roosevelt.svg?v=6",
 ];
 
-export const avatarURL = "/src/assets/profile.JPG";
+export const avatarURL =
+    "https://media.licdn.com/dms/image/v2/D4E03AQG2fF8PJUR0Iw/profile-displayphoto-shrink_800_800/B4EZdtviMrG4Ag-/0/1749892868477?e=1755734400&v=beta&t=Cfx_QWq3x-doGGT437hYjzKqb7uuLu0eddHfdS5vdQQ";
