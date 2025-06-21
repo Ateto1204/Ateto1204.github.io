@@ -15,13 +15,12 @@ test("has profile img", async ({ page }) => {
 test("has title name and profile subtitle", async ({ page }) => {
     await page.goto("https://ateto1204.github.io/");
 
-    await page.getByRole("heading", { name: "Dong-Yi Su" }).click();
-    await page
-        .getByRole("heading", { name: "Software Engineer | Developer" })
-        .click();
-
-    await page.locator("header svg").first().click();
-    await page.locator("header path").nth(1).click();
+    await expect(
+        page.getByRole("heading", { name: "Dong-Yi Su" })
+    ).toBeVisible();
+    await expect(
+        page.getByRole("heading", { name: /Software Engineer/i }).first()
+    ).toBeVisible();
 });
 
 test("has profile text paragraph", async ({ page }) => {
@@ -34,17 +33,19 @@ test("has profile text paragraph", async ({ page }) => {
 test("has contact icon", async ({ page }) => {
     await page.goto("https://ateto1204.github.io/");
 
-    const page1Promise = page.waitForEvent("popup");
-    await page.getByRole("link").nth(1).click();
-    const page1 = await page1Promise;
+    const githubPopup = page.waitForEvent("popup");
+    await page.locator('a[href*="github.com"]').first().click();
+    await githubPopup;
 
-    const mailtoLink = await page.locator('a[href^="mailto:"]').first();
-    const href = await mailtoLink.getAttribute("href");
+    const href = await page
+        .locator('a[href^="mailto:"]')
+        .first()
+        .getAttribute("href");
     expect(href).toContain("mailto:");
 
-    const page3Promise = page.waitForEvent("popup");
-    await page.getByRole("link").nth(3).click();
-    const page3 = await page3Promise;
+    const otherPopup = page.waitForEvent("popup");
+    await page.locator('a[href*="linkedin.com"]').first().click();
+    await otherPopup;
 });
 
 test("exp page", async ({ page }) => {

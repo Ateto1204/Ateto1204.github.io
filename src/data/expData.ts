@@ -12,8 +12,9 @@ export const engTimelineItems = [
             "Next.js",
             "Docker",
         ],
-        description:
-            "Utilized AVFoundation to develop and test iOS camera functionalities, including configuring the camera to capture 48MP Apple ProRAW images, whileleading the refactoring of UIKit-based views to SwiftUI to resolve compatibility issues in view hierarchy, gesture handling, lifecycle management and state management. Applied architecture patterns like MVC and design patterns such as Pub-Sub, Delegate, and Observer to decouple large-scale software systems, enhancing modularity, maintainability, and optimizing performance across the application.",
+        description: `Developed and tested iOS camera functionalities, making the camera to capture 48MP ProRAW images. Led the refactoring initiative from UIKit-based views to SwiftUI, effectively resolving compatibility challenges related to view hierarchy and lifecycle management. Additionally, leveraged design patterns such as Delegate to decouple large-scale software systems, significantly improving scalability and maintainability.
+        
+Developed a serial number verification system using Go, adhering strictly to Clean Architecture principles, and integrated this system with an Nginx server and Docker Compose environment. Also created an internal admin dashboard featuring authentication services using Next.js.`,
     },
     {
         date: "Feb2024 - Jun2024",
