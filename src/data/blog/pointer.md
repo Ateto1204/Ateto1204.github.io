@@ -68,7 +68,7 @@ malloc(memory_size * type_size);
 malloc(5 * sizeof(int));
 ```
 
-![image](https://hackmd.io/_uploads/H1HmyvQHp.png =80%x)
+![alt text](image.png)
 
 而通常我們看到的，在 `malloc()` 前都還會加上一個指標變數的型別轉換，比如說：
 
@@ -186,12 +186,9 @@ int qsort(int* a, int* b) {
 如果 $x$ - $y$ 的值如果大於零就代表 $x$ > $y$，
 所以要交換，而 $x$ <= $y$ 則不需要。
 
-:::success
-
-### 張胖練功坊 - 2D 點排序
+#### 張胖練功坊 - 2D 點排序
 
 https://hackmd.io/@Ateto/rkhcO9gSa
-:::
 
 ## 結構的指標
 
