@@ -1,5 +1,5 @@
-import { glassBgStyle } from "../../data/glassStyle";
-import Subtitle from "../../component/subtitle/Subtitle";
+import { glassBgStyle } from "@/data/glassStyle";
+import Subtitle from "@/component/subtitle/Subtitle";
 import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 const blogPreviews = [

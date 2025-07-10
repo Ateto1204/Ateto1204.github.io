@@ -1,10 +1,10 @@
-import { useContext } from "react"
-import { LocalDataModel } from "../model/LocalDataModel";
-import { language } from "../model/LanCxtProvider";
+import { useContext } from "react";
+import { LocalDataModel } from "@/model/LocalDataModel";
+import { language } from "@/model/LanCxtProvider";
 
 export class LanguageManager {
     private static getLocalData(): string {
-        const { lan } = useContext(language) || {lan: 'en'};
+        const { lan } = useContext(language) || { lan: "en" };
         return lan;
     }
 

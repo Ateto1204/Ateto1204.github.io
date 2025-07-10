@@ -1,10 +1,10 @@
-import { glassBgStyle } from "../data/glassStyle";
-import Profile from "../component/profile/Profile";
-import Experience from "../component/experience/Experience";
-import Specialty from "../component/specialty/Specialty";
-import Skill from "../component/skill/Skill";
-import Footer from "../component/footer/Footer";
-import Blog from "../component/blog/Blog";
+import { glassBgStyle } from "@/data/glassStyle";
+import Profile from "@/component/profile/Profile";
+import Experience from "@/component/experience/Experience";
+import Specialty from "@/component/specialty/Specialty";
+import Skill from "@/component/skill/Skill";
+import Footer from "@/component/footer/Footer";
+import Blog from "@/component/blog/Blog";
 
 function Main() {
     return (

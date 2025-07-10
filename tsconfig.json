@@ -1,14 +1,18 @@
 {
     "compilerOptions": {
-      "target": "ESNext",
-      "module": "ESNext",
-      "jsx": "react-jsx",
-      "strict": true,
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
+        "target": "ESNext",
+        "module": "ESNext",
+        "jsx": "react-jsx",
+        "strict": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        }
     },
     "include": ["src"],
     "exclude": ["node_modules"]
-  }
+}

@@ -1,22 +1,20 @@
-import { useEffect, useRef, useState } from 'react';
-import { mbtiUrls } from '../data/profile/profileData';
-import ProfileAvatar from '../component/profile/avatar/ProfileAvatar';
-
-
+import { useEffect, useRef, useState } from "react";
+import { mbtiUrls } from "@/data/profile/profileData";
+import ProfileAvatar from "@/component/profile/avatar/ProfileAvatar";
 
 function ProfileAvatarController() {
     const cardRef = useRef<HTMLDivElement>(null);
-    const [currentMBTIimg, setCurrentMBTIimg] = useState<string>('');
+    const [currentMBTIimg, setCurrentMBTIimg] = useState<string>("");
     const [isFront, setIsFront] = useState(true);
     const [randSequence, setRandSequence] = useState<number[]>([]);
 
     useEffect(() => {
         toggleMBTIurl();
-    }, [])
+    }, []);
 
-    const handleClick = async() => {
+    const handleClick = async () => {
         if (cardRef.current) {
-            cardRef.current.classList.toggle('transform-rotateY-180');
+            cardRef.current.classList.toggle("transform-rotateY-180");
             setIsFront(!isFront);
             if (!isFront) {
                 setTimeout(() => {
@@ -30,10 +28,10 @@ function ProfileAvatarController() {
         if (randSequence.length < 3) {
             await generateRandSequence();
         }
-      
+
         const idx = randSequence[0];
         const img = mbtiUrls[idx ?? 0];
-      
+
         setRandSequence(randSequence.slice(1));
         console.log(randSequence);
         setCurrentMBTIimg(img);
@@ -46,9 +44,9 @@ function ProfileAvatarController() {
             return urlIdx + 1;
         }
         return urlIdx;
-    }
+    };
 
-    const generateRandSequence = async() => {
+    const generateRandSequence = async () => {
         const number = 10;
         let urlSeq: number[] = randSequence;
         let last = -1;
@@ -58,13 +56,13 @@ function ProfileAvatarController() {
             last = url;
         }
         setRandSequence(urlSeq);
-    }
+    };
 
     return (
         <ProfileAvatar
-            cardRef={cardRef} 
-            handleClick={handleClick} 
-            imgUrl={currentMBTIimg} 
+            cardRef={cardRef}
+            handleClick={handleClick}
+            imgUrl={currentMBTIimg}
         />
     );
 }

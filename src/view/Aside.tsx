@@ -1,5 +1,5 @@
-import ThemeModeButton from "../component/button/ThemeModeButton";
-import { LanSetButton } from "../component/button/LanSetButton";
+import ThemeModeButton from "@/component/button/ThemeModeButton";
+import { LanSetButton } from "@/component/button/LanSetButton";
 
 function Aside() {
     return (
@@ -7,7 +7,7 @@ function Aside() {
             <ThemeModeButton />
             <LanSetButton />
         </aside>
-    )
+    );
 }
 
 export default Aside;

@@ -1,4 +1,4 @@
-import { avatarURL, name } from "../../../data/profile/profileData";
+import { avatarURL, name } from "@/data/profile/profileData";
 
 function MyAvatar() {
     return (

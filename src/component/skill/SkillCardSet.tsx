@@ -1,5 +1,5 @@
 import SkillCard from "./SkillCard";
-import { skillData } from "../../data/skillData";
+import { skillData } from "@/data/skillData";
 
 function SkillCardSet() {
     return (

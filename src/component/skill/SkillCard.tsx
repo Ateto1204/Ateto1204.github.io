@@ -1,4 +1,4 @@
-import { glassBgStyle } from "../../data/glassStyle";
+import { glassBgStyle } from "@/data/glassStyle";
 import SkillItem from "./SkillItem";
 
 interface SkillCardProps {
