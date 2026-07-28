@@ -12,9 +12,8 @@ function BlogPost() {
 
     useEffect(() => {
         const savedTheme = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
         document.documentElement.dataset.theme =
-            savedTheme === "dark" || (!savedTheme && prefersDark) ? "dark" : "light";
+            savedTheme === "dark" ? "dark" : "light";
 
         if (!slug) return;
         setLoading(true);

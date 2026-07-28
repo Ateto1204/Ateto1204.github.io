@@ -27,6 +27,13 @@ const copy = {
 
 const sectionIds = ["about", "experience", "publications"];
 
+const lastUpdated = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone: "Asia/Taipei",
+}).format(new Date(import.meta.env.VITE_LAST_UPDATED));
+
 const experiences = [
   {
     date: "2026.02 — Present",
@@ -176,11 +183,12 @@ const publications = [
           第 22 屆臺灣軟體工程研討會 (
           <a href="https://tcse2026.seat.org.tw/">TCSE 2026</a>)
         </em>
-        ，台中（勤益科大）， 2026 年 7 月。<strong>（佳作展示論文）</strong>
+        ，台中（勤益科大）， 2026 年 7 月。
       </>
     ),
     links: [],
     language: "zh",
+    award: true,
   },
   {
     authors: (
@@ -272,11 +280,8 @@ function Main() {
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
     document.documentElement.dataset.theme =
-      savedTheme === "dark" || (!savedTheme && prefersDark) ? "dark" : "light";
+      savedTheme === "dark" ? "dark" : "light";
   }, []);
 
   const toggleTheme = () => {
@@ -511,7 +516,16 @@ function Main() {
                           {publication.authors}
                         </p>
                       </div>
-                      <p className="publication-venue">{publication.venue}</p>
+                      <p className="publication-venue">
+                        {publication.venue}
+                        {publication.award && (
+                          <strong>
+                            {locale === "zh"
+                              ? "（佳作展示論文）"
+                              : " (Honorable Mention Demo Paper)"}
+                          </strong>
+                        )}
+                      </p>
                     </article>
                   </li>
                 ))}
@@ -520,10 +534,10 @@ function Main() {
         </main>
       </div>
 
-      <footer className="site-footer">
-        <p>© {new Date().getFullYear()} Dong-Yi Su</p>
-        <p>Last updated · June 21, 2025</p>
-        <a href="#top">Back to top ↑</a>
+            <footer className="site-footer">
+                <p>© {new Date().getFullYear()} Dong-Yi Su</p>
+                <p>Last updated · {lastUpdated}</p>
+                <a href="#top">Back to top ↑</a>
       </footer>
     </div>
   );
