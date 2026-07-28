@@ -1,17 +1,34 @@
-import FaviconSetter from './controller/FaviconSetter'
-import { LanProvider } from './model/LanCxtProvider'
-import Aside from './view/Aside';
-import Main from './view/Main'
+import { lazy, Suspense } from "react";
+import FaviconSetter from "./controller/FaviconSetter";
+import { LanProvider } from "./model/LanCxtProvider";
+import Main from "./view/Main";
+import { Routes, Route } from "react-router-dom";
+
+const BlogPost = lazy(() => import("./component/blog/BlogPost"));
 
 function App() {
-  FaviconSetter();
+    FaviconSetter();
 
-  return (
-    <LanProvider>
-      <Main />
-      <Aside />
-    </LanProvider>
-  );
+    return (
+        <LanProvider>
+            <Routes>
+                <Route
+                    path="/"
+                    element={
+                        <Main />
+                    }
+                />
+                <Route
+                    path="/blog/:slug"
+                    element={
+                        <Suspense fallback={<p className="blog-page">載入中...</p>}>
+                            <BlogPost />
+                        </Suspense>
+                    }
+                />
+            </Routes>
+        </LanProvider>
+    );
 }
 
 export default App;

@@ -11,7 +11,12 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "test": "jest --testPathIgnorePatterns=\"tests/playwright\""
+    "test": "jest"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    }
   },
   "dependencies": {
     "@emotion/react": "^11.13.3",
@@ -24,17 +29,20 @@
     "@mui/material": "^6.1.1",
     "aos": "^2.3.4",
     "gh-pages": "^6.1.1",
+    "prism-themes": "^1.9.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.2.1",
-    "react-router-dom": "^6.25.1"
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^6.25.1",
+    "rehype-prism-plus": "^2.0.1",
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
     "@babel/preset-typescript": "^7.24.7",
-    "@playwright/test": "^1.47.2",
     "@types/aos": "^3.0.7",
     "@types/jest": "^29.5.13",
     "@types/node": "^22.7.4",

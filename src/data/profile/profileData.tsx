@@ -1,4 +1,4 @@
-import { HoverLink } from "../../component/profile/HoverLink";
+import { HoverLink } from "@/component/profile/HoverLink";
 
 export const name = "蘇東毅";
 export const profileSubtitle = "開發者";

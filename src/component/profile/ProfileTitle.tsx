@@ -1,4 +1,4 @@
-import { LanguageManager } from "../../controller/LanguageManager";
+import { LanguageManager } from "@/controller/LanguageManager";
 
 export const ProfileTitle = () => {
     return (

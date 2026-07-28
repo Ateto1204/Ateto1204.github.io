@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ExpDialog } from "./ExpDialog";
-import { TimelineItemProps } from "../../model/TimelineItemProps";
-import { glassBgStyle } from "../../data/glassStyle";
+import { TimelineItemProps } from "@/model/TimelineItemProps";
+import { glassBgStyle } from "@/data/glassStyle";
 import { TiFolderOpen } from "react-icons/ti";
 import SkillTag from "./SkillTag";
 

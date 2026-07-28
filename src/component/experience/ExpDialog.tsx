@@ -5,7 +5,7 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 
-import { TimelineItemProps } from "../../model/TimelineItemProps";
+import { TimelineItemProps } from "@/model/TimelineItemProps";
 import SkillTag from "./SkillTag";
 
 interface ExpDialogProps {

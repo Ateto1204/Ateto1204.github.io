@@ -1,4 +1,4 @@
-import { engTimelineItems, timelineItems } from "../data/expData";
+import { engTimelineItems, timelineItems } from "@/data/expData";
 import {
     engName,
     engProfileParagraphsData,
@@ -6,8 +6,8 @@ import {
     name,
     profileParagraphsData,
     profileSubtitle,
-} from "../data/profile/profileData";
-import { engSpecialties, specialties } from "../data/specialtyData";
+} from "@/data/profile/profileData";
+import { engSpecialties, specialties } from "@/data/specialtyData";
 
 export class LocalDataModel {
     private localData: Record<string, Record<string, any>>;
