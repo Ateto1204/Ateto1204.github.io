@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypePrism from "rehype-prism-plus";
+import "prism-themes/themes/prism-vsc-dark-plus.css";
 
 function BlogPost() {
     const { slug } = useParams<{ slug: string }>();
@@ -8,6 +11,11 @@ function BlogPost() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        const savedTheme = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.dataset.theme =
+            savedTheme === "dark" || (!savedTheme && prefersDark) ? "dark" : "light";
+
         if (!slug) return;
         setLoading(true);
         import(`../../data/blog/${slug}.md?raw`)
@@ -23,15 +31,34 @@ function BlogPost() {
     }, [slug]);
 
     if (loading) {
-        return <p>載入中...</p>;
+        return <p className="blog-page">載入中...</p>;
     }
     if (mdContent === null) {
-        return <p>找不到文章：{slug}</p>;
+        return (
+            <main className="blog-page">
+                <Link className="blog-back" to="/">← Back home</Link>
+                <p>找不到文章：{slug}</p>
+            </main>
+        );
     }
     return (
-        <article className="p-8">
-            <ReactMarkdown>{mdContent}</ReactMarkdown>
-        </article>
+        <main className="blog-page">
+            <header className="blog-header">
+                <Link className="blog-back" to="/">← Back home</Link>
+                <span>ATETO / NOTES</span>
+            </header>
+            <article className="blog-prose">
+                <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    rehypePlugins={[[rehypePrism, { ignoreMissing: true }]]}
+                >
+                    {mdContent}
+                </ReactMarkdown>
+            </article>
+            <footer className="blog-footer">
+                <Link to="/">← More from Ateto</Link>
+            </footer>
+        </main>
     );
 }
 export default BlogPost;

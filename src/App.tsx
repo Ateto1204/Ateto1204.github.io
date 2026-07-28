@@ -1,9 +1,10 @@
-import BlogPost from "./component/blog/BlogPost";
+import { lazy, Suspense } from "react";
 import FaviconSetter from "./controller/FaviconSetter";
 import { LanProvider } from "./model/LanCxtProvider";
-import Aside from "./view/Aside";
 import Main from "./view/Main";
 import { Routes, Route } from "react-router-dom";
+
+const BlogPost = lazy(() => import("./component/blog/BlogPost"));
 
 function App() {
     FaviconSetter();
@@ -14,13 +15,17 @@ function App() {
                 <Route
                     path="/"
                     element={
-                        <>
-                            <Main />
-                            <Aside />
-                        </>
+                        <Main />
                     }
                 />
-                <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route
+                    path="/blog/:slug"
+                    element={
+                        <Suspense fallback={<p className="blog-page">載入中...</p>}>
+                            <BlogPost />
+                        </Suspense>
+                    }
+                />
             </Routes>
         </LanProvider>
     );

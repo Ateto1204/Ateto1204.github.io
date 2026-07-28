@@ -4,7 +4,6 @@ import {
     SiSpringboot,
     SiMongodb,
     SiGithubactions,
-    SiPlaywright,
     SiJest,
     SiXcode,
     SiKong,
@@ -51,7 +50,6 @@ const devopsSkills = [
 ];
 
 const testSkills = [
-    { title: "Playwright", icon: SiPlaywright, color: "#44883e" },
     { title: "Jest", icon: SiJest, color: "orange" },
     { title: "XCTest", icon: SiXcode, color: "#44883e" },
     { title: "Unit", icon: SiJunit5, color: "#ae3837" },
