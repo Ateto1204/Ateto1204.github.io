@@ -29,6 +29,15 @@ function BlogPost() {
             });
     }, [slug]);
 
+    useEffect(() => {
+        document
+            .querySelectorAll<HTMLAnchorElement>('a[href^="http"]')
+            .forEach((link) => {
+                link.target = "_blank";
+                link.rel = "noopener noreferrer";
+            });
+    }, [mdContent]);
+
     if (loading) {
         return <p className="blog-page">載入中...</p>;
     }

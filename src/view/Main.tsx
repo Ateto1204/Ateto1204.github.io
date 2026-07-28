@@ -284,6 +284,15 @@ function Main() {
       savedTheme === "dark" ? "dark" : "light";
   }, []);
 
+  useEffect(() => {
+    document
+      .querySelectorAll<HTMLAnchorElement>('a[href^="http"]')
+      .forEach((link) => {
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      });
+  }, [locale]);
+
   const toggleTheme = () => {
     const root = document.documentElement;
     const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";

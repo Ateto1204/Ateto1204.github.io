@@ -416,6 +416,11 @@ a {
     border-bottom: 1px solid var(--line);
 }
 
+.experience-item:last-child,
+.publication-item:last-child {
+    border-bottom: 0;
+}
+
 .experience-date {
     position: absolute;
     top: 0.2rem;
@@ -592,16 +597,17 @@ a {
     justify-content: center;
     width: 28px;
     height: 28px;
-    border: 1px solid var(--line);
     color: var(--ink-soft);
-    font-size: 0.72rem;
-    transition:
-        border-color 180ms ease,
-        color 180ms ease;
+    font-size: 1rem;
+    transition: color 180ms ease;
+}
+
+.publication-links svg {
+    width: 1rem;
+    height: 1rem;
 }
 
 .publication-links a:hover {
-    border-color: var(--accent);
     color: var(--accent);
 }
 
