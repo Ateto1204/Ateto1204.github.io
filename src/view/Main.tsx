@@ -42,7 +42,6 @@ const experiences = [
       en: <a href="https://www.aidmics.com/">Aidmics</a>,
       zh: <a href="https://www.aidmics.com/">Aidmics</a>,
     },
-    skills: ["Swift"],
   },
   {
     date: "2025.09 — 2026.01",
@@ -51,7 +50,6 @@ const experiences = [
       en: <a href="https://www.binance.com/en">Binance</a>,
       zh: <a href="https://www.binance.com/en">Binance</a>,
     },
-    skills: ["Swift"],
   },
   {
     date: "2024.07 — 2025.08",
@@ -60,7 +58,6 @@ const experiences = [
       en: <a href="https://www.aidmics.com/">Aidmics</a>,
       zh: <a href="https://www.aidmics.com/">Aidmics</a>,
     },
-    skills: ["Swift", "Go", "Next.js", "Django", "Docker", "Nginx"],
   },
   {
     date: "2024.02 — 2024.06",
@@ -69,23 +66,20 @@ const experiences = [
       en: (
         <>
           NTOU —{" "}
-          <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/lab.html">
-            Affective Learning and Human-computer Collaboration LAB
+          <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/index.html">
+            Advisor: Shih-Yeh Chen
           </a>{" "}
-          <span>(now at Engineering Science, NCKU)</span>
         </>
       ),
       zh: (
         <>
           NTOU —{" "}
-          <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/lab.html">
-            感知學習與人機合作實驗室
+          <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/index.html">
+            指導教授：陳世曄
           </a>{" "}
-          <span>（現於成大工科所）</span>
         </>
       ),
     },
-    skills: ["C++"],
   },
 ];
 
@@ -354,9 +348,9 @@ function Main() {
                 {locale === "zh" ? "蘇東毅" : "Dong-Yi Su"}
                 <span>Ateto</span>
               </h1>
-              <ul className="profile-points">
-                <li>Senior undergraduate at NTOU</li>
-                <li>Software Engineering Researcher</li>
+              <ul className="profile-role-list">
+                <li>B.S @NTOU</li>
+                <li>Intern @Aidmics</li>
               </ul>
             </div>
             <div className="profile-meta">
@@ -401,16 +395,19 @@ function Main() {
                     與 Agentic AI。
                   </p>
                   <p>
-                    蘇東毅具備豐富的學術研究和實務經驗，他自大一開始在外商{" "}
-                    <a href="https://www.binance.com/en">Binance</a> 與新創{" "}
-                    <a href="https://www.aidmics.com/">Aidmics</a> 擔任 Software
+                    蘇東毅具備豐富的學術研究和實務經驗，他在新創{" "}
+                    <a href="https://www.aidmics.com/">Aidmics</a> 與外商{" "}
+                    <a href="https://www.binance.com/en">Binance</a> 擔任 Software
                     Engineer Intern 和 Research
                     Intern；蘇東毅在國科會計劃中獲得多項專題競賽獎項，同時他也以第一作者將軟體工程與人工智慧等研究成果發表於{" "}
-                    <a href="https://www.seai.org/">
+                    <a className="conference-link" href="https://www.seai.org/">
                       <em>SEAI</em>
                     </a>{" "}
                     和{" "}
-                    <a href="https://tcse2026.seat.org.tw/">
+                    <a
+                      className="conference-link"
+                      href="https://tcse2026.seat.org.tw/"
+                    >
                       <em>TCSE</em>
                     </a>{" "}
                     等國內外會議上。
@@ -426,22 +423,24 @@ function Main() {
                     evolution, AI4SE, and Agentic AI.
                   </p>
                   <p>
-                    He has extensive academic and industry experience. Since his
-                    first year, he has worked as a Software Engineer Intern and
-                    Research Intern at{" "}
-                    <a href="https://www.binance.com/en">Binance</a> and{" "}
-                    <a href="https://www.aidmics.com/">Aidmics</a>. Through an
+                    He has extensive academic and industry experience. He has
+                    worked as a Software Engineer Intern and Research Intern at{" "}
+                    <a href="https://www.aidmics.com/">Aidmics</a> and{" "}
+                    <a href="https://www.binance.com/en">Binance</a>. Through an
                     NSTC research project, he received multiple awards spanning
                     software engineering, artificial intelligence,
                     entrepreneurship, and project competitions. As first author,
                     he has published work in software engineering and artificial
                     intelligence at domestic and international conferences
                     including{" "}
-                    <a href="https://www.seai.org/">
+                    <a className="conference-link" href="https://www.seai.org/">
                       <em>SEAI</em>
                     </a>{" "}
                     and{" "}
-                    <a href="https://tcse2026.seat.org.tw/">
+                    <a
+                      className="conference-link"
+                      href="https://tcse2026.seat.org.tw/"
+                    >
                       <em>TCSE</em>
                     </a>
                     .
@@ -453,9 +452,9 @@ function Main() {
 
           <section className="content-section" id="experience">
             <SectionHeading title={text.experienceTitle} />
-            <div className="experience-list">
+            <ul className="experience-list">
               {experiences.map((item) => (
-                <article
+                <li
                   className="experience-item"
                   key={`${item.date}-${item.title}`}
                 >
@@ -468,15 +467,10 @@ function Main() {
                         @ {item.organization[locale]}
                       </span>
                     </h3>
-                    <ul className="tag-list" aria-label="Technologies">
-                      {item.skills.map((skill) => (
-                        <li key={skill}>{skill}</li>
-                      ))}
-                    </ul>
                   </div>
-                </article>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
 
           <section
