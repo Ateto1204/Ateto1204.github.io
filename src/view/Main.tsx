@@ -10,34 +10,37 @@ import { language } from "@/model/LanCxtProvider";
 
 const copy = {
   en: {
-    nav: ["About", "Experience", "Publications"],
+    nav: ["About", "Research", "Experience", "Publications"],
     aboutTitle: "About",
+    researchTitle: "Research",
     experienceTitle: "Experience",
     publicationsTitle: "Publications",
     location: "Keelung, Taiwan",
   },
   zh: {
-    nav: ["About", "Experience", "Publications"],
+    nav: ["About", "Research", "Experience", "Publications"],
     aboutTitle: "About",
+    researchTitle: "Research",
     experienceTitle: "Experience",
     publicationsTitle: "Publications",
     location: "Keelung, Taiwan",
   },
 };
 
-const sectionIds = ["about", "experience", "publications"];
+const sectionIds = ["about", "research", "experience", "publications"];
 
 const lastUpdated = new Intl.DateTimeFormat("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    timeZone: "Asia/Taipei",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "Asia/Taipei",
 }).format(new Date(import.meta.env.VITE_LAST_UPDATED));
 
 const experiences = [
   {
     date: "2026.02 — Present",
     title: "Research Intern",
+    skills: ["Swift"],
     organization: {
       en: <a href="https://www.aidmics.com/">Aidmics</a>,
       zh: <a href="https://www.aidmics.com/">Aidmics</a>,
@@ -46,6 +49,7 @@ const experiences = [
   {
     date: "2025.09 — 2026.01",
     title: "Software Engineer Intern",
+    skills: ["Swift"],
     organization: {
       en: <a href="https://www.binance.com/en">Binance</a>,
       zh: <a href="https://www.binance.com/en">Binance</a>,
@@ -54,6 +58,7 @@ const experiences = [
   {
     date: "2024.07 — 2025.08",
     title: "Software Engineer Intern",
+    skills: ["Swift", "Go", "Next.js", "Django", "Docker", "Nginx"],
     organization: {
       en: <a href="https://www.aidmics.com/">Aidmics</a>,
       zh: <a href="https://www.aidmics.com/">Aidmics</a>,
@@ -62,6 +67,7 @@ const experiences = [
   {
     date: "2024.02 — 2024.06",
     title: "Research Assistant",
+    skills: ["C++"],
     organization: {
       en: (
         <>
@@ -349,7 +355,7 @@ function Main() {
                 <span>Ateto</span>
               </h1>
               <ul className="profile-role-list">
-                <li>B.S @NTOU</li>
+                <li>B.S. @NTOU</li>
                 <li>Intern @Aidmics</li>
               </ul>
             </div>
@@ -391,14 +397,13 @@ function Main() {
                 <>
                   <p>
                     蘇東毅（Dong-Yi
-                    Su）目前就讀國立臺灣海洋大學資訊工程學系四年級，他的研究領域包含但不限於軟體工程、人工智慧，尤其軟體演化、AI4SE
-                    與 Agentic AI。
+                    Su）目前就讀國立臺灣海洋大學資訊工程學系四年級。
                   </p>
                   <p>
                     蘇東毅具備豐富的學術研究和實務經驗，他在新創{" "}
                     <a href="https://www.aidmics.com/">Aidmics</a> 與外商{" "}
-                    <a href="https://www.binance.com/en">Binance</a> 擔任 Software
-                    Engineer Intern 和 Research
+                    <a href="https://www.binance.com/en">Binance</a> 擔任
+                    Software Engineer Intern 和 Research
                     Intern；蘇東毅在國科會計劃中獲得多項專題競賽獎項，同時他也以第一作者將軟體工程與人工智慧等研究成果發表於{" "}
                     <a className="conference-link" href="https://www.seai.org/">
                       <em>SEAI</em>
@@ -417,10 +422,7 @@ function Main() {
                 <>
                   <p>
                     Dong-Yi Su is a senior undergraduate in Computer Science and
-                    Engineering at National Taiwan Ocean University. His
-                    research spans software engineering and artificial
-                    intelligence, with particular interests in software
-                    evolution, AI4SE, and Agentic AI.
+                    Engineering at National Taiwan Ocean University.
                   </p>
                   <p>
                     He has extensive academic and industry experience. He has
@@ -450,6 +452,17 @@ function Main() {
             </div>
           </section>
 
+          <section className="content-section" id="research">
+            <SectionHeading title={text.researchTitle} />
+            <div className="about-copy">
+              <p>
+                {locale === "zh"
+                  ? "他的研究領域包含但不限於軟體工程、人工智慧，尤其軟體演化、AI4SE 與 Agentic AI。"
+                  : "His research spans software engineering and artificial intelligence, with particular interests in software evolution, AI4SE, and Agentic AI."}
+              </p>
+            </div>
+          </section>
+
           <section className="content-section" id="experience">
             <SectionHeading title={text.experienceTitle} />
             <ul className="experience-list">
@@ -467,6 +480,11 @@ function Main() {
                         @ {item.organization[locale]}
                       </span>
                     </h3>
+                    <div className="experience-skills" aria-label="Skills">
+                      {item.skills.map((skill) => (
+                        <span key={skill}>{skill}</span>
+                      ))}
+                    </div>
                   </div>
                 </li>
               ))}
@@ -537,10 +555,10 @@ function Main() {
         </main>
       </div>
 
-            <footer className="site-footer">
-                <p>© {new Date().getFullYear()} Dong-Yi Su</p>
-                <p>Last updated · {lastUpdated}</p>
-                <a href="#top">Back to top ↑</a>
+      <footer className="site-footer">
+        <p>© {new Date().getFullYear()} Dong-Yi Su</p>
+        <p>Last updated · {lastUpdated}</p>
+        <a href="#top">Back to top ↑</a>
       </footer>
     </div>
   );
