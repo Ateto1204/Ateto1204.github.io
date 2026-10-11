@@ -1,33 +1,19 @@
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faEnvelope, faFileLines } from "@fortawesome/free-regular-svg-icons";
+import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { HiOutlineMoon, HiOutlineSun } from "react-icons/hi2";
 
 import profilePhoto from "@/assets/profile-web.jpg";
-import { language } from "@/model/LanCxtProvider";
 
 const copy = {
-  en: {
-    nav: ["About", "Research", "Experience", "Publications"],
-    aboutTitle: "About",
-    researchTitle: "Research",
-    experienceTitle: "Experience",
-    publicationsTitle: "Publications",
-    location: "Keelung, Taiwan",
-  },
-  zh: {
-    nav: ["About", "Research", "Experience", "Publications"],
-    aboutTitle: "About",
-    researchTitle: "Research",
-    experienceTitle: "Experience",
-    publicationsTitle: "Publications",
-    location: "Keelung, Taiwan",
-  },
+  nav: ["Home", "Experience", "Publications"],
+  aboutTitle: "About",
+  location: "Keelung, Taiwan",
 };
 
-const sectionIds = ["about", "research", "experience", "publications"];
+const navTargets = ["#about", "/experience", "/publications"];
 
 const lastUpdated = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
@@ -36,11 +22,39 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
   timeZone: "Asia/Taipei",
 }).format(new Date(import.meta.env.VITE_LAST_UPDATED));
 
-const experiences = [
+export const experiences = [
+  {
+    date: "2026.08 — Present",
+    title: "Research Intern",
+    skills: ["Software Engineering", "Reverse Engineering"],
+    organization: {
+      en: (
+        <>
+          <a href="https://www.waseda.jp/top/en/">WasedaU</a> —{" "}
+          <a href="https://545659928.github.io/jialongli/">
+            Advisor: Prof. Jialong Li
+          </a>
+        </>
+      ),
+      zh: (
+        <>
+          <a href="https://www.waseda.jp/top/en/">WasedaU</a> —{" "}
+          <a href="https://545659928.github.io/jialongli/">
+            Advisor: Prof. Jialong Li
+          </a>
+        </>
+      ),
+    },
+  },
   {
     date: "2026.02 — Present",
-    title: "Research Intern",
-    skills: ["Swift"],
+    title: "R&D Intern",
+    skills: [
+      "Computer Vision",
+      "Sperm Analysis",
+      "Ultrasound Imaging",
+      "Mobile Systems",
+    ],
     organization: {
       en: <a href="https://www.aidmics.com/">Aidmics</a>,
       zh: <a href="https://www.aidmics.com/">Aidmics</a>,
@@ -89,22 +103,22 @@ const experiences = [
   },
 ];
 
-const publications = [
+export const publications = [
   {
     authors: (
       <>
         <strong>Dong-Yi Su</strong>
       </>
     ),
-    title: "Temporality and the Limits of AI in Software Evolution.",
+    title:
+      "A Preliminary of Study on Temporality and the Limits of AI in Software Evolution.",
     venue: (
       <>
-        Under Review at{" "}
         <em>
           the 33rd Asia-Pacific Software Engineering Conference (
           <a href="https://conf.researchr.org/home/apsec-2026">APSEC 2026</a>)
         </em>
-        , Bali, Indonesia, 2026.
+        , Bali, Indonesia, December, 2026. (to appear)
       </>
     ),
     links: [
@@ -114,61 +128,6 @@ const publications = [
       },
       { label: "code", href: "https://github.com/Ateto1204/temporality-AI-SE" },
     ],
-    hidden: true,
-  },
-  {
-    authors: (
-      <>
-        <strong>Dong-Yi Su</strong>, Yuan-Kai Liu, Wei-Hua Chien, Yan-Cheng Lin,
-        Shang-Pin Ma
-      </>
-    ),
-    title:
-      "Casdoc: An Agentic Workbench for Specification-Driven Software Documentation.",
-    venue: (
-      <>
-        Under Review at{" "}
-        <em>
-          the 33rd Asia-Pacific Software Engineering Conference (
-          <a href="https://conf.researchr.org/home/apsec-2026">APSEC 2026</a>)
-        </em>
-        , Bali, Indonesia, 2026.
-      </>
-    ),
-    links: [
-      {
-        label: "paper",
-        href: "https://drive.google.com/file/d/1wOyHQDkBZ5IQdJ8_AiinklzjmzxU4Qdo/view?usp=sharing",
-      },
-      { label: "code", href: "https://github.com/casdoc" },
-    ],
-    hidden: true,
-  },
-  {
-    authors: (
-      <>
-        <strong>Dong-Yi Su</strong>, Han-Sheng Lu
-      </>
-    ),
-    title:
-      "AST-driven LLM Migration of Imperative UI Views to Declarative UI Frameworks: UIKit to SwiftUI.",
-    venue: (
-      <>
-        Under Review at{" "}
-        <em>
-          the 33rd Asia-Pacific Software Engineering Conference (
-          <a href="https://conf.researchr.org/home/apsec-2026">APSEC 2026</a>)
-        </em>
-        , Bali, Indonesia, 2026.
-      </>
-    ),
-    links: [
-      {
-        label: "code",
-        href: "https://github.com/alanlu01/AST-Driven-UIKit2SwiftUI",
-      },
-    ],
-    hidden: true,
   },
   {
     authors: (
@@ -183,7 +142,7 @@ const publications = [
           第 22 屆臺灣軟體工程研討會 (
           <a href="https://tcse2026.seat.org.tw/">TCSE 2026</a>)
         </em>
-        ，台中（勤益科大）， 2026 年 7 月。
+        ，台中（勤益科大），2026年7月。
       </>
     ),
     links: [],
@@ -200,11 +159,10 @@ const publications = [
       "Hierarchical Semantic Anchoring: Progressive Hierarchical Retrieval for Intent-Grounded Task Placement in LLM-Assisted Mind Maps.",
     venue: (
       <>
-        In{" "}
         <em>
-          Proceedings of the 6th International Conference on Software
-          Engineering and Artificial Intelligence (
-          <a href="https://www.seai.org/">SEAI 2026</a>)
+          the 6th International Conference on Software Engineering and
+          Artificial Intelligence (<a href="https://www.seai.org/">SEAI 2026</a>
+          )
         </em>
         , Fuzhou, China, June, 2026.
       </>
@@ -230,10 +188,9 @@ const publications = [
     title: "Patterns for AI-Assisted Document Maintenance and Traceability.",
     venue: (
       <>
-        In{" "}
         <em>
-          Proceedings of the 12th Asian Conference on Pattern Languages of
-          Programs, People &amp; Practices (
+          the 12th Asian Conference on Pattern Languages of Programs, People
+          &amp; Practices (
           <a href="https://plopcon.org/asianplop2026/">AsianPLoP 2026</a>)
         </em>
         , Yokohama, Japan, March, 2026.
@@ -260,7 +217,7 @@ const publications = [
           第 30 屆資訊管理學術暨實務研討會 (
           <a href="https://sites.google.com/view/imp2025">IMP 2025</a>)
         </em>
-        ，桃園 （長庚大學），2025 年 12 月。
+        ，桃園（長庚大學），2025年12月。
       </>
     ),
     links: [],
@@ -269,14 +226,7 @@ const publications = [
 ];
 
 function Main() {
-  const context = useContext(language);
-  if (!context) {
-    throw new Error("Main must be used within a LanProvider");
-  }
-
-  const { lan, setLan } = context;
-  const locale = lan === "zh" ? "zh" : "en";
-  const text = copy[locale];
+  const text = copy;
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
@@ -291,7 +241,7 @@ function Main() {
         link.target = "_blank";
         link.rel = "noopener noreferrer";
       });
-  }, [locale]);
+  }, []);
 
   const toggleTheme = () => {
     const root = document.documentElement;
@@ -309,20 +259,12 @@ function Main() {
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
           {text.nav.map((item, index) => (
-            <a key={sectionIds[index]} href={`#${sectionIds[index]}`}>
+            <a key={navTargets[index]} href={navTargets[index]}>
               {item}
             </a>
           ))}
         </nav>
         <div className="header-actions">
-          <button
-            className="text-button"
-            type="button"
-            onClick={() => setLan(locale === "zh" ? "en" : "zh")}
-            aria-label="Switch language"
-          >
-            {locale === "zh" ? "EN" : "中"}
-          </button>
           <button
             className="icon-button theme-toggle"
             type="button"
@@ -339,11 +281,7 @@ function Main() {
         <aside className="profile-rail">
           <div className="profile-card">
             <div className="portrait-wrap">
-              <img
-                className="portrait"
-                src={profilePhoto}
-                alt={locale === "zh" ? "蘇東毅" : "Dong-Yi Su"}
-              />
+              <img className="portrait" src={profilePhoto} alt="Dong-Yi Su" />
               <span
                 className="availability-dot"
                 title="Open to conversations"
@@ -351,12 +289,12 @@ function Main() {
             </div>
             <div className="profile-copy">
               <h1>
-                {locale === "zh" ? "蘇東毅" : "Dong-Yi Su"}
+                Dong-Yi Su
                 <span>Ateto</span>
               </h1>
               <ul className="profile-role-list">
                 <li>B.S. @NTOU</li>
-                <li>Intern @Aidmics</li>
+                <li>Intern @Aidmics & @WasedaU</li>
               </ul>
             </div>
             <div className="profile-meta">
@@ -393,164 +331,20 @@ function Main() {
           <section className="content-section about-section" id="about">
             <SectionHeading title={text.aboutTitle} />
             <div className="about-copy">
-              {locale === "zh" ? (
-                <>
-                  <p>
-                    蘇東毅（Dong-Yi
-                    Su）目前就讀國立臺灣海洋大學資訊工程學系四年級。
-                  </p>
-                  <p>
-                    蘇東毅具備豐富的學術研究和實務經驗，他在新創{" "}
-                    <a href="https://www.aidmics.com/">Aidmics</a> 與外商{" "}
-                    <a href="https://www.binance.com/en">Binance</a> 擔任
-                    Software Engineer Intern 和 Research
-                    Intern；蘇東毅在國科會計劃中獲得多項專題競賽獎項，同時他也以第一作者將軟體工程與人工智慧等研究成果發表於{" "}
-                    <a className="conference-link" href="https://www.seai.org/">
-                      <em>SEAI</em>
-                    </a>{" "}
-                    和{" "}
-                    <a
-                      className="conference-link"
-                      href="https://tcse2026.seat.org.tw/"
-                    >
-                      <em>TCSE</em>
-                    </a>{" "}
-                    等國內外會議上。
-                  </p>
-                </>
-              ) : (
-                <>
-                  <p>
-                    Dong-Yi Su is a senior undergraduate in Computer Science and
-                    Engineering at National Taiwan Ocean University.
-                  </p>
-                  <p>
-                    He has extensive academic and industry experience. He has
-                    worked as a Software Engineer Intern and Research Intern at{" "}
-                    <a href="https://www.aidmics.com/">Aidmics</a> and{" "}
-                    <a href="https://www.binance.com/en">Binance</a>. Through an
-                    NSTC research project, he received multiple awards spanning
-                    software engineering, artificial intelligence,
-                    entrepreneurship, and project competitions. As first author,
-                    he has published work in software engineering and artificial
-                    intelligence at domestic and international conferences
-                    including{" "}
-                    <a className="conference-link" href="https://www.seai.org/">
-                      <em>SEAI</em>
-                    </a>{" "}
-                    and{" "}
-                    <a
-                      className="conference-link"
-                      href="https://tcse2026.seat.org.tw/"
-                    >
-                      <em>TCSE</em>
-                    </a>
-                    .
-                  </p>
-                </>
-              )}
-            </div>
-          </section>
-
-          <section className="content-section" id="research">
-            <SectionHeading title={text.researchTitle} />
-            <div className="about-copy">
               <p>
-                {locale === "zh"
-                  ? "他的研究領域包含但不限於軟體工程、人工智慧，尤其軟體演化、AI4SE 與 Agentic AI。"
-                  : "His research spans software engineering and artificial intelligence, with particular interests in software evolution, AI4SE, and Agentic AI."}
+                Dong-Yi Su is an undergraduate in Computer Science and
+                Engineering at National Taiwan Ocean University. He currently
+                serves as an R&amp;D Intern at{" "}
+                <a href="https://www.aidmics.com/">Aidmics</a> and a Research
+                Intern at <a href="https://www.waseda.jp/top/en/">Waseda</a>{" "}
+                University. He has worked as a SWE Intern at{" "}
+                <a href="https://www.aidmics.com/">Aidmics</a> and{" "}
+                <a href="https://www.binance.com/en">Binance</a>. His research
+                spans software engineering and artificial intelligence, with
+                particular interests in software evolution, AI4SE, and Agentic
+                AI.
               </p>
             </div>
-          </section>
-
-          <section className="content-section" id="experience">
-            <SectionHeading title={text.experienceTitle} />
-            <ul className="experience-list">
-              {experiences.map((item) => (
-                <li
-                  className="experience-item"
-                  key={`${item.date}-${item.title}`}
-                >
-                  <div className="experience-body">
-                    <p className="experience-date">{item.date}</p>
-                    <h3>
-                      {item.title}
-                      <span className="experience-company">
-                        {" "}
-                        @ {item.organization[locale]}
-                      </span>
-                    </h3>
-                    <div className="experience-skills" aria-label="Skills">
-                      {item.skills.map((skill) => (
-                        <span key={skill}>{skill}</span>
-                      ))}
-                    </div>
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <section
-            className="content-section publications-section"
-            id="publications"
-          >
-            <SectionHeading title={text.publicationsTitle} />
-            <ol className="publication-list">
-              {publications
-                .filter((publication) => !publication.hidden)
-                .map((publication) => (
-                  <li className="publication-item" key={publication.title}>
-                    <article>
-                      <div className="publication-title-row">
-                        <h3>
-                          {publication.title}
-                          {publication.language === "zh" && (
-                            <span className="publication-language">
-                              {locale === "zh" ? "中文" : "Chinese"}
-                            </span>
-                          )}
-                        </h3>
-                        {publication.links.length > 0 && (
-                          <div className="publication-links">
-                            {publication.links.map((link) => (
-                              <a
-                                key={link.label}
-                                href={link.href}
-                                target="_blank"
-                                rel="noreferrer"
-                                aria-label={link.label}
-                                title={link.label}
-                              >
-                                {link.label === "paper" ? (
-                                  <FontAwesomeIcon icon={faFileLines} />
-                                ) : (
-                                  <FaGithub />
-                                )}
-                              </a>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                      <div className="publication-meta-row">
-                        <p className="publication-authors">
-                          {publication.authors}
-                        </p>
-                      </div>
-                      <p className="publication-venue">
-                        {publication.venue}
-                        {publication.award && (
-                          <strong>
-                            {locale === "zh"
-                              ? "（佳作展示論文）"
-                              : " (Honorable Mention Demo Paper)"}
-                          </strong>
-                        )}
-                      </p>
-                    </article>
-                  </li>
-                ))}
-            </ol>
           </section>
         </main>
       </div>
@@ -569,7 +363,7 @@ interface SectionHeadingProps {
   intro?: string;
 }
 
-function SectionHeading({ title, intro }: SectionHeadingProps) {
+export function SectionHeading({ title, intro }: SectionHeadingProps) {
   return (
     <header className="section-heading">
       <div>

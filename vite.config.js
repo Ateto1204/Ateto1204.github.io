@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "url";
 import { execFileSync } from "node:child_process";
+import { copyFileSync } from "node:fs";
 
 function getLastUpdatedTimestamp() {
     try {
@@ -15,7 +16,15 @@ function getLastUpdatedTimestamp() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [
+        react(),
+        {
+            name: "github-pages-spa-fallback",
+            closeBundle() {
+                copyFileSync("dist/index.html", "dist/404.html");
+            },
+        },
+    ],
     define: {
         "import.meta.env.VITE_LAST_UPDATED": JSON.stringify(
             getLastUpdatedTimestamp()

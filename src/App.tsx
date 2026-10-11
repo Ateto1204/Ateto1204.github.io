@@ -1,7 +1,8 @@
 import { lazy, Suspense } from "react";
 import FaviconSetter from "./controller/FaviconSetter";
-import { LanProvider } from "./model/LanCxtProvider";
 import Main from "./view/Main";
+import ExperiencePage from "./view/ExperiencePage";
+import PublicationsPage from "./view/PublicationsPage";
 import { Routes, Route } from "react-router-dom";
 
 const BlogPost = lazy(() => import("./component/blog/BlogPost"));
@@ -10,8 +11,7 @@ function App() {
     FaviconSetter();
 
     return (
-        <LanProvider>
-            <Routes>
+        <Routes>
                 <Route
                     path="/"
                     element={
@@ -26,8 +26,9 @@ function App() {
                         </Suspense>
                     }
                 />
-            </Routes>
-        </LanProvider>
+                <Route path="/experience" element={<ExperiencePage />} />
+                <Route path="/publications" element={<PublicationsPage />} />
+        </Routes>
     );
 }
 
