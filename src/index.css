@@ -351,6 +351,14 @@ a {
   padding-top: 24px;
 }
 
+#about {
+  padding-bottom: 8px;
+}
+
+#about + #research {
+  padding-top: 8px;
+}
+
 .section-heading {
   margin-bottom: 1.35rem;
 }
@@ -365,6 +373,7 @@ a {
 }
 
 #research .section-heading h2,
+#news .section-heading h2,
 #internship .section-heading h2,
 #teaching .section-heading h2,
 #talks .section-heading h2,
@@ -377,6 +386,10 @@ a {
   margin: 1rem 0 0;
   color: var(--ink-soft);
   font-size: 0.95rem;
+}
+
+#research .section-heading > div > p {
+  max-width: 100%;
 }
 
 .standalone-page-title {
@@ -408,6 +421,86 @@ a {
 
 .about-copy a.conference-link {
   color: inherit;
+}
+
+.research-interest-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.research-interest-list li {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr);
+  column-gap: 1.25rem;
+  padding-left: 1rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.research-interest-list li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink);
+  content: "";
+}
+
+.research-interest-list strong {
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.news-list {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.news-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr);
+  column-gap: 0.8rem;
+  align-items: baseline;
+  padding-left: 1rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.news-item::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--ink);
+  content: "";
+}
+
+.news-date {
+  color: var(--ink-soft);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.7rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.news-item a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .publication-venue a {
@@ -597,7 +690,7 @@ a {
 .publication-item {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -606,11 +699,11 @@ a {
   align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.3rem;
 }
 
 .publication-meta-row {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.3rem;
 }
 
 .publication-authors {
@@ -1023,6 +1116,7 @@ a {
   }
 
   #research .section-heading h2,
+  #news .section-heading h2,
   #internship .section-heading h2,
   #teaching .section-heading h2,
   #talks .section-heading h2,
@@ -1037,6 +1131,16 @@ a {
 
   .about-copy p {
     font-size: 1rem;
+  }
+
+  .research-interest-list li {
+    grid-template-columns: 1fr;
+    row-gap: 0.05rem;
+  }
+
+  .news-item {
+    grid-template-columns: 4.8rem minmax(0, 1fr);
+    column-gap: 0.5rem;
   }
 
   .experience-item {

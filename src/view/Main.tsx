@@ -22,29 +22,42 @@ const lastUpdated = new Intl.DateTimeFormat("en-US", {
   timeZone: "Asia/Taipei",
 }).format(new Date(import.meta.env.VITE_LAST_UPDATED));
 
+const newsItems = [
+  {
+    id: "apsec-acceptance",
+    date: "2026.09",
+    content: (
+      <>
+        Research on temporality in software evolution was accepted at{" "}
+        <a href="https://conf.researchr.org/home/apsec-2026">APSEC 2026</a>.
+      </>
+    ),
+  },
+  {
+    id: "ntou-talk",
+    date: "2026.09",
+    content: <>Presented “Learn Programming in the AI Era” at NTOU.</>,
+  },
+  {
+    id: "waseda-appointment",
+    date: "2026.08",
+    content: <>Started as a Research Intern at Waseda University.</>,
+  },
+];
+
 export const experiences = [
   {
     date: "2026.08 — Present",
     title: "Research Intern",
     skills: ["Software Engineering", "Reverse Engineering"],
-    organization: {
-      en: (
-        <>
-          <a href="https://www.waseda.jp/top/en/">WasedaU</a> —{" "}
-          <a href="https://545659928.github.io/jialongli/">
-            Advisor: Prof. Jialong Li
-          </a>
-        </>
-      ),
-      zh: (
-        <>
-          <a href="https://www.waseda.jp/top/en/">WasedaU</a> —{" "}
-          <a href="https://545659928.github.io/jialongli/">
-            Advisor: Prof. Jialong Li
-          </a>
-        </>
-      ),
-    },
+    organization: (
+      <>
+        <a href="https://www.waseda.jp/top/en/">WasedaU</a> —{" "}
+        <a href="https://545659928.github.io/jialongli/">
+          Advisor: Prof. Jialong Li
+        </a>
+      </>
+    ),
   },
   {
     date: "2026.02 — Present",
@@ -55,51 +68,46 @@ export const experiences = [
       "Ultrasound Imaging",
       "Mobile Systems",
     ],
-    organization: {
-      en: <a href="https://www.aidmics.com/">Aidmics</a>,
-      zh: <a href="https://www.aidmics.com/">Aidmics</a>,
-    },
+    organization: <a href="https://www.aidmics.com/">Aidmics</a>,
+  },
+  {
+    date: "2025.12 - Present",
+    title: "Undergraduate Researcher",
+    skills: ["Software Evolution", "Traceability", "Agentic AI"],
+    organization: (
+      <>
+        <a href="https://ntou-soselab.github.io/SOSELab/">SOSELab</a> —{" "}
+        <a href="https://ntou-soselab.github.io/SOSELab/director.html">
+          Advisor: Prof. Shang-Pin Ma
+        </a>
+      </>
+    ),
   },
   {
     date: "2025.09 — 2026.01",
     title: "Software Engineer Intern",
     skills: ["Swift"],
-    organization: {
-      en: <a href="https://www.binance.com/en">Binance</a>,
-      zh: <a href="https://www.binance.com/en">Binance</a>,
-    },
+    organization: <a href="https://www.binance.com/en">Binance</a>,
   },
+
   {
     date: "2024.07 — 2025.08",
     title: "Software Engineer Intern",
     skills: ["Swift", "Go", "Next.js", "Django", "Docker", "Nginx"],
-    organization: {
-      en: <a href="https://www.aidmics.com/">Aidmics</a>,
-      zh: <a href="https://www.aidmics.com/">Aidmics</a>,
-    },
+    organization: <a href="https://www.aidmics.com/">Aidmics</a>,
   },
   {
     date: "2024.02 — 2024.06",
     title: "Research Assistant",
     skills: ["C++"],
-    organization: {
-      en: (
-        <>
-          NTOU —{" "}
-          <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/index.html">
-            Advisor: Shih-Yeh Chen
-          </a>{" "}
-        </>
-      ),
-      zh: (
-        <>
-          NTOU —{" "}
-          <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/index.html">
-            指導教授：陳世曄
-          </a>{" "}
-        </>
-      ),
-    },
+    organization: (
+      <>
+        <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/lab.html">ALHCLab</a> —{" "}
+        <a href="https://lab.es.ncku.edu.tw/cinfon/ya.cv/index.html">
+          Advisor: Shih-Yeh Chen
+        </a>
+      </>
+    ),
   },
 ];
 
@@ -152,7 +160,8 @@ export const publications = [
   {
     authors: (
       <>
-        <strong>Dong-Yi Su</strong>, Chang-Yen Liu, Jun-Yu Wang, Shang-Pin Ma
+        <strong>Dong-Yi Su</strong>, Chang-Yen Liu, Jun-Yu Wang, and Shang-Pin
+        Ma
       </>
     ),
     title:
@@ -182,7 +191,7 @@ export const publications = [
     authors: (
       <>
         <strong>Dong-Yi Su</strong>, Yuan-Kai Liu, Wei-Hua Chien, Yan-Cheng Lin,
-        Shang-Pin Ma
+        and Shang-Pin Ma
       </>
     ),
     title: "Patterns for AI-Assisted Document Maintenance and Traceability.",
@@ -340,12 +349,43 @@ function Main() {
                 University. He has worked as a SWE Intern at{" "}
                 <a href="https://www.aidmics.com/">Aidmics</a> and{" "}
                 <a href="https://www.binance.com/en">Binance</a>. His research
-                spans software engineering and artificial intelligence, with
-                particular interests in software evolution, AI4SE, and Agentic
-                AI.
+                spans Software Engineering and Artificial Intelligence.
               </p>
             </div>
           </section>
+
+          <section className="content-section about-section" id="research">
+            <SectionHeading
+              title="Research Interests"
+              intro="His research focuses on software engineering and artificial intelligence, with recent work also exploring natural language processing and computer vision."
+            />
+            <ul className="research-interest-list">
+              <li>
+                <strong>Software Engineering</strong>
+                <span>Software Evolution, AI4SE, and Agentic AI</span>
+              </li>
+              <li>
+                <strong>Natural Language Processing</strong>
+                <span>Representation Learning</span>
+              </li>
+              <li>
+                <strong>Computer Vision</strong>
+                <span>Biomedical Image Analysis</span>
+              </li>
+            </ul>
+          </section>
+
+          {/* <section className="content-section about-section" id="news">
+            <SectionHeading title="News" />
+            <ul className="news-list">
+              {newsItems.map((item) => (
+                <li className="news-item" key={item.id}>
+                  <time className="news-date">{item.date}</time>
+                  <span className="news-content">{item.content}</span>
+                </li>
+              ))}
+            </ul>
+          </section> */}
         </main>
       </div>
 

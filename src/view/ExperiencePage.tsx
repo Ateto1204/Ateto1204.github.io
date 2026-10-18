@@ -3,7 +3,7 @@ import SiteLayout from "@/view/SiteLayout";
 
 const talks = [
   {
-    title: "Learn Programming in the AI Era: Approaches and Mindsets.",
+    title: "Learn Programming in the AI Era.",
     date: "2026.09.11",
     organizer: "NTOU CSIE",
   },
@@ -52,14 +52,12 @@ export default function ExperiencePage() {
                 key={`${item.date}-${item.title}`}
               >
                 <div className="experience-body">
-                  {item.date && (
-                    <p className="experience-date">{item.date}</p>
-                  )}
+                  {item.date && <p className="experience-date">{item.date}</p>}
                   <h3>
                     {item.title}
                     <span className="experience-company">
                       {" "}
-                      @ {item.organization.en}
+                      @ {item.organization}
                     </span>
                   </h3>
                   {item.skills.length > 0 && (
